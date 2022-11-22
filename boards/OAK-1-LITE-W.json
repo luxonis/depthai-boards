@@ -6,7 +6,7 @@
         "cameras":{
             "CAM_A": {
                 "name": "rgb",
-                "hfov": 93.7,
+                "hfov": 105,
                 "type": "color"
             }
         }
