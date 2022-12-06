@@ -15,14 +15,14 @@
             "eeprom":"eeprom/PA2096_R0M0E0_oak_1_poe_ff.json"
         },
         {
-            "title":"OAK-1 W PoE (SJ2096 R0M0E0)",
-            "description": "OAK-1 WideLens PoE, based on SJ2096 R0M0E0 board",
+            "title":"OAK-1 W PoE (PA2096 R0M0E0)",
+            "description": "OAK-1 WideLens PoE, based on PA2096 R0M0E0 board",
             "eeprom":"eeprom/PA2096_R0M0E0_oak_1_w_poe.json"
         },
         {
-            "title":"OAK-1 97W PoE (SJ2096 R2M1E2)",
-            "description": "OAK-1 97 WideLens angle PoE, based on SJ2096 R0M0E0 board",
-            "eeprom":"eeprom/PA2096_R0M0E0_oak_1_97w_poe.json"
+            "title":"OAK-1 W PoE OV9782 (PA2096 R0M0E0)",
+            "description": "OAK-1 WideLens angle PoE, with OV9782",
+            "eeprom":"eeprom/PA2096_R0M0E0_oak_1_w_poe_9782.json"
         }
     ]
 }
