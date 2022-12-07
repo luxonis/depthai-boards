@@ -10,6 +10,11 @@
             "eeprom":"eeprom/SJ2096_R2M1E2_oak_1_poe_ff.json"
         },
         {
+            "title":"OAK-1 PoE AF (SJ2096 R2M1E2)",
+            "description": "OAK-1 PoE with Auto Focus, based on SJ2096 R2M1E2 board",
+            "eeprom":"eeprom/SJ2096_R2M1E2_oak_1_poe_af.json"
+        },
+        {
             "title":"OAK-1 PoE FF (PA2096 R0M0E0)",
             "description": "OAK-1 PoE with Fixed Focus, based on PA2096 R0M0E0 board",
             "eeprom":"eeprom/PA2096_R0M0E0_oak_1_poe_ff.json"
