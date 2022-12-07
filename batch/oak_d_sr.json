@@ -3,6 +3,7 @@
     "description": "OAK-D SR",
     "image": "images/oak_d_sr.jpg",
     "test_type": "OAK-D-SR",
+    "bootloader": "nor",
     "variants": [
         {
             "title":"OAK-D SR (DM2080 R0M0E0) (2x OV9782)",

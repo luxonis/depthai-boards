@@ -3,6 +3,7 @@
     "description": "OAK-D",
     "image": "images/oak_d.jpg",
     "test_type": "OAK-D",
+    "bootloader": "none",
     "variants": [
         {
             "title":"OAK-D (BW1098 R1M0E1)",
