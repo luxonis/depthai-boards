@@ -1,9 +1,9 @@
-  {
+{
     "title": "OAK FFC-4P",
     "description": "OAK FFC-4P",
     "image": "images/oak_d_ffc_4p.jpg",
     "test_type": "OAK-FFC-4P",
-    "bootloader": "usb",
+    "options": {"bootloader": "usb"},
     "variants": [
         {
             "title":"OAK-FFC 4P (DD2090 R4M1E4)",
