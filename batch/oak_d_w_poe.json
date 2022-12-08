@@ -1,8 +1,9 @@
-  {
+{
     "title": "OAK-D W PoE",
     "description": "OAK-D W PoE",
     "image": "images/oak_d_w_poe.jpg",
     "test_type": "OAK-D-POE",
+    "options": {"bootloader": "poe"},
     "variants": [
         {
             "title":"OAK-D W PoE (NG9097 R4M2E3 BMI270)",
@@ -13,6 +14,16 @@
             "title":"OAK-D W PoE (NG9097 R4M2E3 BNO086)",
             "description": "OAK-D WideLens PoE, based on NG9097 R4M2E3 board with BNO086 IMU",
             "eeprom":"eeprom/NG9097_R4M2E3_BNO086_oak_d_w_poe.json"
+        },
+        {
+            "title":"OAK-D W PoE (NG9097 R4M2E4 BMI270)",
+            "description": "OAK-D WideLens PoE, based on NG9097 R4M2E4 board with BMI270 IMU",
+            "eeprom":"eeprom/NG9097_R4M2E4_BMI270_oak_d_w_poe.json"
+        },
+        {
+            "title":"OAK-D W PoE (NG9097 R4M2E4 BNO086)",
+            "description": "OAK-D WideLens PoE, based on NG9097 R4M2E4 board with BNO086 IMU",
+            "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_w_poe.json"
         }
     ]
 }

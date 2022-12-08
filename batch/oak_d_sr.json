@@ -3,7 +3,13 @@
     "description": "OAK-D SR",
     "image": "images/oak_d_sr.jpg",
     "test_type": "OAK-D-SR",
+    "options": {"bootloader": "header_usb"},
     "variants": [
+        {
+            "title":"OAK-D SR (DM2080 R1M1E1) (2x OV9782)",
+            "description": "OAK-D SR, based on DM2080 R1M1E1 board",
+            "eeprom":"eeprom/DM2080_R1M1E1_oak_d_sr.json"
+        },
         {
             "title":"OAK-D SR (DM2080 R0M0E0) (2x OV9782)",
             "description": "OAK-D SR, based on DM2080 R0M0E0 board",
