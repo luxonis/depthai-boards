@@ -12,7 +12,7 @@
         },
         {
             "title":"OAK-D W C15 (DM9098 R6M2E6)",
-            "description": "OAK-D W C15 based on DM9098 R6M2E6 board, with wide lens (OV9282 center camera)",
+            "description": "OAK-D W C15 based on DM9098 R6M2E6 board, with wide lens (OV9782 center camera)",
             "eeprom":"eeprom/DM9098_R6M2E6_oak_d_w_c15.json"
         }
     ]
