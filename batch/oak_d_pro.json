@@ -56,7 +56,7 @@
             "eeprom":"eeprom/DM9098_R6M2E6_oak_d_pro_w_c06.json"
         },
         {
-            "title":"OAK-D Pro W C06 (DM9098 R6M2E6)",
+            "title":"OAK-D Pro W C16 (DM9098 R6M2E6)",
             "description": "OAK-D Pro Wide C16 with center OV9782 camera, IR bandpass",
             "eeprom":"eeprom/DM9098_R6M2E6_oak_d_pro_w_c16.json"
         },
