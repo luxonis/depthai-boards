@@ -1,0 +1,14 @@
+{
+    "title": "OAK-D LR",
+    "description": "OAK-D LR",
+    "image": "images/oak_d_lr.jpg",
+    "test_type": "OAK-D-LR",
+    "options": {"bootloader": "header_usb"},
+    "variants": [
+        {
+            "title":"OAK-D LR (BC2087 R0M0E0)",
+            "description": "OAK-D LR, based on BC2087 R0M0E0 board",
+            "eeprom":"eeprom/BC2087_R0M0E0_oak_d_lr.json"
+        }
+    ]
+}
