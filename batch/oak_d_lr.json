@@ -3,7 +3,7 @@
     "description": "OAK-D LR",
     "image": "images/oak_d_lr.jpg",
     "test_type": "OAK-D-LR",
-    "options": {"bootloader": "header_usb"},
+    "options": {"bootloader": "poe"},
     "variants": [
         {
             "title":"OAK-D LR (BC2087 R0M0E0)",
