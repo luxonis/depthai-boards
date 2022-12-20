@@ -42,7 +42,7 @@
         },
         {
             "title":"OAK-1 Lite FF (NG9093 R3M0E4)",
-            "description": "OAK-1 Lite Fixed Focus based on NG9093 R2M0E3 board",
+            "description": "OAK-1 Lite Fixed Focus based on NG9093 R3M0E4 board",
             "eeprom":"eeprom/NG9093_R3M0E4_oak_1_lite_ff.json",
             "test_type": "OAK-1-LITE"
         }

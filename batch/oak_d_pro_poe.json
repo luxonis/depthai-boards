@@ -31,6 +31,11 @@
             "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_pro_poe_af.json"
         },
         {
+            "title":"OAK-D Pro PoE AF C18 (NG9097 R4M2E4 BNO086)",
+            "description": "OAK-D Pro PoE C18 AutoFocus based on NG9097 R4M2E4 and BNO086 IMU",
+            "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_pro_poe_af_c18.json"
+        },
+        {
             "title":"OAK-D Pro PoE FF (NG9097 R3M2E2)",
             "description": "OAK-D Pro PoE FixedFocus based on NG9097 R3M2E2",
             "eeprom":"eeprom/NG9097_R3M2E2_oak_d_pro_poe_ff.json"
@@ -66,7 +71,7 @@
             "eeprom":"eeprom/NG9097_R4M2E3_BMI270_oak_d_pro_w_poe.json"
         },
         {
-            "title":"OAK-D Pro PoE FF (NG9097 R4M2E3 BNO086)",
+            "title":"OAK-D Pro W PoE (NG9097 R4M2E3 BNO086)",
             "description": "OAK-D Pro PoE WideLens based on NG9097 R4M2E3 and BNO086 IMU",
             "eeprom":"eeprom/NG9097_R4M2E3_BNO086_oak_d_pro_w_poe.json"
         },
@@ -76,7 +81,7 @@
             "eeprom":"eeprom/NG9097_R4M2E4_BMI270_oak_d_pro_w_poe.json"
         },
         {
-            "title":"OAK-D Pro PoE FF (NG9097 R4M2E4 BNO086)",
+            "title":"OAK-D Pro W PoE (NG9097 R4M2E4 BNO086)",
             "description": "OAK-D Pro PoE WideLens based on NG9097 R4M2E4 and BNO086 IMU",
             "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_pro_w_poe.json"
         },
