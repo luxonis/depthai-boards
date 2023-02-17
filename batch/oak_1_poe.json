@@ -8,27 +8,32 @@
         {
             "title":"OAK-1 PoE FF (SJ2096 R2M1E2)",
             "description": "OAK-1 PoE with Fixed Focus, based on SJ2096 R2M1E2 board",
-            "eeprom":"eeprom/SJ2096_R2M1E2_oak_1_poe_ff.json"
+            "eeprom":"eeprom/SJ2096_R2M1E2_oak_1_poe_ff.json",
+            "board_config_file": "OAK-1-POE.json"
         },
         {
             "title":"OAK-1 PoE AF (SJ2096 R2M1E2)",
             "description": "OAK-1 PoE with Auto Focus, based on SJ2096 R2M1E2 board",
-            "eeprom":"eeprom/SJ2096_R2M1E2_oak_1_poe_af.json"
+            "eeprom":"eeprom/SJ2096_R2M1E2_oak_1_poe_af.json",
+            "board_config_file": "OAK-1-POE.json"
         },
         {
             "title":"OAK-1 PoE FF (PA2096 R0M0E0)",
             "description": "OAK-1 PoE with Fixed Focus, based on PA2096 R0M0E0 board",
-            "eeprom":"eeprom/PA2096_R0M0E0_oak_1_poe_ff.json"
+            "eeprom":"eeprom/PA2096_R0M0E0_oak_1_poe_ff.json",
+            "board_config_file": "OAK-1-POE.json"
         },
         {
             "title":"OAK-1 W PoE (PA2096 R0M0E0)",
             "description": "OAK-1 WideLens PoE, based on PA2096 R0M0E0 board",
-            "eeprom":"eeprom/PA2096_R0M0E0_oak_1_w_poe.json"
+            "eeprom":"eeprom/PA2096_R0M0E0_oak_1_w_poe.json",
+            "board_config_file": "OAK-1-W-POE.json"
         },
         {
             "title":"OAK-1 W PoE OV9782 (PA2096 R0M0E0)",
             "description": "OAK-1 WideLens angle PoE, with OV9782",
-            "eeprom":"eeprom/PA2096_R0M0E0_oak_1_w_poe_9782.json"
+            "eeprom":"eeprom/PA2096_R0M0E0_oak_1_w_poe_9782.json",
+            "board_config_file": "OAK-1-W-POE-97.json"
         }
     ]
 }

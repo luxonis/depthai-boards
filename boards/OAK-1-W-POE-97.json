@@ -1,15 +1,15 @@
 {
     "board_config":
     {
-        "name": "OAK-1-POE",
-        "revision": "R2M1E2",
+        "name": "OAK-1-W-POE-97",
         "cameras":{
             "CAM_A": {
                 "name": "rgb",
-                "hfov": 68.7938,
+                "hfov": 127,
                 "type": "color"
             }
         }
+        
     }
 }
 
