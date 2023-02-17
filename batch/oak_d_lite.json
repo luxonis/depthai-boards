@@ -8,53 +8,20 @@
         {
             "title":"OAK-D Lite (DM9095 R3M2E4)",
             "description": "OAK-D Lite, based on DM9095 R3M2E4 board",
-            "eeprom":"eeprom/DM9095_R3M2E4_oak_d_lite.json"
+            "eeprom":"eeprom/DM9095_R3M2E4_oak_d_lite.json",
+            "board_config_file": "OAK-D-LITE.json"
         },
         {
             "title":"OAK-D Lite AF (DM9095 R2M1E4)",
             "description": "OAK-D Lite Auto Focus, based on DM9095 R2M1E4 board",
-            "eeprom":"eeprom/DM9095_R2M1E4_oak_d_lite_af.json"
+            "eeprom":"eeprom/DM9095_R2M1E4_oak_d_lite_af.json",
+            "board_config_file": "OAK-D-LITE.json"
         },
         {
             "title":"OAK-D Lite FF (DM9095 R2M1E4)",
             "description": "OAK-D Lite Fixed Focus, based on DM9095 R2M1E4 board",
-            "eeprom":"eeprom/DM9095_R2M1E4_oak_d_lite_ff.json"
-        },
-        {
-            "title":"OAK-1 Lite C05 (NG9093 R2M0E3)",
-            "description": "OAK-1 Lite C05 based on NG9093 R2M0E3 board",
-            "eeprom":"eeprom/NG9093_R2M0E3_oak_1_lite_c05.json",
-            "test_type": "OAK-1-LITE"
-        },
-        {
-            "title":"OAK-1 Lite W (NG9093 R2M0E3)",
-            "description": "OAK-1 Lite Wide Lens based on NG9093 R2M0E3 board",
-            "eeprom":"eeprom/NG9093_R2M0E3_oak_1_lite_w.json",
-            "test_type": "OAK-1-LITE"
-        },
-        {
-            "title":"OAK-1 Lite FF (NG9093 R2M0E3)",
-            "description": "OAK-1 Lite Fixed Focus based on NG9093 R2M0E3 board",
-            "eeprom":"eeprom/NG9093_R2M0E3_oak_1_lite_ff.json",
-            "test_type": "OAK-1-LITE"
-        },
-        {
-            "title":"OAK-1 Lite C05 (NG9093 R3M0E4)",
-            "description": "OAK-1 Lite C05 based on NG9093 R3M0E4 board",
-            "eeprom":"eeprom/NG9093_R3M0E4_oak_1_lite_c05.json",
-            "test_type": "OAK-1-LITE"
-        },
-        {
-            "title":"OAK-1 Lite W (NG9093 R3M0E4)",
-            "description": "OAK-1 Lite Wide Lens based on NG9093 R3M0E4 board",
-            "eeprom":"eeprom/NG9093_R3M0E4_oak_1_lite_w.json",
-            "test_type": "OAK-1-LITE"
-        },
-        {
-            "title":"OAK-1 Lite FF (NG9093 R3M0E4)",
-            "description": "OAK-1 Lite Fixed Focus based on NG9093 R3M0E4 board",
-            "eeprom":"eeprom/NG9093_R3M0E4_oak_1_lite_ff.json",
-            "test_type": "OAK-1-LITE"
+            "eeprom":"eeprom/DM9095_R2M1E4_oak_d_lite_ff.json",
+            "board_config_file": "OAK-D-LITE.json"
         }
     ]
 }
