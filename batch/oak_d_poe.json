@@ -45,7 +45,7 @@
             "title":"OAK-D W PoE C12 (NG9097 R4M2E4 BMI270)",
             "description": "OAK-D WideLens PoE C12, based on NG9097 R4M2E4 board with BMI270 IMU",
             "eeprom":"eeprom/NG9097_R4M2E4_oak_d_w_poe_c12.json",
-            "board_config_file": "OAK-D-W-POE-C12.json"
+            "board_config_file": "OAK-D-POE-W-C12.json"
         }
     ]
 }
