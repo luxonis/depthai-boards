@@ -8,97 +8,116 @@
         {
             "title":"OAK-D Pro PoE AF (NG9097 R3M2E2)",
             "description": "OAK-D Pro PoE AutoFocus based on NG9097 R3M2E2",
-            "eeprom":"eeprom/NG9097_R3M2E2_oak_d_pro_poe_af.json"
+            "eeprom":"eeprom/NG9097_R3M2E2_oak_d_pro_poe_af.json",
+            "board_config_file": "OAK-D-PRO-POE.json"
         },
         {
             "title":"OAK-D Pro PoE AF (NG9097 R4M2E3 BMI270)",
             "description": "OAK-D Pro PoE AutoFocus based on NG9097 R4M2E3 and BMI270 IMU",
-            "eeprom":"eeprom/NG9097_R4M2E3_BMI270_oak_d_pro_poe_af.json"
+            "eeprom":"eeprom/NG9097_R4M2E3_BMI270_oak_d_pro_poe_af.json",
+            "board_config_file": "OAK-D-PRO-POE.json"
         },
         {
             "title":"OAK-D Pro PoE AF (NG9097 R4M2E3 BNO086)",
             "description": "OAK-D Pro PoE AutoFocus based on NG9097 R4M2E3 and BNO086 IMU",
-            "eeprom":"eeprom/NG9097_R4M2E3_BNO086_oak_d_pro_poe_af.json"
+            "eeprom":"eeprom/NG9097_R4M2E3_BNO086_oak_d_pro_poe_af.json",
+            "board_config_file": "OAK-D-PRO-POE.json"
         },
         {
             "title":"OAK-D Pro PoE AF (NG9097 R4M2E4 BMI270)",
             "description": "OAK-D Pro PoE AutoFocus based on NG9097 R4M2E4 and BMI270 IMU",
-            "eeprom":"eeprom/NG9097_R4M2E4_BMI270_oak_d_pro_poe_af.json"
+            "eeprom":"eeprom/NG9097_R4M2E4_BMI270_oak_d_pro_poe_af.json",
+            "board_config_file": "OAK-D-PRO-POE.json"
         },
         {
             "title":"OAK-D Pro PoE AF (NG9097 R4M2E4 BNO086)",
             "description": "OAK-D Pro PoE AutoFocus based on NG9097 R4M2E4 and BNO086 IMU",
-            "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_pro_poe_af.json"
+            "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_pro_poe_af.json",
+            "board_config_file": "OAK-D-PRO-POE.json"
         },
         {
             "title":"OAK-D Pro PoE AF C18 (NG9097 R4M2E4 BNO086)",
-            "description": "OAK-D Pro PoE C18 AutoFocus based on NG9097 R4M2E4 and BNO086 IMU",
-            "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_pro_poe_af_c18.json"
+            "description": "OAK-D Pro PoE C18 AutoFocus based on NG9097 R4M2E4 and BNO086 IMU, no enclosure, cables and packaging",
+            "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_pro_poe_af_c18.json",
+            "board_config_file": "OAK-D-PRO-POE.json"
         },
         {
             "title":"OAK-D Pro PoE FF (NG9097 R3M2E2)",
             "description": "OAK-D Pro PoE FixedFocus based on NG9097 R3M2E2",
-            "eeprom":"eeprom/NG9097_R3M2E2_oak_d_pro_poe_ff.json"
+            "eeprom":"eeprom/NG9097_R3M2E2_oak_d_pro_poe_ff.json",
+            "board_config_file": "OAK-D-PRO-POE.json"
         },
         {
             "title":"OAK-D Pro PoE FF (NG9097 R4M2E3 BMI270)",
             "description": "OAK-D Pro PoE FixedFocus based on NG9097 R4M2E3 and BMI270 IMU",
-            "eeprom":"eeprom/NG9097_R4M2E3_BMI270_oak_d_pro_poe_ff.json"
+            "eeprom":"eeprom/NG9097_R4M2E3_BMI270_oak_d_pro_poe_ff.json",
+            "board_config_file": "OAK-D-PRO-POE.json"
         },
         {
             "title":"OAK-D Pro PoE FF (NG9097 R4M2E3 BNO086)",
             "description": "OAK-D Pro PoE FixedFocus based on NG9097 R4M2E3 and BNO086 IMU",
-            "eeprom":"eeprom/NG9097_R4M2E3_BNO086_oak_d_pro_poe_ff.json"
+            "eeprom":"eeprom/NG9097_R4M2E3_BNO086_oak_d_pro_poe_ff.json",
+            "board_config_file": "OAK-D-PRO-POE.json"
         },
         {
             "title":"OAK-D Pro PoE FF (NG9097 R4M2E4 BMI270)",
             "description": "OAK-D Pro PoE FixedFocus based on NG9097 R4M2E4 and BMI270 IMU",
-            "eeprom":"eeprom/NG9097_R4M2E4_BMI270_oak_d_pro_poe_ff.json"
+            "eeprom":"eeprom/NG9097_R4M2E4_BMI270_oak_d_pro_poe_ff.json",
+            "board_config_file": "OAK-D-PRO-POE.json"
         },
         {
             "title":"OAK-D Pro PoE FF (NG9097 R4M2E4 BNO086)",
             "description": "OAK-D Pro PoE FixedFocus based on NG9097 R4M2E4 and BNO086 IMU",
-            "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_pro_poe_ff.json"
+            "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_pro_poe_ff.json",
+            "board_config_file": "OAK-D-PRO-POE.json"
         },
         {
             "title":"OAK-D Pro W PoE (NG9097 R3M2E2)",
             "description": "OAK-D Pro PoE WideLens based on NG9097 R3M2E2",
-            "eeprom":"eeprom/NG9097_R3M2E2_oak_d_pro_w_poe.json"
+            "eeprom":"eeprom/NG9097_R3M2E2_oak_d_pro_w_poe.json",
+            "board_config_file": "OAK-D-PRO-W-POE.json"
         },
         {
             "title":"OAK-D Pro W PoE (NG9097 R4M2E3 BMI270)",
             "description": "OAK-D Pro PoE WideLens based on NG9097 R4M2E3 and BMI270 IMU",
-            "eeprom":"eeprom/NG9097_R4M2E3_BMI270_oak_d_pro_w_poe.json"
+            "eeprom":"eeprom/NG9097_R4M2E3_BMI270_oak_d_pro_w_poe.json",
+            "board_config_file": "OAK-D-PRO-W-POE.json"
         },
         {
             "title":"OAK-D Pro W PoE (NG9097 R4M2E3 BNO086)",
             "description": "OAK-D Pro PoE WideLens based on NG9097 R4M2E3 and BNO086 IMU",
-            "eeprom":"eeprom/NG9097_R4M2E3_BNO086_oak_d_pro_w_poe.json"
+            "eeprom":"eeprom/NG9097_R4M2E3_BNO086_oak_d_pro_w_poe.json",
+            "board_config_file": "OAK-D-PRO-W-POE.json"
         },
         {
             "title":"OAK-D Pro W PoE (NG9097 R4M2E4 BMI270)",
             "description": "OAK-D Pro PoE WideLens based on NG9097 R4M2E4 and BMI270 IMU",
-            "eeprom":"eeprom/NG9097_R4M2E4_BMI270_oak_d_pro_w_poe.json"
+            "eeprom":"eeprom/NG9097_R4M2E4_BMI270_oak_d_pro_w_poe.json",
+            "board_config_file": "OAK-D-PRO-W-POE.json"
         },
         {
             "title":"OAK-D Pro W PoE (NG9097 R4M2E4 BNO086)",
             "description": "OAK-D Pro PoE WideLens based on NG9097 R4M2E4 and BNO086 IMU",
-            "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_pro_w_poe.json"
+            "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_pro_w_poe.json",
+            "board_config_file": "OAK-D-PRO-W-POE.json"
         },
         {
             "title":"OAK-D Pro W PoE Custom (NG9097 R3M2E2)",
             "description": "OAK-D Pro PoE Custom based on NG9097 R3M2E2",
-            "eeprom":"eeprom/NG9097_R3M2E2_oak_d_pro_w_poe_custom.json"
+            "eeprom":"eeprom/NG9097_R3M2E2_oak_d_pro_w_poe_custom.json",
+            "board_config_file": "OAK-D-PRO-W-POE-CUSTOM.json"
         },
         {
             "title":"OAK-D Pro W PoE C01 (NG9097 R4M2E3)",
             "description": "OAK-D Pro PoE C01 based on NG9097 R3M2E2",
-            "eeprom":"eeprom/NG9097_R4M2E3_oak_d_pro_w_poe_c01.json"
+            "eeprom":"eeprom/NG9097_R4M2E3_oak_d_pro_w_poe_c01.json",
+            "board_config_file": "OAK-D-PRO-W-POE-C01.json"
         },
         {
             "title":"OAK-D Pro W PoE C01 (NG9097 R4M2E4)",
             "description": "OAK-D Pro W PoE C01 based on NG9097 R4M2E4",
-            "eeprom":"eeprom/NG9097_R4M2E4_oak_d_pro_w_poe_c01.json"
+            "eeprom":"eeprom/NG9097_R4M2E4_oak_d_pro_w_poe_c01.json",
+            "board_config_file": "OAK-D-PRO-W-POE-C01.json"
         }
     ]
 }
