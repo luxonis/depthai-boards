@@ -2,6 +2,7 @@
 	"title": "OAK-D CM4",
 	"description": "OAK-D CM4",
 	"test_type": "OAK-D-CM4",
+    "options": {"bootloader": "none", "websocket_capture": true},
 	"variants": [
 		{
 			"title": "OAK-D CM4 (DM1097 R2M0E2)",

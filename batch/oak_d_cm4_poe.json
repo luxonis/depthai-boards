@@ -2,6 +2,7 @@
 	"title": "OAK-D CM4 PoE",
 	"description": "OAK-D CM4 PoE",
 	"test_type": "OAK-D-CM4-POE",
+    "options": {"bootloader": "none", "websocket_capture": true},
 	"variants": [
 		{
 			"title": "OAK-D CM4 PoE (DM2097 R3M1E4)",
