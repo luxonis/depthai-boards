@@ -1,9 +1,7 @@
 from pathlib import Path
 import json
 from enum import Enum
-from dataclasses import dataclass
-from dataclasses_json import dataclass_json
-import marshmallow
+from pydantic import BaseModel, ValidationError
 from typing import Optional, Union, Dict, List
 import copy
 
@@ -12,7 +10,7 @@ DEPTHAI_BOARDS_PRIVATE_PATH = Path(__file__).parent / "../depthai_boards_private
 
 
 # Bootloader options
-class BootloaderType(Enum):
+class BootloaderType(str, Enum):
 	POE = 'poe' # Specifies POE bootloader
 	USB = 'usb' # Specifies USB bootloader
 	HEADER_USB = 'header_usb' # Specifies NOR Header Bootloader USB
@@ -29,18 +27,14 @@ class BootloaderType(Enum):
 		else:
 			return BootloaderType.NONE
 
-@dataclass_json
-@dataclass
-class Options:
+class Options(BaseModel):
 	bootloader: BootloaderType
 
 	environment: Union[str, dict] = "standard" 
 	""" if dict, each key represents a stage (flashing, testing, calibration) and the value 
 	is the environment to use for that stage """
 
-@dataclass_json
-@dataclass
-class EepromData:
+class EepromData(BaseModel):
 	boardConf: str
 	boardName: str
 	boardRev: str
@@ -52,30 +46,22 @@ class EepromData:
 	batchTime: int = 0 
 	""" seconds since epoch """
 
-@dataclass_json
-@dataclass
-class RotationType:
+class RotationType(BaseModel):
 	r: float # roll
 	p: float # pitch
 	y: float # yaw
 
-@dataclass_json
-@dataclass
-class TranslationType:
+class TranslationType(BaseModel):
 	x: float
 	y: float
 	z: float
 
-@dataclass_json
-@dataclass
-class Extrinsics:
+class Extrinsics(BaseModel):
 	to_cam: str
 	rotation: RotationType
 	specTranslation: TranslationType
 
-@dataclass_json
-@dataclass
-class CameraInfo:
+class CameraInfo(BaseModel):
 	name: str
 	hfov: float
 	type: str
@@ -84,21 +70,15 @@ class CameraInfo:
 	has_autofocus: bool = False
 	lens_position: int = -1
 
-@dataclass_json
-@dataclass
-class StereoConfig:
+class StereoConfig(BaseModel):
 	left_cam: str
 	right_cam: str
 
-@dataclass_json
-@dataclass
-class BoardConfig:
+class BoardConfig(BaseModel):
 	cameras: Dict[str, CameraInfo]
 	stereo_config: Optional[StereoConfig] = None
 
-@dataclass_json
-@dataclass
-class VariantConfig:
+class VariantConfig(BaseModel):
 	id: str 
 	""" equivalent to the eeprom file name (inside the eeprom folder) without the extension """
 
@@ -115,9 +95,7 @@ class VariantConfig:
 
 	options: Options
 
-@dataclass_json
-@dataclass
-class DeviceConfig:
+class DeviceConfig(BaseModel):
 	id: str 
 	""" equivalent to the device file name (inside the batch folder) without the extension """
 
@@ -143,63 +121,72 @@ def update(d: Dict, u: Dict):
 DEVICES = []
 DEVICES_TYPED: List[DeviceConfig] = []
 for device_file in [*(DEPTHAI_BOARDS_PATH / "batch" ).glob("*.json"), *(DEPTHAI_BOARDS_PRIVATE_PATH / "batch" ).glob("*.json")]:
-	with open(device_file, "r") as f:
-		device = json.load(f)
-		device["id"] = device_file.stem
-		variants = device["variants"]
+	try:
+		with open(device_file, "r") as f:
+			device = json.load(f)
+	except json.decoder.JSONDecodeError as e:
+		raise Exception(f"Couldn't parse device file at {device_file.resolve()}. Make sure the file is valid JSON. \n{e}")
+	except Exception as e:
+		raise Exception(f"Couldn't load device file at {device_file.resolve()}. Make sure the file exists.")
 
-		# If no options are specified, use defaults
-		options = {
-			"bootloader": BootloaderType.get_default_bootloader(device.get("test_type", "")),
-			"environment": "standard"
-		}
-		options.update(device.get("options", {}))
-		device["options"] = options
+	device["id"] = device_file.stem
+	variants = device["variants"]
 
-		# Load the variants
-		variants_combined = []
-		for variant in variants:
-			variant_combined = copy.deepcopy(device) # the variant inherits the device's properties first
-			variant_combined.pop("variants") # remove the variants field from the variant
-			update(variant_combined, variant) # then the variant's properties are applied on top
+	# If no options are specified, use defaults
+	options = {
+		"bootloader": BootloaderType.get_default_bootloader(device.get("test_type", "")),
+		"environment": "standard"
+	}
+	options.update(device.get("options", {}))
+	device["options"] = options
 
-			# Load the eeprom data
-			try: 
-				eeprom_data_path = device_file.parent / variant_combined["eeprom"]
-				with open(eeprom_data_path, "r") as f:
-					variant_combined["eeprom_data"] = json.load(f)
-					variant_combined["eeprom_file_name"] = eeprom_data_path.name
-					variant_combined["id"] = eeprom_data_path.stem
-			except Exception as e:
-				raise Exception(f"Couldn't load eeprom file for device '{device_file.resolve()}' variant '{variant_combined.get('id', '')}'. Make sure the eeprom field is set correctly in the device file.")
+	# Load the variants
+	variants_combined = []
+	for variant in variants:
+		variant_combined = copy.deepcopy(device) # the variant inherits the device's properties first
+		variant_combined.pop("variants") # remove the variants field from the variant
+		update(variant_combined, variant) # then the variant's properties are applied on top
 
-			# Load the board config
-			if "board_config_file" in variant_combined:
-				board_config_path = device_file.parent / "../boards" / variant_combined["board_config_file"]
-				if not board_config_path.exists():
-					raise Exception(f"Couldn't load board config file at {board_config_path.resolve()} for device '{device_file.resolve()}'. Make sure the board_config_file field is set correctly in the device file.")
+		# Load the eeprom data
+		try: 
+			eeprom_data_path = device_file.parent / variant_combined["eeprom"]
+			with open(eeprom_data_path, "r") as f:
+				variant_combined["eeprom_data"] = json.load(f)
+				variant_combined["eeprom_file_name"] = eeprom_data_path.name
+				variant_combined["id"] = eeprom_data_path.stem
+		except json.decoder.JSONDecodeError as e:
+			raise Exception(f"Couldn't parse eeprom file for device '{device_file.resolve()}' variant '{variant_combined.get('id', '')}'. Make sure the eeprom file is valid JSON. \n{e}")
+		except Exception as e:
+			raise Exception(f"Couldn't load eeprom file for device '{device_file.resolve()}' variant '{variant_combined.get('id', '')}'. Make sure the eeprom field is set correctly in the device file.")
+
+		# Load the board config
+		if "board_config_file" in variant_combined:
+			board_config_path = device_file.parent / "../boards" / variant_combined["board_config_file"]
+			try:
 				with open(board_config_path, "r") as f:
 					variant_combined["board_config"] = json.load(f).get("board_config", {}) 
-			else:
-				variant_combined["board_config"] = {"cameras": {}} # if no board config is specified, use an empty one (used for FCC cameras)
+			except json.decoder.JSONDecodeError as e:
+				raise Exception(f"Couldn't parse board config file at {board_config_path.resolve()} for device '{device_file.resolve()}'. Make sure the board config file is valid JSON. \n{e}")
+			except Exception as e:
+				raise Exception(f"Couldn't load board config file at {board_config_path.resolve()} for device '{device_file.resolve()}'. Make sure the board_config_file field is set correctly in the device file.")
+		else:
+			variant_combined["board_config"] = {"cameras": {}} # if no board config is specified, use an empty one (used for FCC cameras)
 
-			# Convert the bootloader string to an enum
-			variant_combined["options"]["bootloader"] = BootloaderType(options["bootloader"]) # convert string to enum
+		# Convert the bootloader string to an enum
+		variant_combined["options"]["bootloader"] = BootloaderType(options["bootloader"]) # convert string to enum
 
-			variants_combined.append(variant_combined)
-		
-		device["variants"] = variants_combined
+		variants_combined.append(variant_combined)
+	
+	device["variants"] = variants_combined
 
-		DEVICES.append(device)
+	DEVICES.append(device)
 
-		# Convert the dict to a list of DeviceConfig objects and validate it
-		try:
-			device_typed: DeviceConfig = DeviceConfig.from_dict(device) # type: ignore
-			DEVICES_TYPED.append(device_typed)
-		except marshmallow.ValidationError as err:
-			print(f"In file or in file referenced by '{device_file}': Type mismatch", err)
-		except Exception as err:
-			print(f"In file or in file referenced by '{device_file}': Mising field", err)
+	# Convert the dict to a list of DeviceConfig objects and validate it
+	try:
+		device_typed: DeviceConfig = DeviceConfig(**device) # type: ignore
+		DEVICES_TYPED.append(device_typed)
+	except ValidationError as err:
+		raise Exception(f"Validation error in file or in file referenced by '{device_file}':\n {err}\n")
 
 
 
