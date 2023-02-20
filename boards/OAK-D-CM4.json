@@ -1,8 +1,6 @@
 {
     "board_config":
     {
-        "name": "OAK-D-CM4",
-        "revision": "R2M0E2",
         "cameras":{
             "CAM_A": {
                 "name": "rgb",
