@@ -1,12 +1,12 @@
 {
     "board_config":
     {
-        "name": "OAK-D-CM4-C11",
+        "name": "OAK-D-CM4",
         "revision": "R2M0E2",
         "cameras":{
             "CAM_A": {
                 "name": "rgb",
-                "hfov": 80.0,
+                "hfov": 68.7938,
                 "type": "color"
             },
             "CAM_B": {
@@ -34,7 +34,7 @@
                 "extrinsics": {
                     "to_cam": "CAM_A",
                     "specTranslation": {
-                        "x": 7,
+                        "x": 7.7,
                         "y": 0,
                         "z": 0
                     },
