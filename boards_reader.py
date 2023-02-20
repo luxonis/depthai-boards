@@ -34,6 +34,11 @@ class Options(BaseModel):
 	""" if dict, each key represents a stage (flashing, testing, calibration) and the value 
 	is the environment to use for that stage """
 
+	websocket_capture: bool = False
+	""" This should be set to 'True' for cameras (e.g. OAK-D-CM4) that don't work with depthai 
+	library directly and need a websocket server to stream the images to the 
+	calibration node.  """
+
 class EepromData(BaseModel):
 	boardConf: str
 	boardName: str

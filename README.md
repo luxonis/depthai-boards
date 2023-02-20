@@ -33,6 +33,8 @@ The `batch` folder contains a file for each device type, which looks like this:
 
 `options` field is used to specify the device properties such as bootloader type, required python environment, settings used for calibration, tests that should be run, etc. They can be specified at device level or at variant level. If they are specified at variant level, they will override the device level settings.
 
+> If a specific device needs a special treatment during calibration, flashing, etc. it should be specified in the `options` field. Code such as `if "POE" in device_name:` should be __avoided at all costs__!
+
 `eeprom` field specifies the path to the EEPROM configuration file. EEPROM configuration files are located in the `batch/eeprom` folder and they look like this:
 
 ```json
