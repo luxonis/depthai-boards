@@ -12,6 +12,12 @@
             "board_config_file": "OAK-1.json"
         },
         {
+            "title":"OAK-1 AF C20 (NG9093 R3M0E4)",
+            "description": "OAK-1 with Auto Focus, without enclosure",
+            "eeprom":"eeprom/NG9093_R3M0E4_oak_1_af_c20.json",
+            "board_config_file": "OAK-1.json"
+        },
+        {
             "title":"OAK-1 FF C09 (NG9093 R2M0E3)",
             "description": "OAK-1 with Fixed Focus C09",
             "eeprom":"eeprom/NG9093_R2M0E3_oak_1_ff_c09.json",
