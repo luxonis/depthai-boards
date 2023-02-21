@@ -8,12 +8,20 @@
         {
             "title":"OAK-D (BW1098 R1M0E1)",
             "description": "OAK-D based on BW1098 R1M0E1 board",
-            "eeprom":"eeprom/BW1098_R1M0E1_oak_d.json"
+            "eeprom":"eeprom/BW1098_R1M0E1_oak_d.json",
+            "board_config_file": "OAK-D.json"
         },
         {
             "title":"OAK-D W C15 (DM9098 R6M2E6)",
             "description": "OAK-D W C15 based on DM9098 R6M2E6 board, with wide lens (OV9782 center camera)",
-            "eeprom":"eeprom/DM9098_R6M2E6_oak_d_w_c15.json"
+            "eeprom":"eeprom/DM9098_R6M2E6_oak_d_w_c15.json",
+            "board_config_file": "OAK-D-W-97.json"
+        },
+        {
+            "title":"OAK-D W (DM9098 R6M2E6)",
+            "description": "OAK-D Wide Lens, based on DM9098 R6M2E6 board",
+            "eeprom":"eeprom/DM9098_R6M2E6_oak_d_w.json",
+            "board_config_file": "OAK-D-W.json"
         }
     ]
 }
