@@ -2,7 +2,7 @@ from pathlib import Path
 import json
 from enum import Enum
 from pydantic import BaseModel, ValidationError
-from typing import Optional, Union, Dict, List
+from typing import Optional, Union, Dict, List, Tuple
 import copy
 
 DEPTHAI_BOARDS_PATH = Path(__file__).parent
@@ -26,6 +26,23 @@ class BootloaderType(str, Enum):
 			return BootloaderType.HEADER_USB
 		else:
 			return BootloaderType.NONE
+		
+
+class CameraSettings(BaseModel):
+	sharpness: Optional[int] = None
+	luma_denoise: Optional[int] = None
+	chroma_denoise: Optional[int] = None
+	exposure: Optional[Tuple[int, int]] = None
+	lens_position: Optional[int] = None
+
+class TVCalibrationSettings(BaseModel):
+	camera_settings: Dict[str, CameraSettings] = {}
+	""" Dictionary with camera names as keys and CameraSettings as values. Used to set
+	camera settings (sharpness, exposure, ...) for TV calibration. """
+
+	n_charuco_markers_per_row: int = 19
+	""" The number of charuco markers per row in the calibration pattern. The size of a 
+	charuco square is determined by dividing the width of the TV by this number. """
 
 class Options(BaseModel):
 	bootloader: BootloaderType
@@ -38,6 +55,9 @@ class Options(BaseModel):
 	""" This should be set to 'True' for cameras (e.g. OAK-D-CM4) that don't work with depthai 
 	library directly and need a websocket server to stream the images to the 
 	calibration node.  """
+
+	tv_calibration: TVCalibrationSettings = TVCalibrationSettings()
+	""" Settings for TV calibration. """
 
 class EepromData(BaseModel):
 	boardConf: str
