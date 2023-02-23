@@ -33,7 +33,12 @@ class CameraSettings(BaseModel):
 	luma_denoise: Optional[int] = None
 	chroma_denoise: Optional[int] = None
 	exposure: Optional[Tuple[int, int]] = None
+	""" Tuple of (exposure_time, ISO_gain) values. Exposure is in microseconds."""
 	lens_position: Optional[int] = None
+
+	isp_scale: Optional[Tuple[int, int]] = None
+	""" Tuple of (numerator, denominator) values. The image is scaled by 
+	numerator/denominator. Only applicable to color cameras. """
 
 class TVCalibrationSettings(BaseModel):
 	camera_settings: Dict[str, CameraSettings] = {}

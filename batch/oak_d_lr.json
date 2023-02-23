@@ -3,7 +3,16 @@
     "description": "OAK-D LR",
     "image": "images/oak_d_lr.jpg",
     "test_type": "OAK-D-LR",
-    "options": {"bootloader": "poe"},
+    "options": {
+        "bootloader": "poe",
+        "tv_calibration": {
+            "camera_settings": {
+                "left": {"isp_scale": [2,3]},
+                "right": {"isp_scale": [2,3]},
+                "center": {"isp_scale": [2,3]}
+            }
+        } 
+    },
     "variants": [
         {
             "title":"OAK-D LR (BC2087 R0M0E0)",
