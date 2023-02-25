@@ -1,6 +1,6 @@
 # DepthAI Boards
 
-This repository contains the hardware specifications for the DepthAI boards.
+This repository contains the hardware specifications for OAK devices (Hardware [docs here](https://docs.luxonis.com/projects/hardware/en/latest/)).
 
 ## Directory structure
 
