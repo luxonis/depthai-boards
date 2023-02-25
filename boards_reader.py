@@ -4,6 +4,7 @@ from enum import Enum
 from pydantic import BaseModel, ValidationError
 from typing import Optional, Union, Dict, List, Tuple
 import copy
+import depthai as dai
 
 DEPTHAI_BOARDS_PATH = Path(__file__).parent
 DEPTHAI_BOARDS_PRIVATE_PATH = Path(__file__).parent / "../depthai_boards_private" # (optional) private/custom boards should be placed in a sibling directory to this one
@@ -245,3 +246,21 @@ def get_variant_by_id_typed(variant_id: str):
 			if variant.id == variant_id:
 				return variant
 	raise KeyError(f"Variant with id '{variant_id}' not found")
+
+def get_variant_by_eeprom_typed(calibration: dai.CalibrationHandler):
+	eeprom = calibration.getEepromData()
+	
+	for device in DEVICES_TYPED:
+		for variant in device.variants:
+			if (eeprom.productName.upper().replace(' ', '-') == variant.eeprom_data.productName.upper().replace(' ', '-') and
+				eeprom.boardName == variant.eeprom_data.boardName and
+				eeprom.boardRev == variant.eeprom_data.boardRev and
+				eeprom.boardOptions == variant.eeprom_data.boardOptions and
+				eeprom.hardwareConf == variant.eeprom_data.hardwareConf and
+				eeprom.boardConf == variant.eeprom_data.boardConf):
+				return variant
+	raise KeyError(
+		f"Variant with eeprom data 'productName: {eeprom.productName}, \
+			boardName: {eeprom.boardName}, boardRev: {eeprom.boardRev}, \
+			boardOptions: {eeprom.boardOptions}, boardConf: {eeprom.boardConf} \
+				hardwareConf: {eeprom.hardwareConf}' not found")
