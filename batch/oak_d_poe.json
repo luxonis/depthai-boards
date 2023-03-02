@@ -52,6 +52,12 @@
             "description": "OAK-D WideLens PoE C12, based on NG9097 R4M2E4 board with BMI270 IMU",
             "eeprom":"eeprom/NG9097_R4M2E4_oak_d_w_poe_c12.json",
             "board_config_file": "OAK-D-POE-W-C12.json"
+        },
+        {
+            "title":"OAK-D PoE C22 (DM2088 R1M1E3)",
+            "description": "OAK-D PoE C22, based on DM2088 R1M1E3 board, with ArduCam OV9782 PY074",
+            "eeprom":"eeprom/DM2088_R1M1E3_oak_d_poe_c22.json",
+            "board_config_file": "OAK-D-POE-C22.json"
         }
     ]
 }
