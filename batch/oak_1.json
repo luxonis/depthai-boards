@@ -76,6 +76,12 @@
             "description": "OAK-1 Wide Lens",
             "eeprom":"eeprom/NG9093_R3M0E4_oak_1_w.json",
             "board_config_file": "OAK-1-W.json"
+        },
+        {
+            "title":"OAK-1 W 97 (NG9093 R3M0E4)",
+            "description": "OAK-1 Wide Lens 97",
+            "eeprom":"eeprom/NG9093_R3M0E4_oak_1_w_97.json",
+            "board_config_file": "OAK-1-W-97.json"
         }
     ]
 }
