@@ -66,6 +66,12 @@
             "board_config_file": "OAK-D-PRO-W.json"
         },
         {
+            "title":"OAK-D Pro W 97 (DM9098 R6M2E6)",
+            "description": "OAK-D Pro Wide 97 with center OV9782 camera",
+            "eeprom":"eeprom/DM9098_R6M2E6_oak_d_pro_w_97.json",
+            "board_config_file": "OAK-D-PRO-W-97.json"
+        },
+        {
             "title":"OAK-D Pro W C06 (DM9098 R6M2E6)",
             "description": "OAK-D Pro Wide C06 with center OV9782 camera",
             "eeprom":"eeprom/DM9098_R6M2E6_oak_d_pro_w_c06.json",
