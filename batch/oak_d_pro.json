@@ -36,6 +36,12 @@
             "board_config_file": "OAK-D-PRO.json"
         },
         {
+            "title":"OAK-D Pro FF 97 (DM9098 R6M2E6)",
+            "description": "OAK-D Pro 97, Fixed Focus",
+            "eeprom":"eeprom/DM9098_R6M2E6_oak_d_pro_ff_97.json",
+            "board_config_file": "OAK-D-PRO-97.json"
+        },
+        {
             "title":"OAK-D Pro FF C13 (DM9098 R6M2E6)",
             "description": "OAK-D Pro-PB C13, Fixed Focus with center camera IMX378, IR bandpass",
             "eeprom":"eeprom/DM9098_R6M2E6_oak_d_pro_ff_c13.json",
@@ -58,6 +64,12 @@
             "description": "OAK-D Pro Wide with center IMX378 camera",
             "eeprom":"eeprom/DM9098_R6M2E6_oak_d_pro_w.json",
             "board_config_file": "OAK-D-PRO-W.json"
+        },
+        {
+            "title":"OAK-D Pro W 97 (DM9098 R6M2E6)",
+            "description": "OAK-D Pro Wide 97 with center OV9782 camera",
+            "eeprom":"eeprom/DM9098_R6M2E6_oak_d_pro_w_97.json",
+            "board_config_file": "OAK-D-PRO-W-97.json"
         },
         {
             "title":"OAK-D Pro W C06 (DM9098 R6M2E6)",
