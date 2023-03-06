@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxonis EEPROM board options util</title>
+  </head>
+  <body>
+    <h1>Luxonis EEPROM board options util</h1>
+    <div style="margin-bottom: 6px">
+      <label for="config-value-field">CONFIGURATION: </label>
+      <input id="config-value-field" type="text"/>
+    </div>
+    <div id="table-div"></div>
+  </body>
+</html>
+
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+
+  tr :hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  input[type="text"]:focus {
+    border-color: #0077ff;
+  }
+  label {
+    font-size: 14px;
+
+  }
+</style>
+
+
+<script>
+  let configValueField;
+let activeConfig = "eeprom_board_options"
+
+addEventListener("DOMContentLoaded", () => {
+  configValueField = document.getElementById("config-value-field");
+  configValueField.addEventListener("keyup", handleChange);
+  configValueField.addEventListener("keydown", handleChange);
+  handleChange();
+});
+
+const EEPROM_CAM_CONFIGURATION_BITS = {
+  EEPROM_BOARD_OPTIONS_CAM_CONF_NONE: 0 << 3,
+  EEPROM_BOARD_OPTIONS_CAM_CONF_1: 1 << 3, // EEPROM_BOARD_OPTIONS_CAM_CONF_1
+};
+
+const EEPROM_PMIC_CONFIGURATION_BITS = {
+  EEPROM_BOARD_OPTIONS_PMIC_CONF_NONE: 0 << 20,
+  EEPROM_BOARD_OPTIONS_PMIC_CONF_1: 1 << 20, // EEPROM_BOARD_OPTIONS_PMIC_CONF_1
+  EEPROM_BOARD_OPTIONS_PMIC_CONF_2: 2 << 20, // EEPROM_BOARD_OPTIONS_PMIC_CONF_1
+};
+
+const EEPROM_BOARD_OPTIONS_BITS = {
+  EEPROM_BOARD_OPTIONS_PCIE_CLOCK_INTERNAL: 0x1,
+  EEPROM_BOARD_OPTIONS_USB3_CLOCK_INTERNAL: 0x2,
+  EEPROM_BOARD_OPTIONS_MIPI_4LANE_RGB: 0x4,
+  EEPROM_BOARD_OPTIONS_CAM_CONFIGURATION_MASK: EEPROM_CAM_CONFIGURATION_BITS,
+  EEPROM_BOARD_OPTIONS_DUAL_PORT_DEVICE: 0x400,
+  EEPROM_BOARD_OPTIONS_PMIC_CONFIGURATION_MASK: EEPROM_PMIC_CONFIGURATION_BITS,
+  EEPROM_BOARD_OPTIONS_USE_BOARD_CONFIG_USER_AREA: 0b1 << 30,
+};
+
+function handleChange() {
+  let configValue = Number(configValueField.value);
+  const tableJson = parseConfigValue(activeConfig, configValue);
+  renderTable(tableJson);
+}
+
+function getOptionBits(configOption) {
+  let optionBits;
+  switch (configOption) {
+    case "eeprom_board_options":
+      optionBits = EEPROM_BOARD_OPTIONS_BITS;
+      break;
+    case "eeprom_cam_configuration":
+      optionBits = EEPROM_CAM_CONFIGURATION_BITS;
+      break;
+    case "eeprom_pmic_configuration":
+      optionBits = EEPROM_PMIC_CONFIGURATION_BITS;
+      break;
+  }
+  return optionBits || configOption;
+}
+
+function parseConfigValue(configOption, configValue) {
+  const tableJson = {};
+  const optionBits = getOptionBits(configOption);
+  for (const [key, bits] of Object.entries(optionBits)) {
+    if (typeof bits === "object") {
+      tableJson[key] = parseConfigValue(bits, configValue);
+      // Dirty handle zero value
+      let nTrue = 0;
+      let zeroValue;
+      for (const [subKey, subValue] of Object.entries(tableJson[key])) {
+        if (subValue) {
+          nTrue++;
+        }
+        if (bits[subKey] === 0) {
+          zeroValue = subKey;
+        }
+      }
+      if (zeroValue && nTrue > 1) {
+        tableJson[key][zeroValue] = false;
+      }
+      continue;
+    }
+    tableJson[key] = (configValue & bits) === bits;
+  }
+  return tableJson;
+}
+
+function renderTable(tableJson) {
+  const tableDiv = document.getElementById("table-div");
+  tableDiv.innerHTML = "";
+  const table = document.createElement("table");
+  tableDiv.appendChild(table);
+
+  for (const [key, value] of Object.entries(tableJson)) {
+    const row = document.createElement("tr");
+    const keyCell = document.createElement("td");
+    if (typeof value === "object") {
+      keyCell.style.padding = "0px";
+      // Dropdown
+      const dropdown = document.createElement("select");
+      dropdown.addEventListener("change", updateConfigValue);
+      let selectedOption;
+      for (const [option, optionValue] of Object.entries(value)) {
+        const optionHtml = document.createElement("option");
+        optionHtml.value = optionValue;
+        optionHtml.innerText = option;
+        dropdown.appendChild(optionHtml);
+        if (optionValue) {
+          selectedOption = option;
+        }
+      }
+      dropdown.options.selectedIndex = Array.from(dropdown.options).findIndex((opt) => opt.innerText === selectedOption)
+      dropdown.style.padding = "5px";
+      dropdown.style.width = "100%";
+      dropdown.style.border = "none";
+      dropdown.style.background = "#319482"
+      keyCell.appendChild(dropdown);
+      row.appendChild(keyCell);
+      table.appendChild(row);
+      continue;
+    }
+    keyCell.addEventListener("click", updateConfigValue);
+    keyCell.style.background = value ? "#3f8f29" : "#C80C0C";
+    keyCell.innerText = key;
+    row.appendChild(keyCell);
+    table.appendChild(row);
+  }
+}
+
+function updateConfigValue(e) {
+  let configValue = Number(configValueField.value);
+  let configKey = e.target.innerText;
+  if (e.target.tagName === "SELECT") {
+    configKey = e.target.options[e.target.selectedIndex].innerText;
+  }
+  configValueField.value = computeNewConfigValue(
+    configKey,
+    configValue,
+    activeConfig
+  );
+  handleChange();
+}
+
+function computeNewConfigValue(key, currentConfigValue, configOption) {
+  const configJson = parseConfigValue(configOption, currentConfigValue);
+  const optionBits = getOptionBits(configOption);
+  if (configJson.hasOwnProperty(key)) {
+    configJson[key] = !configJson[key];
+  } else {
+    for (const [configKey, configJsonValue] of Object.entries(configJson)) {
+      if (typeof configJsonValue === "object") {
+        // Find subobject with key
+        if (!configJsonValue.hasOwnProperty(key)) {
+          continue;
+        }
+        for (const [subConfigKey, subConfigValue] of Object.entries(configJsonValue)) {
+          if (subConfigKey === key) {
+            configJson[configKey][subConfigKey] = true;
+          } else {
+            configJson[configKey][subConfigKey] = false;
+          }
+        }
+      }
+    }
+  }
+  for (const [optionsKey, bits] of Object.entries(optionBits)) {
+    if (typeof bits === "object") {
+      for (const [configKey, configValue] of Object.entries(bits)) {
+        if (configJson[optionsKey][configKey]) {
+          currentConfigValue |= configValue;
+        } else {
+          currentConfigValue &= ~configValue;
+        }
+      }
+    }
+    else if (configJson[optionsKey]) {
+      currentConfigValue |= bits;
+    } else {
+      currentConfigValue &= ~bits;
+    }
+  }
+  return currentConfigValue;
+}
+</script>
