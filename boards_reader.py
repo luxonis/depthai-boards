@@ -255,12 +255,11 @@ def get_variant_by_eeprom_typed(calibration: dai.CalibrationHandler):
 			if (eeprom.productName.upper().replace(' ', '-') == variant.eeprom_data.productName.upper().replace(' ', '-') and
 				eeprom.boardName == variant.eeprom_data.boardName and
 				eeprom.boardRev == variant.eeprom_data.boardRev and
-				eeprom.boardOptions == variant.eeprom_data.boardOptions and
 				eeprom.hardwareConf == variant.eeprom_data.hardwareConf and
 				eeprom.boardConf == variant.eeprom_data.boardConf):
 				return variant
 	raise KeyError(
 		f"Variant with eeprom data 'productName: {eeprom.productName}, \
 			boardName: {eeprom.boardName}, boardRev: {eeprom.boardRev}, \
-			boardOptions: {eeprom.boardOptions}, boardConf: {eeprom.boardConf} \
+			boardConf: {eeprom.boardConf} \
 				hardwareConf: {eeprom.hardwareConf}' not found")
