@@ -18,9 +18,9 @@
             "board_config_file": "OAK-1.json"
         },
         {
-            "title":"OAK-1 FF 97 (NG9093 R2M0E3)",
+            "title":"OAK-1 FF 97 (NG9093 R3M0E4)",
             "description": "OAK-1 with Fixed Focus 97, previously c09",
-            "eeprom":"eeprom/NG9093_R2M0E3_oak_1_ff_97.json",
+            "eeprom":"eeprom/NG9093_R3M0E4_oak_1_ff_97.json",
             "board_config_file": "OAK-1-97.json"
         },
         {
