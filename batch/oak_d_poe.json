@@ -6,6 +6,12 @@
     "options": {"bootloader": "poe"},
     "variants": [
         {
+            "title":"OAK-D PoE AF (DM2088 R1M1E3)",
+            "description": "OAK-D PoE with AutoFocus, based on DM2088 R1M1E3",
+            "eeprom":"eeprom/DM2088_R1M1E3_oak_d_poe_af.json",
+            "board_config_file": "OAK-D-POE.json"
+        },
+        {
             "title":"OAK-D PoE AF (DM2088 R0M0E0)",
             "description": "OAK-D PoE with AutoFocus, based on DM2088 R0M0E0",
             "eeprom":"eeprom/DM2088_R0M0E0_oak_d_poe_af.json",
