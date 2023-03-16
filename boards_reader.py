@@ -27,7 +27,7 @@ class BootloaderType(str, Enum):
 			return BootloaderType.HEADER_USB
 		else:
 			return BootloaderType.NONE
-		
+
 
 class CameraSettings(BaseModel):
 	sharpness: Optional[int] = None
@@ -38,7 +38,7 @@ class CameraSettings(BaseModel):
 	lens_position: Optional[int] = None
 
 	isp_scale: Optional[Tuple[int, int]] = None
-	""" Tuple of (numerator, denominator) values. The image is scaled by 
+	""" Tuple of (numerator, denominator) values. The image is scaled by
 	numerator/denominator. Only applicable to color cameras. """
 
 class TVCalibrationSettings(BaseModel):
@@ -47,23 +47,27 @@ class TVCalibrationSettings(BaseModel):
 	camera settings (sharpness, exposure, ...) for TV calibration. """
 
 	n_charuco_markers_per_row: int = 19
-	""" The number of charuco markers per row in the calibration pattern. The size of a 
+	""" The number of charuco markers per row in the calibration pattern. The size of a
 	charuco square is determined by dividing the width of the TV by this number. """
 
 class Options(BaseModel):
 	bootloader: BootloaderType
 
-	environment: Union[str, dict] = "standard" 
-	""" if dict, each key represents a stage (flashing, testing, calibration) and the value 
+	environment: Union[str, dict] = "standard"
+	""" if dict, each key represents a stage (flashing, testing, calibration) and the value
 	is the environment to use for that stage """
 
 	websocket_capture: bool = False
-	""" This should be set to 'True' for cameras (e.g. OAK-D-CM4) that don't work with depthai 
-	library directly and need a websocket server to stream the images to the 
+	""" This should be set to 'True' for cameras (e.g. OAK-D-CM4) that don't work with depthai
+	library directly and need a websocket server to stream the images to the
 	calibration node.  """
 
 	tv_calibration: TVCalibrationSettings = TVCalibrationSettings()
 	""" Settings for TV calibration. """
+
+	test_suite: str = ""
+	""" Specify which test_suite to use. """
+
 
 class EepromData(BaseModel):
 	boardConf: str
@@ -74,7 +78,7 @@ class EepromData(BaseModel):
 	hardwareConf: str
 	boardOptions: int
 	version: int
-	batchTime: int = 0 
+	batchTime: int = 0
 	""" seconds since epoch """
 
 class RotationType(BaseModel):
@@ -110,16 +114,16 @@ class BoardConfig(BaseModel):
 	stereo_config: Optional[StereoConfig] = None
 
 class VariantConfig(BaseModel):
-	id: str 
+	id: str
 	""" equivalent to the eeprom file name (inside the eeprom folder) without the extension """
 
 	title: str
-	
+
 	description: str
-	
-	eeprom: str 
+
+	eeprom: str
 	""" path to eeprom file """
-	
+
 	eeprom_data: EepromData
 
 	board_config: BoardConfig
@@ -127,11 +131,11 @@ class VariantConfig(BaseModel):
 	options: Options
 
 class DeviceConfig(BaseModel):
-	id: str 
+	id: str
 	""" equivalent to the device file name (inside the batch folder) without the extension """
 
 	title: str
-	
+
 	description: str
 
 	variants: list[VariantConfig]
@@ -179,7 +183,7 @@ for device_file in [*(DEPTHAI_BOARDS_PATH / "batch" ).glob("*.json"), *(DEPTHAI_
 		update(variant_combined, variant) # then the variant's properties are applied on top
 
 		# Load the eeprom data
-		try: 
+		try:
 			eeprom_data_path = device_file.parent / variant_combined["eeprom"]
 			with open(eeprom_data_path, "r") as f:
 				variant_combined["eeprom_data"] = json.load(f)
@@ -195,7 +199,7 @@ for device_file in [*(DEPTHAI_BOARDS_PATH / "batch" ).glob("*.json"), *(DEPTHAI_
 			board_config_path = device_file.parent / "../boards" / variant_combined["board_config_file"]
 			try:
 				with open(board_config_path, "r") as f:
-					variant_combined["board_config"] = json.load(f).get("board_config", {}) 
+					variant_combined["board_config"] = json.load(f).get("board_config", {})
 			except json.decoder.JSONDecodeError as e:
 				raise Exception(f"Couldn't parse board config file at {board_config_path.resolve()} for device '{device_file.resolve()}'. Make sure the board config file is valid JSON. \n{e}")
 			except Exception as e:
@@ -207,7 +211,7 @@ for device_file in [*(DEPTHAI_BOARDS_PATH / "batch" ).glob("*.json"), *(DEPTHAI_
 		variant_combined["options"]["bootloader"] = BootloaderType(options["bootloader"]) # convert string to enum
 
 		variants_combined.append(variant_combined)
-	
+
 	device["variants"] = variants_combined
 
 	DEVICES.append(device)
@@ -249,7 +253,7 @@ def get_variant_by_id_typed(variant_id: str):
 
 def get_variant_by_eeprom_typed(calibration: dai.CalibrationHandler):
 	eeprom = calibration.getEepromData()
-	
+
 	for device in DEVICES_TYPED:
 		for variant in device.variants:
 			if (eeprom.productName.upper().replace(' ', '-') == variant.eeprom_data.productName.upper().replace(' ', '-') and
