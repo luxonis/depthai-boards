@@ -138,7 +138,7 @@ class DeviceConfig(BaseModel):
 
 	description: str
 
-	variants: list[VariantConfig]
+	variants: List[VariantConfig]
 
 
 def update(d: Dict, u: Dict):
