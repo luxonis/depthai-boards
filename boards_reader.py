@@ -4,7 +4,6 @@ from enum import Enum
 from pydantic import BaseModel, ValidationError
 from typing import Optional, Union, Dict, List, Tuple
 import copy
-import depthai as dai
 
 DEPTHAI_BOARDS_PATH = Path(__file__).parent
 DEPTHAI_BOARDS_PRIVATE_PATH = Path(__file__).parent / "../depthai_boards_private" # (optional) private/custom boards should be placed in a sibling directory to this one
@@ -258,7 +257,7 @@ def get_variant_by_id_typed(variant_id: str):
 				return variant
 	raise KeyError(f"Variant with id '{variant_id}' not found")
 
-def get_variant_by_eeprom_typed(calibration: dai.CalibrationHandler):
+def get_variant_by_eeprom_typed(calibration):
 	eeprom = calibration.getEepromData()
 
 	for device in DEVICES_TYPED:
