@@ -132,6 +132,13 @@ class VariantConfig(BaseModel):
 
 	options: Options
 
+	fip: Optional[str] = None
+	""" Name of the FIP fipe to be flashed."""
+
+	configs: Optional[List[str]] = None
+	""" List of config tars names to be flashed. """
+
+
 class DeviceConfig(BaseModel):
 	id: str
 	""" equivalent to the device file name (inside the batch folder) without the extension """
@@ -140,7 +147,7 @@ class DeviceConfig(BaseModel):
 
 	description: str
 
-	variants: list[VariantConfig]
+	variants: List[VariantConfig]
 
 
 def update(d: Dict, u: Dict):
