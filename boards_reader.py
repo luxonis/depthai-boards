@@ -67,6 +67,9 @@ class Options(BaseModel):
 	test_suite: str = ""
 	""" Specify which test_suite to use. """
 
+	platform: str = ""
+	""" Specify platform of device. """
+
 
 class EepromData(BaseModel):
 	boardConf: str
