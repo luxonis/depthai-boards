@@ -97,9 +97,9 @@ class Extrinsics(BaseModel):
 	specTranslation: TranslationType
 
 class CameraInfo(BaseModel):
-	name: str
-	hfov: float
-	type: str
+	name: str = ""
+	hfov: float = 0.0
+	type: str = ""
 	extrinsics: Optional[Extrinsics] = None
 	sensor_name: str = ""
 	has_autofocus: bool = False
