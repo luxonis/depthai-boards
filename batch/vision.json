@@ -6,14 +6,14 @@
     "options": {
         "platform": "rvc3",
         "bootloader": "poe",
-        "environment": {"flashing": "rvc3_develop", "testing": "rvc3_develop", "calibration": "rvc3_develop"},
-        "test_suite": "vision"
+        "environment": {"flashing": "rvc3_develop", "testing": "rvc3_develop", "calibration": "rvc3_develop"}
     },
     "variants": [
         {
             "title":"Vision (DM6031_R0M0E0)",
             "description": "Vision based on DM6031_R0M0E0 board",
-            "eeprom":"eeprom/DM6031_R0M0E0_vision.json"
+            "eeprom":"eeprom/DM6031_R0M0E0_vision.json",
+            "test_suite": "DM6031_R0M0E0_vision"
         }
     ]
 }
