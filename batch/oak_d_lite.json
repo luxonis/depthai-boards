@@ -3,7 +3,7 @@
     "description": "OAK-D Lite",
     "image": "images/oak_d_lite.jpg",
     "test_type": "OAK-D-LITE",
-    "options": {"bootloader": "none"},
+    "options": {"bootloader": "none", "imu": true},
     "variants": [
         {
             "title":"OAK-D Lite (DM9095 R3M2E4)",

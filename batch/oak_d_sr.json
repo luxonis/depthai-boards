@@ -3,7 +3,7 @@
     "description": "OAK-D SR",
     "image": "images/oak_d_sr.jpg",
     "test_type": "OAK-D-SR",
-    "options": {"bootloader": "header_usb"},
+    "options": {"bootloader": "header_usb", "imu": true},
     "variants": [
         {
             "title":"OAK-D SR (DM2080 R1M1E1) (2x OV9782)",
