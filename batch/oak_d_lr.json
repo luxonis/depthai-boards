@@ -5,6 +5,7 @@
     "test_type": "OAK-D-LR",
     "options": {
         "bootloader": "poe",
+        "imu": true,
         "environment": "oak_d_lr",
         "tv_calibration": {
             "camera_settings": {
