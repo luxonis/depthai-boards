@@ -2,7 +2,7 @@
     "title": "OAK-D LR",
     "description": "OAK-D LR",
     "image": "images/oak_d_lr.jpg",
-    "test_type": "OAK-D-PRO",
+    "test_type": "OAK-D-LR",
     "options": {
         "bootloader": "poe",
         "environment": "oak_d_lr",
