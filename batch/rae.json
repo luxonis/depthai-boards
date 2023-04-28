@@ -15,7 +15,7 @@
         {
             "title": "RAE (DM3370_R1M1E1)",
             "description": "Little robot",
-            "eeprom": "eeprom/DM3370_R1M1E1.json",
+            "eeprom": "eeprom/DM3370_R1M1E1_rae.json",
             "configs": [
                 "config-rae.tar"
             ],
