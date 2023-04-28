@@ -1,0 +1,25 @@
+{
+    "title": "Rae",
+    "description": "Rae",
+    "test_type": "ETH",
+    "options": {
+        "platform": "rvc3",
+        "bootloader": "poe",
+        "environment": {
+            "flashing": "rvc3_develop",
+            "testing": "rvc3_develop",
+            "calibration": "rvc3_develop"
+        }
+    },
+    "variants": [
+        {
+            "title": "RAE (DM3370_R1M1E1)",
+            "description": "Little robot",
+            "eeprom": "eeprom/DM3370_R1M1E1.json",
+            "configs": [
+                "config-rae.tar"
+            ],
+            "fip": "fip-rae-dm3370-r0m0e0-1.5.0.bin"
+        }
+    ]
+}
