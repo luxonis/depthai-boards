@@ -1,6 +1,6 @@
 {
-    "title": "Rae",
-    "description": "Rae",
+    "title": "rae",
+    "description": "rae",
     "test_type": "ETH",
     "options": {
         "platform": "rvc3",
@@ -13,7 +13,17 @@
     },
     "variants": [
         {
-            "title": "RAE (DM3370_R1M1E1)",
+            "title": "rae (DM3370_R4M2E4)",
+            "description": "rae (little robot)",
+            "eeprom": "eeprom/DM3370_R4M2E4_rae.json",
+            "configs": [
+                "config-rae.tar"
+            ],
+            "fip": "fip-dm3370-r4m2e4-1.4.0.bin",
+            "test_suite": "DM3370_R4M2E4_rae"
+        },
+        {
+            "title": "rae (DM3370_R1M1E1)",
             "description": "Little robot",
             "eeprom": "eeprom/DM3370_R1M1E1_rae.json",
             "configs": [
