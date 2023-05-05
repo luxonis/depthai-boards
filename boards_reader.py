@@ -56,6 +56,9 @@ class Options(BaseModel):
 	""" if dict, each key represents a stage (flashing, testing, calibration) and the value
 	is the environment to use for that stage """
 
+	imu: bool = True
+	""" Does the board have an IMU or not? """
+
 	websocket_capture: bool = False
 	""" This should be set to 'True' for cameras (e.g. OAK-D-CM4) that don't work with depthai
 	library directly and need a websocket server to stream the images to the
@@ -99,6 +102,8 @@ class CameraInfo(BaseModel):
 	name: str = ""
 	hfov: float = 0.0
 	type: str = ""
+	camera_model: str = "perspective"
+	""" Camera model can be either 'perspective' or 'fisheye'. """
 	extrinsics: Optional[Extrinsics] = None
 	sensor_name: str = ""
 	has_autofocus: bool = False
