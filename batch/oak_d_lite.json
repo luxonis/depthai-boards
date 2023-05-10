@@ -24,7 +24,7 @@
             "board_config_file": "OAK-D-LITE.json"
         },
         {
-            "title":"OAK-D Lite FF (early batch)",
+            "title":"OAK-D Lite (early batch)",
             "description": "early OAK-D Lite, with unknown board, DO NOT USE FOR NEW CAMERAS!",
             "eeprom":"eeprom/DM9095_EARLY_oak_d_lite.json",
             "board_config_file": "OAK-D-LITE.json"
