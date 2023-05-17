@@ -67,8 +67,8 @@ class Options(BaseModel):
 	tv_calibration: TVCalibrationSettings = TVCalibrationSettings()
 	""" Settings for TV calibration. """
 
-	test_suite: str = ""
-	""" Specify which test_suite to use. """
+	platform: str = ""
+	""" Specify platform of device. """
 
 
 class EepromData(BaseModel):
@@ -139,6 +139,9 @@ class VariantConfig(BaseModel):
 
 	configs: Optional[List[str]] = None
 	""" List of config tars names to be flashed. """
+
+	test_suite: str = ""
+	""" Specify which test_suite to use. """
 
 
 class DeviceConfig(BaseModel):
