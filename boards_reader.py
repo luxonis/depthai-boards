@@ -70,6 +70,8 @@ class Options(BaseModel):
 	platform: str = ""
 	""" Specify platform of device. """
 
+	skip_eeprom_check: bool = False
+
 
 class EepromData(BaseModel):
 	boardConf: str
