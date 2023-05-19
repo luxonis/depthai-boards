@@ -48,6 +48,12 @@
             "board_config_file": "OAK-D-POE-W.json"
         },
         {
+            "title":"OAK-D W PoE C23 (NG9097 R4M2E4 BNO086)",
+            "description": "OAK-D WideLens PoE C23 (matte black enclosure), based on NG9097 R4M2E4 board with BNO086 IMU",
+            "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_w_poe_c23.json",
+            "board_config_file": "OAK-D-POE-W.json"
+        },
+        {
             "title":"OAK-D W PoE 97 (NG9097 R4M2E4 BMI270)",
             "description": "OAK-D WideLens PoE 97, based on NG9097 R4M2E4 board with BMI270 IMU (previously C12)",
             "eeprom":"eeprom/NG9097_R4M2E4_BMI270_oak_d_w_poe_97.json",
