@@ -3,7 +3,7 @@
     "description": "OAK-1-LITE",
     "image": "images/oak_1_lite.jpg",
     "test_type": "OAK-1-LITE",
-    "options": {"bootloader": "none"},
+    "options": {"bootloader": "none", "imu": false},
     "variants": [
         {
             "title":"OAK-1 Lite C05 (NG9093 R2M0E3)",

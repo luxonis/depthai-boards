@@ -4,7 +4,6 @@ from enum import Enum
 from pydantic import BaseModel, ValidationError
 from typing import Optional, Union, Dict, List, Tuple
 import copy
-import depthai as dai
 
 DEPTHAI_BOARDS_PATH = Path(__file__).parent
 DEPTHAI_BOARDS_PRIVATE_PATH = Path(__file__).parent / "../depthai_boards_private" # (optional) private/custom boards should be placed in a sibling directory to this one
@@ -57,6 +56,9 @@ class Options(BaseModel):
 	""" if dict, each key represents a stage (flashing, testing, calibration) and the value
 	is the environment to use for that stage """
 
+	imu: bool = True
+	""" Does the board have an IMU or not? """
+
 	websocket_capture: bool = False
 	""" This should be set to 'True' for cameras (e.g. OAK-D-CM4) that don't work with depthai
 	library directly and need a websocket server to stream the images to the
@@ -65,19 +67,21 @@ class Options(BaseModel):
 	tv_calibration: TVCalibrationSettings = TVCalibrationSettings()
 	""" Settings for TV calibration. """
 
-	test_suite: str = ""
-	""" Specify which test_suite to use. """
+	platform: str = ""
+	""" Specify platform of device. """
+
+	skip_eeprom_check: bool = False
 
 
 class EepromData(BaseModel):
-	boardConf: str
-	boardName: str
-	boardRev: str
-	productName: str
-	boardCustom: str
-	hardwareConf: str
-	boardOptions: int
-	version: int
+	boardConf: Optional[str] = None
+	boardName: Optional[str] = None
+	boardRev: Optional[str] = None
+	productName: Optional[str] = None
+	boardCustom: Optional[str] = None
+	hardwareConf: Optional[str] = None
+	boardOptions: Optional[int] = None
+	version: Optional[int] = None
 	batchTime: int = 0
 	""" seconds since epoch """
 
@@ -97,9 +101,11 @@ class Extrinsics(BaseModel):
 	specTranslation: TranslationType
 
 class CameraInfo(BaseModel):
-	name: str
-	hfov: float
-	type: str
+	name: str = ""
+	hfov: float = 0.0
+	type: str = ""
+	camera_model: str = "perspective"
+	""" Camera model can be either 'perspective' or 'fisheye'. """
 	extrinsics: Optional[Extrinsics] = None
 	sensor_name: str = ""
 	has_autofocus: bool = False
@@ -135,6 +141,9 @@ class VariantConfig(BaseModel):
 
 	configs: Optional[List[str]] = None
 	""" List of config tars names to be flashed. """
+
+	test_suite: str = ""
+	""" Specify which test_suite to use. """
 
 
 class DeviceConfig(BaseModel):
@@ -258,7 +267,7 @@ def get_variant_by_id_typed(variant_id: str):
 				return variant
 	raise KeyError(f"Variant with id '{variant_id}' not found")
 
-def get_variant_by_eeprom_typed(calibration: dai.CalibrationHandler):
+def get_variant_by_eeprom_typed(calibration):
 	eeprom = calibration.getEepromData()
 
 	for device in DEVICES_TYPED:

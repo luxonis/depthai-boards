@@ -2,8 +2,8 @@
     "title": "OAK FFC-3P",
     "description": "OAK FFC-3P",
     "image": "images/oak_d_ffc_3p.jpg",
-    "test_type": "OAK-FFC-3P",
-    "options": {"bootloader": "usb"},
+    "test_type": "OAK-1",
+    "options": {"bootloader": "usb", "imu": true},
     "variants": [
         {
             "title":"OAK-FFC 3P (DM1090 R3M0E3)",
