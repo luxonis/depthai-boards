@@ -66,6 +66,12 @@
             "board_config_file": "OAK-D-PRO-POE.json"
         },
         {
+            "title":"OAK-D Pro PoE FF 97 (NG9097 R4M2E4 BNO086)",
+            "description": "OAK-D Pro PoE FixedFocus with OV9782 sensor based on NG9097 R4M2E4 and BNO086 IMU",
+            "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_pro_poe_ff_97.json",
+            "board_config_file": "OAK-D-PRO-POE.json"
+        },
+        {
             "title":"OAK-D Pro PoE FF 97 (NG9097 R4M2E3 BMI270)",
             "description": "OAK-D Pro PoE FixedFocus with OV9782 sensor based on NG9097 R4M2E3 and BMI270 IMU",
             "eeprom":"eeprom/NG9097_R4M2E3_BMI270_oak_d_pro_poe_ff_97.json",
