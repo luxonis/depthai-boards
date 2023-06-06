@@ -3,7 +3,7 @@
     "description": "OAK-D-W",
     "image": "images/oak_d.jpg",
     "test_type": "OAK-D",
-    "options": {"bootloader": "none", "imu": true},
+    "options": {"bootloader": "header_usb", "imu": true},
     "variants": [
         {
             "title":"OAK-D W 97 (DM9098 R7M2E7)",
