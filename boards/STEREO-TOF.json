@@ -1,0 +1,78 @@
+{
+    "board_config":
+    {
+        "name": "STEREO-TOF-FFC",
+        "revision": "R0M0E0",
+        "cameras":{
+            "CAM_C": {
+                "name": "left",
+                "hfov": 130,
+                "type": "color",
+                "flip": true,
+                "extrinsics": {
+                    "to_cam": "CAM_D",
+                    "specTranslation": {
+                        "x": -10.0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotation":{
+                        "r": 0,
+                        "p": 0,
+                        "y": 0
+                    }
+                }
+            },
+            "CAM_D": {
+                "name": "right",
+                "hfov": 130,
+                "type": "color",
+                "flip": true,
+                "extrinsics": {
+                    "to_cam": "CAM_B",
+                    "specTranslation": {
+                        "x": 6.0,
+                        "y": -2.0,
+                        "z": 0
+                    },
+                    "rotation":{
+                        "r": 0,
+                        "p": 0,
+                        "y": 0
+                    }
+                }
+            },
+            "CAM_B": {
+                "name": "CAM_B",
+                "hfov": 130,
+                "type": "color",
+                "flip": false,
+                "extrinsics": {
+                    "to_cam": "CAM_A",
+                    "specTranslation": {
+                        "x": 3.0,
+                        "y": 0.0,
+                        "z": 0
+                    },
+                    "rotation":{
+                        "r": 0,
+                        "p": 0,
+                        "y": 0
+                    }
+                }
+            },
+
+            "CAM_A": {
+                "name": "tof",
+                "hfov": 80.86,
+                "type": "tof",
+                "flip": false
+            }
+        },
+
+        "stereo_config":{
+            "left_cam": "CAM_C",
+            "right_cam": "CAM_D"
+        }
+    }
+}
