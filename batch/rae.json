@@ -13,7 +13,7 @@
     },
     "variants": [
         {
-            "title": "rae (DM3370_R4M2E4)",
+            "title": "rae (DM3370_R5M2E5)",
             "description": "rae (little robot)",
             "eeprom": "eeprom/DM3370_R5M2E5_rae.json",
             "configs": [
