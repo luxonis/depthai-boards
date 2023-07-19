@@ -9,7 +9,7 @@
                 "hfov": 71.86,
                 "type": "color",
                 "extrinsics": {
-                    "to_cam": "CAM_C",
+                    "to_cam": "CAM_E",
                     "specTranslation": {
                         "x": -4.71,
                         "y": 0,
@@ -22,7 +22,7 @@
                     }
                 }
             },
-            "CAM_C": {
+            "CAM_E": {
                 "name": "right",
                 "hfov": 71.86,
                 "type": "tof"
@@ -31,7 +31,7 @@
 
         "stereo_config":{
             "left_cam": "CAM_D",
-            "right_cam": "CAM_C"
+            "right_cam": "CAM_E"
         }
     }
 }

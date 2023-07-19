@@ -16,6 +16,8 @@
             "title": "rae (DM3370_R5M2E5)",
             "description": "rae (little robot)",
             "eeprom": "eeprom/DM3370_R5M2E5_rae.json",
+            "board_config_file": "TOF-FFC-A-B-C.json",
+            "board_config_file_2": "TOF-FFC-D-E.json",
             "configs": [
                 "config-rae.tar"
             ],
@@ -26,6 +28,8 @@
             "title": "rae (DM3370_R4M2E4)",
             "description": "rae (little robot)",
             "eeprom": "eeprom/DM3370_R4M2E4_rae.json",
+            "board_config_file": "TOF-FFC-A-B-C.json",
+            "board_config_file_2": "TOF-FFC-D-E.json",
             "configs": [
                 "config-rae.tar"
             ],
@@ -36,6 +40,8 @@
             "title": "rae (DM3370_R1M1E1)",
             "description": "Little robot",
             "eeprom": "eeprom/DM3370_R1M1E1_rae.json",
+            "board_config_file": "TOF-FFC-A-B-C.json",
+            "board_config_file_2": "TOF-FFC-D-E.json",
             "configs": [
                 "config-rae.tar"
             ],
