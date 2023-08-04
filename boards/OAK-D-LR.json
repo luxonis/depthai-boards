@@ -1,6 +1,7 @@
 {
     "board_config":
     {
+        "name": "OAK-D-LR",
         "cameras":{
             "LEFT": {
                 "name": "left",
