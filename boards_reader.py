@@ -139,6 +139,9 @@ class VariantConfig(BaseModel):
 	fip: Optional[str] = None
 	""" Name of the FIP fipe to be flashed."""
 
+	os: Optional[str] = None
+	"""Name of the OS zip to be flashed."""
+
 	configs: Optional[List[str]] = None
 	""" List of config tars names to be flashed. """
 
