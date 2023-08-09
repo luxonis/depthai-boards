@@ -1,22 +1,17 @@
 {
     "board_config":
     {
-        "name": "TOF-FFC",
+        "name": "RAE",
         "revision": "R0M0E0",
         "cameras":{
-            "CAM_A": {
-                "name": "rgb",
-                "hfov": 73,
-                "type": "color"
-            },
-            "CAM_C": {
+            "CAM_E": {
                 "name": "left",
                 "hfov": 71.86,
                 "type": "color",
                 "extrinsics": {
-                    "to_cam": "CAM_B",
+                    "to_cam": "CAM_D",
                     "specTranslation": {
-                        "x": -7.71,
+                        "x": -7.5,
                         "y": 0,
                         "z": 0
                     },
@@ -25,21 +20,18 @@
                         "p": 0,
                         "y": 0
                     }
-
                 }
-
             },
-            "CAM_B": {
+            "CAM_D": {
                 "name": "right",
                 "hfov": 71.86,
                 "type": "color"
             }
-
         },
 
         "stereo_config":{
-            "left_cam": "CAM_C",
-            "right_cam": "CAM_B"
+            "left_cam": "CAM_E",
+            "right_cam": "CAM_D"
         }
     }
 }
