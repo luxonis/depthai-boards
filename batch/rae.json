@@ -21,8 +21,9 @@
             "configs": [
                 "config-rae.tar"
             ],
-            "fip": "fip-dm3370-r5m2e5-1.6.0.bin",
-            "test_suite": "DM3370_R4M2E4_rae"
+            "fip": "fip-dm3370-r5m2e5-1.7.1.bin",
+            "test_suite": "DM3370_R5M2E5_rae",
+            "os": "luxonisos-1.11.zip"
         },
         {
             "title": "rae (DM3370_R4M2E4)",
