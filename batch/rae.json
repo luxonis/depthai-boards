@@ -5,6 +5,7 @@
     "options": {
         "platform": "rvc3",
         "bootloader": "poe",
+        "imu": true,
         "environment": {
             "flashing": "rvc3_develop",
             "testing": "rvc3_develop",

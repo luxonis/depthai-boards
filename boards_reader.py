@@ -115,9 +115,14 @@ class StereoConfig(BaseModel):
 	left_cam: str
 	right_cam: str
 
+class ImuExtrinsics(BaseModel):
+	sensorName: str
+	extrinsics: Optional[Extrinsics] = None
+
 class BoardConfig(BaseModel):
 	cameras: Dict[str, CameraInfo]
 	stereo_config: Optional[StereoConfig] = None
+	imuExtrinsics: Optional[ImuExtrinsics] = None
 
 class VariantConfig(BaseModel):
 	id: str
