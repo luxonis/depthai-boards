@@ -1,7 +1,7 @@
 {
     "board_config":
     {
-        "name": "TOF-FFC",
+        "name": "RAE",
         "revision": "R0M0E0",
         "cameras":{
             "CAM_A": {
