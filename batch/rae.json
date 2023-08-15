@@ -10,6 +10,19 @@
             "flashing": "rvc3_develop",
             "testing": "rvc3_develop",
             "calibration": "rvc3_develop"
+        },
+        "tv_calibration": {
+            "camera_settings": {
+                "left": {
+                    "exposure": [2200, 600]
+                },
+                "right": {
+                    "exposure": [2200, 600]
+                },
+                "rgb": {
+                    "exposure": [2200, 600]
+                }
+            }
         }
     },
     "variants": [
