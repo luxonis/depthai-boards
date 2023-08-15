@@ -13,13 +13,20 @@
         },
         "tv_calibration": {
             "camera_settings": {
-                "left": {
+                "CAM_C": {
                     "exposure": [2200, 600]
                 },
-                "right": {
+                "CAM_B": {
                     "exposure": [2200, 600]
                 },
-                "rgb": {
+                "CAM_A": {
+                    "exposure": [2200, 1000]
+                },
+                "CAM_D": {
+                    "exposure": [2200, 1000]
+                },
+                "CAM_E":
+                {
                     "exposure": [2200, 1000]
                 }
             }

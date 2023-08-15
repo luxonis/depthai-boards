@@ -42,7 +42,7 @@ class CameraSettings(BaseModel):
 
 class TVCalibrationSettings(BaseModel):
 	camera_settings: Dict[str, CameraSettings] = {}
-	""" Dictionary with camera names as keys and CameraSettings as values. Used to set
+	""" Dictionary with camera sockets as keys and CameraSettings as values. Used to set
 	camera settings (sharpness, exposure, ...) for TV calibration. """
 
 	n_charuco_markers_per_row: int = 19
