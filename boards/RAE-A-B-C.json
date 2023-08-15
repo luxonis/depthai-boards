@@ -43,9 +43,9 @@
         "imuExtrinsics":
         {   "sensorName" : "BNO086",
             "extrinsics": {
-                "to_cam": "CAM_B",
+                "to_cam": "CAM_C",
                 "specTranslation": {
-                    "x": -5.99,
+                    "x": -1.51,
                     "y": 0,
                     "z": -7.3
                 },
