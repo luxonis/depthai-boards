@@ -20,8 +20,6 @@ class BootloaderType(str, Enum):
 	def get_default_bootloader(test_type: str):
 		if 'POE' in test_type:
 			return BootloaderType.POE
-		elif 'FFC' in test_type:
-			return BootloaderType.USB
 		elif not ('LITE' in test_type or '1' in test_type):
 			return BootloaderType.HEADER_USB
 		else:
