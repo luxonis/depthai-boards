@@ -25,13 +25,15 @@
             "title":"OAK-D LR (BC2087 R1M1E1)",
             "description": "OAK-D LR, based on BC2087 R1M1E1 board",
             "eeprom":"eeprom/BC2087_R1M1E1_oak_d_lr.json",
-            "board_config_file": "OAK-D-LR.json"
+            "board_config_file": "OAK-D-LR.json",
+            "housing_file": "OAK-D-LR.stl"
         },
         {
             "title":"OAK-D LR (BC2087 R0M0E0)",
             "description": "OAK-D LR, based on BC2087 R0M0E0 board",
             "eeprom":"eeprom/BC2087_R0M0E0_oak_d_lr.json",
-            "board_config_file": "OAK-D-LR.json"
+            "board_config_file": "OAK-D-LR.json",
+            "housing_file": "OAK-D-LR.stl"
         }
     ]
 }
