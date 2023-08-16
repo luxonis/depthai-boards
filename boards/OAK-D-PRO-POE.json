@@ -49,6 +49,27 @@
         "stereo_config":{
             "left_cam": "CAM_B",
             "right_cam": "CAM_C"
+        },
+        "imuExtrinsics":
+        {   
+            "sensors":{ 
+                "BNO": {
+                    "name" : "BNO086",
+                    "extrinsics": {
+                        "to_cam": "CAM_B",
+                        "specTranslation": {
+                            "x": -7.75,
+                            "y": -2.264,
+                            "z": 0
+                            },
+                        "rotation":{
+                            "r": 0,
+                            "p": 0,
+                            "y": 0
+                            }
+                    }
+                }
+            }
         }
     }
 }
