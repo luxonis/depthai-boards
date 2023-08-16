@@ -14,20 +14,20 @@
         "tv_calibration": {
             "camera_settings": {
                 "CAM_C": {
-                    "exposure": [2200, 600]
+                    "exposure": [14500, 150]
                 },
                 "CAM_B": {
-                    "exposure": [2200, 600]
+                    "exposure": [14500, 150]
                 },
                 "CAM_A": {
-                    "exposure": [2200, 1000]
+                    "exposure": [14500, 150]
                 },
                 "CAM_D": {
-                    "exposure": [2200, 1000]
+                    "exposure": [14500, 150]
                 },
                 "CAM_E":
                 {
-                    "exposure": [2200, 1000]
+                    "exposure": [14500, 150]
                 }
             }
         }
