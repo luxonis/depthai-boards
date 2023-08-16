@@ -43,7 +43,7 @@
         "imuExtrinsics":
         {   
             "sensors":{ 
-                "BNO086": {
+                "BNO": {
                     "name" : "BNO086",
                     "extrinsics": {
                         "to_cam": "CAM_B",
