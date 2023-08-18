@@ -54,7 +54,7 @@
         {   
             "sensors":{ 
                 "BNO": {
-                    "name" : "BNO069",
+                    "name" : "BNO086",
                     "extrinsics": {
                         "to_cam": "CAM_B",
                         "specTranslation": {
@@ -64,8 +64,8 @@
                             },
                         "rotation":{
                             "r": 0,
-                            "p": 0,
-                            "y": 0
+                            "p": 180,
+                            "y": 90
                             }
                     }
                 },
