@@ -47,6 +47,16 @@ class TVCalibrationSettings(BaseModel):
 	""" The number of charuco markers per row in the calibration pattern. The size of a
 	charuco square is determined by dividing the width of the TV by this number. """
 
+
+class BasicCameraInfo(BaseModel):
+	name: str = ""
+	socket: str
+	type: str # color, mono
+
+	def __hash__(self) -> int:
+		return hash((self.name, self.socket, self.type))
+
+
 class Options(BaseModel):
 	bootloader: BootloaderType
 
@@ -70,6 +80,9 @@ class Options(BaseModel):
 
 	skip_eeprom_check: bool = False
 
+	cameras: List[BasicCameraInfo] = []
+	"""List of cameras on board. (If specified this camera config is preferred over board_options for testing)"""
+
 
 class EepromData(BaseModel):
 	boardConf: Optional[str] = None
@@ -82,6 +95,7 @@ class EepromData(BaseModel):
 	version: Optional[int] = None
 	batchTime: int = 0
 	""" seconds since epoch """
+
 
 class RotationType(BaseModel):
 	r: float # roll
