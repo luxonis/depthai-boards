@@ -13,7 +13,7 @@
             "title":"Sense (DM6031_R0M0E0)",
             "description": "Sense based on DM6031_R0M0E0 board",
             "eeprom":"eeprom/DM6031_R0M0E0_sense.json",
-            "fip": "fip-sense-dm6031-r0m0e0-1.4.0.bin",
+            "fip": "fip-sense-dm6031-r0m0e0-1.8.1.bin",
             "test_suite": "DM6031_R0M0E0_sense"
         }
     ]
