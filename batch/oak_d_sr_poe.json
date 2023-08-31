@@ -3,7 +3,7 @@
     "description": "OAK-D SR PoE",
     "image": "images/oak_d_sr_poe.jpg",
     "test_type": "OAK-D-SR-POE",
-    "options": {"bootloader": "poe", "imu": true},
+    "options": {"bootloader": "poe", "imu": true, "usb3": false},
     "variants": [
         {
             "title":"OAK-D SR PoE (EL2086 R1M1E1)",

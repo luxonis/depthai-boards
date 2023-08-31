@@ -51,7 +51,7 @@ class TVCalibrationSettings(BaseModel):
 class BasicCameraInfo(BaseModel):
 	name: str = ""
 	socket: str
-	type: str # color, mono
+	type: str # color, mono, tof
 
 	def __hash__(self) -> int:
 		return hash((self.name, self.socket, self.type))
@@ -66,6 +66,9 @@ class Options(BaseModel):
 
 	imu: bool = True
 	""" Does the board have an IMU or not? """
+
+	usb3: bool = True
+	"""Does the board support USB3?"""
 
 	websocket_capture: bool = False
 	""" This should be set to 'True' for cameras (e.g. OAK-D-CM4) that don't work with depthai

@@ -3,7 +3,7 @@
     "description": "OAK-D Pro PoE",
     "image": "images/oak_d_pro.jpg",
     "test_type": "OAK-D-PRO-POE",
-    "options": {"bootloader": "poe", "imu": true},
+    "options": {"bootloader": "poe", "imu": true, "usb3": false},
     "variants": [
         {
             "title":"OAK-D Pro PoE AF (NG9097 R5M3E5 BNO086)",

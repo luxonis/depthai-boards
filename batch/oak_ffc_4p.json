@@ -5,8 +5,6 @@
     "test_type": "OAK-1",
     "options": {"bootloader": "usb", "imu": true,
         "cameras": [
-            {"name": "left", "type": "mono", "socket": "CAM_C"},
-            {"name": "right", "type": "mono", "socket": "CAM_B"},
             {"name": "rgb", "type": "color", "socket": "CAM_A"}
         ]
     },
