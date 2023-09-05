@@ -70,6 +70,9 @@ class Options(BaseModel):
 	usb3: bool = True
 	"""Does the board support USB3?"""
 
+	eeprom: bool = True
+	"""Should the eeprom be flashed?"""
+
 	websocket_capture: bool = False
 	""" This should be set to 'True' for cameras (e.g. OAK-D-CM4) that don't work with depthai
 	library directly and need a websocket server to stream the images to the
