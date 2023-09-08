@@ -70,6 +70,9 @@ class Options(BaseModel):
 	usb3: bool = True
 	"""Does the board support USB3?"""
 
+	jpeg: bool = True
+	"""Does the board support JPEG encoding? (or is it tested?)"""
+
 	eeprom: bool = True
 	"""Should the eeprom be flashed?"""
 
