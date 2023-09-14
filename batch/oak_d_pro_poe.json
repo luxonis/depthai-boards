@@ -6,6 +6,12 @@
     "options": {"bootloader": "poe", "imu": true},
     "variants": [
         {
+            "title":"OAK-D Pro PoE AF (NG9097 R7M4E6 BNO086)",
+            "description": "OAK-D Pro PoE AutoFocus based on NG9097 R7M4E6 BNO086",
+            "eeprom":"eeprom/NG9097_R7M4E6_BNO086_oak_d_pro_poe_af.json",
+            "board_config_file": "OAK-D-PRO-POE.json"
+        },
+        {
             "title":"OAK-D Pro PoE AF (NG9097 R5M3E5 BNO086)",
             "description": "OAK-D Pro PoE AutoFocus based on NG9097 R5M3E5 BNO086",
             "eeprom":"eeprom/NG9097_R5M3E5_BNO086_oak_d_pro_poe_af.json",
