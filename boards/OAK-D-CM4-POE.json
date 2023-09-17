@@ -48,5 +48,27 @@
             "left_cam": "CAM_B",
             "right_cam": "CAM_C"
         }
+        ,
+        "imuExtrinsics":
+        {   
+            "sensors":{ 
+                "BNO": {
+                    "name" : "BNO085",
+                    "extrinsics": {
+                        "to_cam": "CAM_B",
+                        "specTranslation": {
+                            "x": -2.022,
+                            "y": -8.155,
+                            "z": 0
+                            },
+                        "rotation":{
+                            "r": 0,
+                            "p": 0,
+                            "y": 270
+                            }
+                        }
+                    }
+                }
+        }
     }
 }

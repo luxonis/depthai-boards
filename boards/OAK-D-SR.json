@@ -42,32 +42,32 @@
                 "BNO": {
                     "name" : "BNO085",
                     "extrinsics": {
-                        "to_cam": "CAM_B",
+                        "to_cam": "LEFT",
                         "specTranslation": {
-                            "x": -1.0175,
-                            "y": -0.24,
+                            "x": 1.0175,
+                            "y": -0.1731,
                             "z": 0
                             },
                         "rotation":{
                             "r": 0,
                             "p": 0,
-                            "y": 0
+                            "y": 90
                             }
                     }
                 },
                 "BMI": {
                     "name" : "BMI270",
                     "extrinsics": {
-                        "to_cam": "CAM_B",
+                        "to_cam": "LEFT",
                         "specTranslation": {
-                            "x": -1.0175,
-                            "y": -1.713,
+                            "x": 1,
+                            "y": -0.24,
                             "z": 0
                             },
                         "rotation":{
                             "r": 0,
                             "p": 0,
-                            "y": 180
+                            "y": 90
                             }
                     }
                 }
