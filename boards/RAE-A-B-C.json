@@ -1,7 +1,7 @@
 {
     "board_config":
     {
-        "name": "TOF-FFC",
+        "name": "RAE",
         "revision": "R0M0E0",
         "cameras":{
             "CAM_A": {
@@ -36,10 +36,25 @@
             }
 
         },
-
         "stereo_config":{
             "left_cam": "CAM_C",
             "right_cam": "CAM_B"
+        },
+        "imuExtrinsics":
+        {   "sensorName" : "BNO086",
+            "extrinsics": {
+                "to_cam": "CAM_C",
+                "specTranslation": {
+                    "x": -1.51,
+                    "y": 0,
+                    "z": -7.3
+                },
+                "rotation":{
+                    "r": 270,
+                    "p": 180,
+                    "y": 0
+                }
+            }
         }
     }
 }

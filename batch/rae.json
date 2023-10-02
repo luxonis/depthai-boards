@@ -5,10 +5,31 @@
     "options": {
         "platform": "rvc3",
         "bootloader": "poe",
+        "imu": true,
         "environment": {
             "flashing": "rvc3_develop",
             "testing": "rvc3_develop",
             "calibration": "rvc3_develop"
+        },
+        "tv_calibration": {
+            "camera_settings": {
+                "CAM_C": {
+                    "exposure": [2200, 600]
+                },
+                "CAM_B": {
+                    "exposure": [2200, 600]
+                },
+                "CAM_A": {
+                    "exposure": [2200, 1000]
+                },
+                "CAM_D": {
+                    "exposure": [2200, 1000]
+                },
+                "CAM_E":
+                {
+                    "exposure": [2200, 1000]
+                }
+            }
         }
     },
     "variants": [
