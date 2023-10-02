@@ -60,8 +60,8 @@ class BasicCameraInfo(BaseModel):
 class BootloaderConfig(BaseModel):
 	@staticmethod
 	def str_to_ip(ip: str) -> int:
-		""" Converts an IPv4 string to an integer. """
-		return sum([int(x) << (8 * i) for i, x in enumerate(ip.split(".")[::-1])])
+		""" Converts an IPv4 string to an integer."""
+		return sum([int(x) << (8 * i) for i, x in enumerate(ip.split("."))])
 	
 
 	class NetworkConfig(BaseModel):

@@ -55,7 +55,7 @@
             "options": {
                 "bootloader_config": {
                     "network": {
-                        "ipv4": "192.168.101.112",
+                        "ipv4": "192.168.122.111",
                         "ipv4Mask": "255.255.255.0",
                         "staticIpv4": true
                     }
@@ -70,7 +70,7 @@
             "options": {
                 "bootloader_config": {
                     "network": {
-                        "ipv4": "192.168.101.112",
+                        "ipv4": "192.168.122.112",
                         "ipv4Mask": "255.255.255.0",
                         "staticIpv4": true
                     }
