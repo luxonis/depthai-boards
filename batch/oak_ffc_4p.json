@@ -3,7 +3,11 @@
     "description": "OAK FFC-4P",
     "image": "images/oak_d_ffc_4p.jpg",
     "test_type": "OAK-1",
-    "options": {"bootloader": "usb", "imu": true},
+    "options": {"bootloader": "usb", "imu": true,
+        "cameras": [
+            {"name": "rgb", "type": "color", "socket": "CAM_A"}
+        ]
+    },
     "variants": [
         {
             "title":"OAK-FFC 4P (DD2090 R7M1E7)",

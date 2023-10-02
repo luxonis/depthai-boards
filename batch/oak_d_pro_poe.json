@@ -3,7 +3,7 @@
     "description": "OAK-D Pro PoE",
     "image": "images/oak_d_pro.jpg",
     "test_type": "OAK-D-PRO-POE",
-    "options": {"bootloader": "poe", "imu": true},
+    "options": {"bootloader": "poe", "imu": true, "usb3": false},
     "variants": [
         {
             "title":"OAK-D Pro PoE AF (NG9097 R7M4E6 BNO086)",
@@ -52,6 +52,36 @@
             "description": "OAK-D Pro PoE C18 AutoFocus based on NG9097 R4M2E4 and BNO086 IMU, no enclosure, cables and packaging",
             "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_pro_poe_af_c18.json",
             "board_config_file": "OAK-D-PRO-POE.json"
+        },
+        {
+            "title":"OAK-D Pro PoE AF C27 (NG9097 R4M2E3 BNO086)",
+            "description": "OAK-D Pro PoE C27 AutoFocus based on NG9097 R4M2E4 and BNO086 IMU",
+            "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_pro_poe_af_c27.json",
+            "board_config_file": "OAK-D-PRO-POE.json",
+            "options": {
+                "bootloader_config": {
+                    "network": {
+                        "ipv4": "192.168.122.111",
+                        "ipv4Mask": "255.255.255.0",
+                        "staticIpv4": true
+                    }
+                }
+            }
+        },
+        {
+            "title":"OAK-D Pro PoE AF C28 (NG9097 R4M2E3 BNO086)",
+            "description": "OAK-D Pro PoE C28 AutoFocus based on NG9097 R4M2E4 and BNO086 IMU",
+            "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_pro_poe_af_c28.json",
+            "board_config_file": "OAK-D-PRO-POE.json",
+            "options": {
+                "bootloader_config": {
+                    "network": {
+                        "ipv4": "192.168.122.112",
+                        "ipv4Mask": "255.255.255.0",
+                        "staticIpv4": true
+                    }
+                }
+            }
         },
         {
             "title":"OAK-D Pro PoE AF C18 (NG9097 R4M2E3 BNO086) - temporary fix",
