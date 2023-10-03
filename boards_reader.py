@@ -150,14 +150,14 @@ class Options(BaseModel):
 
 
 class EepromData(BaseModel):
-	boardConf: Optional[str] = None
-	boardName: Optional[str] = None
-	boardRev: Optional[str] = None
-	productName: Optional[str] = None
-	boardCustom: Optional[str] = None
-	hardwareConf: Optional[str] = None
-	boardOptions: Optional[int] = None
-	version: Optional[int] = None
+	boardConf: str = None
+	boardName: str = None
+	boardRev: str = None
+	productName: str = None
+	boardCustom: str = None
+	hardwareConf: str = None
+	boardOptions: int = None
+	version: int = None
 	batchTime: int = 0
 	""" seconds since epoch """
 
