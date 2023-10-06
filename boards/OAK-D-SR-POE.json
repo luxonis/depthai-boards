@@ -7,7 +7,7 @@
             "CAM_B": {
                 "name": "left",
                 "hfov": 71.86,
-                "type": "tof",
+                "type": "color",
                 "extrinsics": {
                     "to_cam": "CAM_C",
                     "specTranslation": {
@@ -41,7 +41,7 @@
                 }
             },
             "CAM_A": {
-                "name": "rgb",
+                "name": "tof",
                 "hfov": 71.86,
                 "type": "tof"
             }
