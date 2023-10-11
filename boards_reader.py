@@ -232,6 +232,9 @@ class VariantConfig(BaseModel):
 	test_suite: str = ""
 	""" Specify which test_suite to use. """
 
+	test_station_config: Optional[str] = None
+	"""Path of the test_station_config, look at stage_testing/test_station/config/__init__.py for more info."""
+
 
 class DeviceConfig(BaseModel):
 	id: str
