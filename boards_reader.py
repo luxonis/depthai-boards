@@ -56,6 +56,10 @@ class BasicCameraInfo(BaseModel):
 	def __hash__(self) -> int:
 		return hash((self.name, self.socket, self.type))
 
+	def dict(self, *args, **kwargs):
+		return f"{self.name} ({self.socket})"
+
+
 # Base model mirror of dai.DeviceBootlodar.Config
 class BootloaderConfig(BaseModel):
 	@staticmethod
