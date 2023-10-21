@@ -6,6 +6,12 @@
     "options": {"bootloader": "header_usb", "imu": true},
     "variants": [
         {
+            "title":"OAK-D Pro AF (DM9098 R7M2E7)",
+            "description": "OAK-D Pro, AutoFocus",
+            "eeprom":"eeprom/DM9098_R7M2E7_oak_d_pro_af.json",
+            "board_config_file": "OAK-D-PRO.json"
+        },
+        {
             "title":"OAK-D Pro AF PB (DM9098 R6M2E6)",
             "description": "OAK-D Pro, AutoFocus, with picoblade connector",
             "eeprom":"eeprom/DM9098_R6M2E6_oak_d_pro_af_pb.json",
@@ -60,15 +66,27 @@
             "board_config_file": "OAK-D-PRO-W-97.json"
         },
         {
+            "title":"OAK-D Pro W (DM9098 R7M2E7)",
+            "description": "OAK-D Pro Wide with center IMX378 camera",
+            "eeprom":"eeprom/DM9098_R7M2E7_oak_d_pro_w.json.json",
+            "board_config_file": "OAK-D-PRO-W.json"
+        },
+        {
             "title":"OAK-D Pro W (DM9098 R6M2E6)",
             "description": "OAK-D Pro Wide with center IMX378 camera",
             "eeprom":"eeprom/DM9098_R6M2E6_oak_d_pro_w.json",
             "board_config_file": "OAK-D-PRO-W.json"
         },
         {
-            "title":"OAK-D Pro W 97 (DM9098 R6M2E6)",
+            "title":"OAK-D Pro W 97 (DM9098 R7M2E7)",
             "description": "OAK-D Pro Wide 97 with center OV9782 camera",
             "eeprom":"eeprom/DM9098_R6M2E6_oak_d_pro_w_97.json",
+            "board_config_file": "OAK-D-PRO-W-97.json"
+        },
+        {
+            "title":"OAK-D Pro W 97 (DM9098 R6M2E6)",
+            "description": "OAK-D Pro Wide 97 with center OV9782 camera",
+            "eeprom":"eeprom/DM9098_R7M2E7_oak_d_pro_w_97.json",
             "board_config_file": "OAK-D-PRO-W-97.json"
         },
         {
