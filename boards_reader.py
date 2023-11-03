@@ -15,6 +15,7 @@ class BootloaderType(str, Enum):
 	USB = 'usb' # Specifies USB bootloader
 	HEADER_USB = 'header_usb' # Specifies NOR Header Bootloader USB
 	NONE = 'none' # Specifies that bootloader does not need to be flashed
+	TEST = 'test' # Only test reads & writes the bootloader
 
 	@staticmethod
 	def get_default_bootloader(test_type: str):
