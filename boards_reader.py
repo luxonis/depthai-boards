@@ -134,6 +134,9 @@ class Options(BaseModel):
 	jpeg: bool = True
 	"""Does the board support JPEG encoding? (or is it tested?)"""
 
+	eth: bool = False
+	"""Does the board support Ethernet? (Is it tested?)"""
+
 	eeprom: bool = True
 	"""Should the eeprom be flashed?"""
 
