@@ -132,6 +132,9 @@ class Options(BaseModel):
 	eeprom: bool = True
 	"""Should the eeprom be flashed?"""
 
+	eth: bool = False
+	"""Does the board support Ethernet?"""
+
 	websocket_capture: bool = False
 	""" This should be set to 'True' for cameras (e.g. OAK-D-CM4) that don't work with depthai
 	library directly and need a websocket server to stream the images to the
