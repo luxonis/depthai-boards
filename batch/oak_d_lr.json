@@ -6,6 +6,7 @@
     "options": {
         "bootloader": "poe",
         "imu": true,
+        "eth": true,
         "tv_calibration": {
             "camera_settings": {
                 "CAM_B": {"isp_scale": [2,3]},

@@ -15,6 +15,7 @@ class BootloaderType(str, Enum):
 	USB = 'usb' # Specifies USB bootloader
 	HEADER_USB = 'header_usb' # Specifies NOR Header Bootloader USB
 	NONE = 'none' # Specifies that bootloader does not need to be flashed
+	TEST = 'test' # Only test reads & writes the bootloader
 
 	@staticmethod
 	def get_default_bootloader(test_type: str):
@@ -55,6 +56,10 @@ class BasicCameraInfo(BaseModel):
 
 	def __hash__(self) -> int:
 		return hash((self.name, self.socket, self.type))
+
+	def dict(self, *args, **kwargs):
+		return f"{self.name} ({self.socket})"
+
 
 # Base model mirror of dai.DeviceBootlodar.Config
 class BootloaderConfig(BaseModel):
@@ -128,6 +133,9 @@ class Options(BaseModel):
 
 	jpeg: bool = True
 	"""Does the board support JPEG encoding? (or is it tested?)"""
+
+	eth: bool = False
+	"""Does the board support Ethernet? (Is it tested?)"""
 
 	eeprom: bool = True
 	"""Should the eeprom be flashed?"""
@@ -231,6 +239,9 @@ class VariantConfig(BaseModel):
 
 	test_suite: str = ""
 	""" Specify which test_suite to use. """
+
+	test_station_config: Optional[str] = None
+	"""Path of the test_station_config, look at stage_testing/test_station/config/__init__.py for more info."""
 
 
 class DeviceConfig(BaseModel):
