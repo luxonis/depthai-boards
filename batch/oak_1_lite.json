@@ -12,6 +12,12 @@
             "board_config_file": "OAK-1-LITE-C05.json"
         },
         {
+            "title":"OAK-1 Lite AF (NG9093 R3M0E4)",
+            "description": "OAK-1 Lite based on NG9093 R3M0E4 board",
+            "eeprom":"eeprom/NG9093_R3M0E4_oak_1_lite_af.json",
+            "board_config_file": "OAK-1-LITE.json"
+        },
+        {
             "title":"OAK-1 Lite AF C21 (NG9093 R3M0E4)",
             "description": "OAK-1 Lite C21 based on NG9093 R3M0E4 board, without enclosure",
             "eeprom":"eeprom/NG9093_R3M0E4_oak_1_lite_af_c21.json",
