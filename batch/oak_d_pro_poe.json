@@ -138,6 +138,12 @@
             "board_config_file": "OAK-D-PRO-POE.json"
         },
         {
+            "title":"OAK-D Pro PoE FF C32 (NG9097 R4M2E4 BNO086)",
+            "description": "OAK-D Pro PoE C32 FixedFocus based on NG9097 R4M2E4 and BNO086 IMU",
+            "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_pro_poe_ff_c32.json",
+            "board_config_file": "OAK-D-PRO-POE.json"
+        },
+        {
             "title":"OAK-D Pro W PoE (NG9097 R3M2E2)",
             "description": "OAK-D Pro PoE WideLens based on NG9097 R3M2E2",
             "eeprom":"eeprom/NG9097_R3M2E2_oak_d_pro_w_poe.json",
