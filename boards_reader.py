@@ -157,6 +157,13 @@ class Options(BaseModel):
 	"""List of cameras on board. (If specified this camera config is preferred over board_options for testing)"""
 
 
+class Limitations(BaseModel):
+	"""Board limitations"""
+
+	max_temp: float = 60.0
+	"""Max allowed core operating temperature"""
+
+
 class EepromData(BaseModel):
 	boardConf: Optional[str] = None
 	boardName: Optional[str] = None
@@ -227,6 +234,8 @@ class VariantConfig(BaseModel):
 	board_config_2: BoardConfig
 
 	options: Options
+
+	limits = Limitations()
 
 	fip: Optional[str] = None
 	""" Name of the FIP fipe to be flashed."""
