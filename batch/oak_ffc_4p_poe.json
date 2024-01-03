@@ -6,6 +6,11 @@
     "options": {"bootloader": "poe", "imu": true, "eth": true},
     "variants": [
         {
+            "title":"OAK-FFC 4P PoE (NG2093 R2M0E2)",
+            "description": "OAK-FFC 4P PoE based on NG2093 R2M0E2 board",
+            "eeprom":"eeprom/NG2093_R2M0E2_oak_ffc_4p_poe.json"
+        },
+        {
             "title":"OAK-FFC 4P PoE (NG2093 R1M0E1)",
             "description": "OAK-FFC 4P PoE based on NG2093 R1M0E1 board",
             "eeprom":"eeprom/NG2093_R1M0E1_oak_ffc_4p_poe.json"
