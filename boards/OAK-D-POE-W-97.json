@@ -1,6 +1,7 @@
 {
     "board_config":
     {
+        "name": "OAK-D-POE-W",
         "cameras":{
             "CAM_A": {
                 "name": "rgb",

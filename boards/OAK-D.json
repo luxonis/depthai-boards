@@ -1,6 +1,7 @@
 {
     "board_config":
     {
+        "name": "OAK-D",
         "cameras":{
             "CAM_A": {
                 "name": "rgb",
