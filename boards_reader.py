@@ -160,7 +160,8 @@ class Options(BaseModel):
 class Limitations(BaseModel):
 	"""Board limitations"""
 
-	max_temp: float = 60.0
+	calib_temp: float = 60.0
+	flashing_temp : float = 60.0
 	"""Max allowed core operating temperature"""
 
 
@@ -235,7 +236,7 @@ class VariantConfig(BaseModel):
 
 	options: Options
 
-	limits = Limitations()
+	limitations = Limitations
 
 	fip: Optional[str] = None
 	""" Name of the FIP fipe to be flashed."""

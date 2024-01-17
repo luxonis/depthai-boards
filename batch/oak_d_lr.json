@@ -15,6 +15,7 @@
             }
         } 
     },
+    "limitations": {"calib_temp": 50, "flashing_temp": 50},
     "variants": [
         {
             "title":"OAK-D LR (BC2087 R3M1E3)",
