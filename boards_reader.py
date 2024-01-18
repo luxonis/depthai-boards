@@ -236,7 +236,7 @@ class VariantConfig(BaseModel):
 
 	options: Options
 
-	limitations = Limitations
+	limitations: Optional[Limitations]
 
 	fip: Optional[str] = None
 	""" Name of the FIP fipe to be flashed."""
@@ -298,6 +298,8 @@ for device_file in [*(DEPTHAI_BOARDS_PATH / "batch" ).glob("*.json"), *(DEPTHAI_
 	}
 	options.update(device.get("options", {}))
 	device["options"] = options
+	if "limitations" in device.keys():
+		limitations = device["limitations"]
 
 	# Load the variants
 	variants_combined = []
@@ -357,6 +359,8 @@ for device_file in [*(DEPTHAI_BOARDS_PATH / "batch" ).glob("*.json"), *(DEPTHAI_
 					raise Exception(f"Couldn't load board config file at {board_config_path.resolve()} for device '{device_file.resolve()}'. Make sure the board_config_file field is set correctly in the device file.")
 		else:
 			variant_combined["board_config_2"] = {"cameras": {}} # if no board config is specified, use an empty one (used for FCC cameras)
+		if "limitations" in variant:
+			variant_combined["limitations"] = variant["limitations"]
 		# Convert the bootloader string to an enum
 		variant_combined["options"]["bootloader"] = BootloaderType(options["bootloader"]) # convert string to enum
 
