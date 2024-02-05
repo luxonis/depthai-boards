@@ -2,7 +2,7 @@
     "title": "OAK-T",
     "description": "OAK-T",
     "image": "images/oak_d.jpg",
-    "options": { "bootloader": "poe", "imu": true, "usb3": false, "eth": false },
+    "options": { "bootloader": "poe", "imu": true, "usb3": false, "eth": true },
     "variants": [
         {
             "title": "OAK-T (MD2084 R3M2E2)",
