@@ -24,6 +24,12 @@
             "board_config_file": "OAK-D-PRO-W.json"
         },
         {
+            "title":"OAK-D Pro W 97 (DM9098 R8M2E8)",
+            "description": "OAK-D Pro Wide 97 with center OV9782 camera",
+            "eeprom":"eeprom/DM9098_R8M2E8_oak_d_pro_w_97.json",
+            "board_config_file": "OAK-D-PRO-W-97.json"
+        },
+        {
             "title":"OAK-D Pro AF (DM9098 R7M2E7)",
             "description": "OAK-D Pro, AutoFocus",
             "eeprom":"eeprom/DM9098_R7M2E7_oak_d_pro_af.json",
