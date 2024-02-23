@@ -1,0 +1,20 @@
+{
+    "board_config":
+    {
+        "name": "OAK-FFC-3P",
+        "cameras":{
+            "CAM_A": {
+                "name": "rgb",
+                "type": "color"
+            },
+            "CAM_B": {
+                "name": "rgb",
+                "type": "color"
+            },
+            "CAM_C": {
+                "name": "rgb",
+                "type": "color"
+            }
+        }
+    }
+}
