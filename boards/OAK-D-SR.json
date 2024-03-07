@@ -4,12 +4,12 @@
         "name": "OAK-D-SR",
         "revision": "R0M0E0",
         "cameras":{
-            "LEFT": {
+            "CAM_B": {
                 "name": "left",
                 "hfov": 71.86,
                 "type": "color",
                 "extrinsics": {
-                    "to_cam": "RIGHT",
+                    "to_cam": "CAM_C",
                     "specTranslation": {
                         "x": -2.0,
                         "y": 0,
@@ -24,7 +24,7 @@
                 }
 
             },
-            "RIGHT": {
+            "CAM_C": {
                 "name": "right",
                 "hfov": 71.86,
                 "type": "color"
@@ -33,8 +33,8 @@
         },
 
         "stereo_config":{
-            "left_cam": "LEFT",
-            "right_cam": "RIGHT"
+            "left_cam": "CAM_B",
+            "right_cam": "CAM_C"
         }
     }
 }
