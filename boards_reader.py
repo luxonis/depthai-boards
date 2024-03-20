@@ -1,13 +1,20 @@
-from pathlib import Path
+import copy
 import json
 from enum import Enum
+from pathlib import Path
+from typing import Dict, List, Optional, Tuple, Union
+
 from pydantic import BaseModel, ValidationError
-from typing import Optional, Union, Dict, List, Tuple
-import copy
 
 DEPTHAI_BOARDS_PATH = Path(__file__).parent
 DEPTHAI_BOARDS_PRIVATE_PATH = Path(__file__).parent / "../depthai_boards_private" # (optional) private/custom boards should be placed in a sibling directory to this one
 
+
+class DeviceFamilies(str, Enum):
+	RVC2 = "rvc2"
+	RVC3 = "rvc3"
+	RVC4 = "rvc4"
+	CM4 = "cm4"
 
 # Bootloader options
 class BootloaderType(str, Enum):
@@ -209,7 +216,8 @@ class BoardConfig(BaseModel):
 	stereo_config: Optional[StereoConfig] = None
 	imuExtrinsics: Optional[ImuExtrinsics] = None
 
-class VariantConfig(BaseModel):
+
+class Config(BaseModel):
 	id: str
 	""" equivalent to the eeprom file name (inside the eeprom folder) without the extension """
 
@@ -217,6 +225,13 @@ class VariantConfig(BaseModel):
 
 	description: str
 
+	family: str = DeviceFamilies.RVC2
+
+	def __str__(self) -> str:
+		return f"{self.title} ({self.description})"
+
+
+class VariantConfig(Config):
 	eeprom: str
 	""" path to eeprom file """
 
@@ -244,14 +259,8 @@ class VariantConfig(BaseModel):
 	"""Path of the test_station_config, look at stage_testing/test_station/config/__init__.py for more info."""
 
 
-class DeviceConfig(BaseModel):
-	id: str
-	""" equivalent to the device file name (inside the batch folder) without the extension """
-
-	title: str
-
-	description: str
-
+class DeviceConfig(Config):
+	"""List of device variant configs"""
 	variants: List[VariantConfig]
 
 
