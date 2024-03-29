@@ -125,6 +125,9 @@ class Options(BaseModel):
 	""" if dict, each key represents a stage (flashing, testing, calibration) and the value
 	is the environment to use for that stage """
 
+	has_serial_code: bool = False
+	"""Does the device have a serial code?"""
+
 	imu: bool = True
 	""" Does the board have an IMU or not? """
 
