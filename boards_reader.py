@@ -146,6 +146,9 @@ class Options(BaseModel):
 	eeprom: bool = True
 	"""Should the eeprom be flashed?"""
 
+	emmc_size: int = 0
+	"""If the eMMC size is a positive number, compare the onboard eMMC size against it"""
+
 	websocket_capture: bool = False
 	""" This should be set to 'True' for cameras (e.g. OAK-D-CM4) that don't work with depthai
 	library directly and need a websocket server to stream the images to the
@@ -236,9 +239,6 @@ class VariantConfig(BaseModel):
 
 	fip: Optional[str] = None
 	""" Name of the FIP fipe to be flashed."""
-
-	cdt: Optional[str] = None
-	"""Name of the CDT file to be flashed. (RVC4 only)"""
 
 	os: Optional[str] = None
 	"""Name of the OS zip to be flashed."""
