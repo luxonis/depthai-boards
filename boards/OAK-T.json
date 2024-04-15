@@ -8,6 +8,11 @@
                 "name": "rgb",
                 "hfov": 68.7938,
                 "type": "color"
+            },
+            "CAM_E": {
+                "name": "thermal",
+                "hfov": 90,
+                "type": "thermal"
             }
         }
     }
