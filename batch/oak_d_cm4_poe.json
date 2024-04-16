@@ -7,7 +7,7 @@
 		{
 			"title": "OAK-D CM4 PoE (DM2097 R3M1E4)",
 			"description": "OAK-D CM4 PoE, based on DM2097 R1M1E1 board",
-			"eeprom": "eeprom/DM2097_R1M1E1_oak_d_cm4_poe.json",
+			"eeprom": "eeprom/DM2097_R3M1E4_oak_d_cm4_poe.json",
 			"board_config_file": "OAK-D-CM4-POE.json"
 		},
 		{
