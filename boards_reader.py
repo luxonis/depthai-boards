@@ -140,6 +140,9 @@ class Options(BaseModel):
 	eth: bool = False
 	"""Does the board support Ethernet? (Is it tested?)"""
 
+	nor_size: int = 0
+	"""Specify the size of the NOR flash."""
+
 	eeprom: bool = True
 	"""Should the eeprom be flashed?"""
 
