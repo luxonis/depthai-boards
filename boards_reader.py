@@ -141,13 +141,13 @@ class Options(BaseModel):
 	"""Does the board support Ethernet? (Is it tested?)"""
 
 	nor_size: int = 0
-	"""Specify the size of the NOR flash."""
+	"""Specify the size of the NOR flash in bytes."""
 
 	eeprom: bool = True
 	"""Should the eeprom be flashed?"""
 
 	emmc_size: int = 0
-	"""If the eMMC size is a positive number, compare the onboard eMMC size against it"""
+	"""Specify the size of the eMMC storage size in bytes (if the device has it)."""
 
 	websocket_capture: bool = False
 	""" This should be set to 'True' for cameras (e.g. OAK-D-CM4) that don't work with depthai
