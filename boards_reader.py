@@ -240,6 +240,9 @@ class VariantConfig(BaseModel):
 	fip: Optional[str] = None
 	""" Name of the FIP fipe to be flashed."""
 
+	cdt: Optional[str] = None
+	"""Name of the CDT file to be flashed. (RVC4 only)"""
+
 	os: Optional[str] = None
 	"""Name of the OS zip to be flashed."""
 
