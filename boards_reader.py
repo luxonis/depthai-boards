@@ -118,6 +118,11 @@ class BootloaderConfig(BaseModel):
 	usb: UsbConfig = UsbConfig()
 
 class Options(BaseModel):
+	module_name: str = ""
+	"""If this field is set, the device will be treated as a module."""
+	submodules: List[str] = []
+	"""List names of submodules with unique serial codes."""
+
 	bootloader: BootloaderType
 	bootloader_config: Optional[BootloaderConfig] = None
 
