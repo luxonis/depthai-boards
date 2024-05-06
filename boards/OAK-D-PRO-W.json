@@ -13,6 +13,7 @@
                 "name": "left",
                 "hfov": 127.0,
                 "type": "mono",
+                "calib_model": "perspective_TILTED",
                 "extrinsics": {
                     "to_cam": "CAM_C",
                     "specTranslation": {
@@ -31,6 +32,7 @@
                 "name": "right",
                 "hfov": 127.0,
                 "type": "mono",
+                "calib_model": "perspective_TILTED",
                 "extrinsics": {
                     "to_cam": "CAM_A",
                     "specTranslation": {
