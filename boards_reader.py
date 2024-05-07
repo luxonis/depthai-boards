@@ -157,11 +157,21 @@ class Options(BaseModel):
 	"""List of cameras on board. (If specified this camera config is preferred over board_options for testing)"""
 
 
-class Limitations(BaseModel):
-	"""Board limitations"""
-
+class Thresholds(BaseModel):
+	"""Board thresholds"""
 	calib_temp: float = 60.0
 	flashing_temp : float = 60.0
+	stereo_error : float = 2.0
+	tof_error: float = 2.0
+	"""Max allowed core operating temperature"""
+
+class Calibration_tests(BaseModel):
+	"""Board thresholds"""
+	sharpness_test: bool = True
+	stereo_depth: bool = True
+	alignment_test: bool = False
+	tof_depth: bool = False
+	thermal_error: bool = False
 	"""Max allowed core operating temperature"""
 
 
@@ -236,7 +246,9 @@ class VariantConfig(BaseModel):
 
 	options: Options
 
-	limitations: Optional[Limitations]
+	thresholds: Thresholds
+
+	calibration_tests: Optional[Calibration_tests]
 
 	fip: Optional[str] = None
 	""" Name of the FIP fipe to be flashed."""
@@ -298,8 +310,22 @@ for device_file in [*(DEPTHAI_BOARDS_PATH / "batch" ).glob("*.json"), *(DEPTHAI_
 	}
 	options.update(device.get("options", {}))
 	device["options"] = options
-	if "limitations" in device.keys():
-		limitations = device["limitations"]
+
+	if "thresholds" not in device.keys():
+		device["thresholds"] = {}
+	else:
+		nested_update_data = device.get('thresholds', {})
+		device["thresholds"].update(nested_update_data)
+	calibrated_data = Thresholds(**device["thresholds"]).dict()
+	device["thresholds"] = calibrated_data
+
+	if "calibration_tests" not in device.keys():
+		device["calibration_tests"] = {}
+	else:
+		nested_update_data = device.get("calibration_tests", {})
+		device["calibration_tests"].update(nested_update_data)
+	calibrated_data = Calibration_tests(**device["calibration_tests"]).dict()
+	device["calibration_tests"] = calibrated_data
 
 	# Load the variants
 	variants_combined = []
@@ -359,15 +385,24 @@ for device_file in [*(DEPTHAI_BOARDS_PATH / "batch" ).glob("*.json"), *(DEPTHAI_
 					raise Exception(f"Couldn't load board config file at {board_config_path.resolve()} for device '{device_file.resolve()}'. Make sure the board_config_file field is set correctly in the device file.")
 		else:
 			variant_combined["board_config_2"] = {"cameras": {}} # if no board config is specified, use an empty one (used for FCC cameras)
-		if "limitations" in variant:
-			variant_combined["limitations"] = variant["limitations"]
+		if "thresholds" in variant:
+			nested_update_data = variant.get('thresholds', {})
+			device["thresholds"].update(nested_update_data)
+			calibrated_data = Thresholds(**device["thresholds"]).dict()
+			variant_combined["thresholds"] = calibrated_data
+
+		if "calibration_tests" in variant:
+			nested_update_data = variant.get("calibration_tests", {})
+			device["calibration_tests"].update(nested_update_data)
+			calibrated_data = Calibration_tests(**device["calibration_tests"]).dict()
+			variant_combined["calibration_tests"] = calibrated_data
+
 		# Convert the bootloader string to an enum
 		variant_combined["options"]["bootloader"] = BootloaderType(options["bootloader"]) # convert string to enum
 
 		variants_combined.append(variant_combined)
 
 	device["variants"] = variants_combined
-
 	DEVICES.append(device)
 
 	# Convert the dict to a list of DeviceConfig objects and validate it

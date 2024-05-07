@@ -4,6 +4,8 @@
     "image": "images/oak_d_sr_poe.jpg",
     "test_type": "OAK-D-SR-POE",
     "options": {"bootloader": "poe", "imu": true, "usb3": false, "eth": true},
+    "calibration_tests": {"sharpness_test": false ,"tof_depth": true},
+    "thresholds": {"tof_error": 2.0},
     "variants": [
         {
             "title":"OAK-D SR PoE (EL2086 R3M2E3)",
