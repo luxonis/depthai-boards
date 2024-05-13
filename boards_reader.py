@@ -199,7 +199,7 @@ class CameraInfo(BaseModel):
 	hfov: float = 0.0
 	type: str = ""
 	camera_model: str = "perspective"
-	calib_model: str = "perspective_DEFAULT"
+	calib_model: str = "perspective_NORMAL"
 	""" Camera model can be either 'perspective' or 'fisheye'. """
 	extrinsics: Optional[Extrinsics] = None
 	sensor_name: str = ""

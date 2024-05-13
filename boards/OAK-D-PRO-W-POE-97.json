@@ -5,11 +5,13 @@
             "CAM_A": {
                 "name": "rgb",
                 "hfov": 127.0,
-                "type": "color"
+                "type": "color",
+                "calib_model": "perspective_TILTED"
             },
             "CAM_B": {
                 "name": "left",
                 "hfov": 127.0,
+                "calib_model": "perspective_TILTED",
                 "type": "mono",
                 "extrinsics": {
                     "to_cam": "CAM_C",
@@ -29,6 +31,7 @@
                 "name": "right",
                 "hfov": 127.0,
                 "type": "mono",
+                "calib_model": "perspective_TILTED",
                 "extrinsics": {
                     "to_cam": "CAM_A",
                     "specTranslation": {
