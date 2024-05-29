@@ -117,6 +117,22 @@ class BootloaderConfig(BaseModel):
 	network: NetworkConfig = NetworkConfig()
 	usb: UsbConfig = UsbConfig()
 
+class MacAddressGeneratingMethod(str, Enum):
+	last_serial_number_digits = "last_serial_number_digits"
+
+class FlashMacAddressConfig(BaseModel):
+	generating_method: MacAddressGeneratingMethod
+	""" Method used to generate the MAC address. """
+
+	prefix: str
+	""" MAC address prefix to be used for all generated MAC addresses. """
+
+	prefix_bits: int
+	""" Number of bits to be used from the prefix. """
+
+	serial_number_digits: Optional[int]
+	""" Number of digits to be used from the serial number. """
+
 class Options(BaseModel):
 	bootloader: BootloaderType
 	bootloader_config: Optional[BootloaderConfig] = None
@@ -165,6 +181,8 @@ class Options(BaseModel):
 	cameras: List[BasicCameraInfo] = []
 	"""List of cameras on board. (If specified this camera config is preferred over board_options for testing)"""
 
+	flash_mac_address: Optional[FlashMacAddressConfig] = None
+	""" Configuration for generating MAC addresses during flashing. """
 
 class EepromData(BaseModel):
 	boardConf: Optional[str] = None
