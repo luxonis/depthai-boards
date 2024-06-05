@@ -59,8 +59,8 @@
                         "to_cam": "CAM_B",
                         "specTranslation": {
                             "x": -7.75,
-                            "y": -2.264,
-                            "z": 0
+                            "y": -0.2,
+                            "z": 2.0264
                             },
                         "rotation":{
                             "r": 0,

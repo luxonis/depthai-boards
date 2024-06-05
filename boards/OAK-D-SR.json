@@ -44,9 +44,9 @@
                     "extrinsics": {
                         "to_cam": "LEFT",
                         "specTranslation": {
-                            "x": 1.0175,
-                            "y": -0.1731,
-                            "z": 0
+                            "x": -0.1731,
+                            "y": 0.0,
+                            "z": 1.0175
                             },
                         "rotation":{
                             "r": 0,
@@ -60,9 +60,9 @@
                     "extrinsics": {
                         "to_cam": "LEFT",
                         "specTranslation": {
-                            "x": 1,
-                            "y": -0.24,
-                            "z": 0
+                            "x": -0.24,
+                            "y": 0.0,
+                            "z": 1.0
                             },
                         "rotation":{
                             "r": 0,
