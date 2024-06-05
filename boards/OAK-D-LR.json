@@ -57,7 +57,7 @@
                 "BNO": {
                     "name" : "BNO084",
                     "extrinsics": {
-                        "to_cam": "LEFT",
+                        "to_cam": "CAM_B",
                         "specTranslation": {
                             "x": 12.1465,
                             "y": 0.0,
@@ -73,7 +73,7 @@
                 "BMI": {
                     "name" : "BMI270",
                     "extrinsics": {
-                        "to_cam": "LEFT",
+                        "to_cam": "CAM_B",
                         "specTranslation": {
                             "x": 9.2731,
                             "y": 0.2,
