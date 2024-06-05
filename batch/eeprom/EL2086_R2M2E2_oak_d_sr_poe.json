@@ -1,9 +1,9 @@
 {
     "batchName": "Maxwell",
     "batchTime": 0,
-    "boardConf": "IR-C81M00-00",
+    "boardConf": "IR-C80M00-00",
     "boardName": "EL2086",
-    "boardRev": "R0M0E0",
+    "boardRev": "R2M2E2",
     "productName": "OAK-D-SR-POE",
     "boardCustom": "",
     "hardwareConf": "F1-FV00-BC000",

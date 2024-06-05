@@ -1,0 +1,20 @@
+{
+    "title": "OAK-FFC-TOF-33D",
+    "description": "Carrier board for 33d tof.",
+    "image": "images/oak_d_ffc_4p.jpg",
+    "options": {
+        "bootloader": "none", 
+        "imu": false, 
+        "usb3": false, 
+        "jpeg": false,
+        "eeprom": false,
+        "cameras": [{"name": "33d tof", "type": "tof", "socket": "CAM_A"}]
+    },
+    "variants": [
+        {
+            "title":"OAK-FFC-TOF-33D",
+            "description": "OAK-FFC 4P with connected 33d tof carrier board.",
+            "eeprom":"eeprom/oak_ffc_tof_33d.json"
+        }
+    ]
+}

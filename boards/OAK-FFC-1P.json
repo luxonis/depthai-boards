@@ -1,0 +1,12 @@
+{
+    "board_config":
+    {
+        "name": "OAK-FFC-1P",
+        "cameras":{
+            "CAM_A": {
+                "name": "rgb",
+                "type": "color"
+            }
+        }
+    }
+}

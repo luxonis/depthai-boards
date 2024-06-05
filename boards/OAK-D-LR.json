@@ -2,12 +2,12 @@
     "board_config":
     {
         "cameras":{
-            "LEFT": {
+            "CAM_B": {
                 "name": "left",
                 "hfov": 77.3,
                 "type": "color",
                 "extrinsics": {
-                    "to_cam": "RIGHT",
+                    "to_cam": "CAM_C",
                     "specTranslation": {
                         "x": -15.0,
                         "y": 0,
@@ -22,7 +22,7 @@
                 }
 
             },
-            "RIGHT": {
+            "CAM_C": {
                 "name": "right",
                 "hfov":  77.3,
                 "type": "color",
@@ -41,15 +41,15 @@
                 }
             },
             "CAM_A": {
-                "name": "center",
+                "name": "rgb",
                 "hfov":  77.3,
                 "type": "color"
             }
         },
 
         "stereo_config":{
-            "left_cam": "LEFT",
-            "right_cam": "RIGHT"
+            "left_cam": "CAM_B",
+            "right_cam": "CAM_C"
         },
         "imuExtrinsics":
         {   

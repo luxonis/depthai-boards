@@ -41,7 +41,7 @@
                 }
             },
             "CAM_A": {
-                "name": "rgb",
+                "name": "tof",
                 "hfov": 71.86,
                 "type": "tof"
             }

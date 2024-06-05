@@ -15,13 +15,12 @@ class BootloaderType(str, Enum):
 	USB = 'usb' # Specifies USB bootloader
 	HEADER_USB = 'header_usb' # Specifies NOR Header Bootloader USB
 	NONE = 'none' # Specifies that bootloader does not need to be flashed
+	TEST = 'test' # Only test reads & writes the bootloader
 
 	@staticmethod
 	def get_default_bootloader(test_type: str):
 		if 'POE' in test_type:
 			return BootloaderType.POE
-		elif 'FFC' in test_type:
-			return BootloaderType.USB
 		elif not ('LITE' in test_type or '1' in test_type):
 			return BootloaderType.HEADER_USB
 		else:
@@ -42,22 +41,113 @@ class CameraSettings(BaseModel):
 
 class TVCalibrationSettings(BaseModel):
 	camera_settings: Dict[str, CameraSettings] = {}
-	""" Dictionary with camera names as keys and CameraSettings as values. Used to set
+	""" Dictionary with camera sockets as keys and CameraSettings as values. Used to set
 	camera settings (sharpness, exposure, ...) for TV calibration. """
 
 	n_charuco_markers_per_row: int = 19
 	""" The number of charuco markers per row in the calibration pattern. The size of a
 	charuco square is determined by dividing the width of the TV by this number. """
 
+
+class BasicCameraInfo(BaseModel):
+	name: str = ""
+	socket: str
+	type: str # color, mono, tof
+
+	def __hash__(self) -> int:
+		return hash((self.name, self.socket, self.type))
+
+	def dict(self, *args, **kwargs):
+		return f"{self.name} ({self.socket})"
+
+
+# Base model mirror of dai.DeviceBootlodar.Config
+class BootloaderConfig(BaseModel):
+	@staticmethod
+	def str_to_ip(ip: str) -> int:
+		""" Converts an IPv4 string to an integer."""
+		return sum([int(x) << (8 * i) for i, x in enumerate(ip.split("."))])
+	
+
+	class NetworkConfig(BaseModel):
+		ipv4: int = 0
+		ipv4Dns: int = 0
+		ipv4DnsAlt: int = 0
+		ipv4Gateway: int = 0
+		ipv4Mask: int = 0
+		ipv6: List[int] = [0, 0, 0, 0]
+		ipv6Dns: List[int] = [0, 0, 0, 0]
+		ipv6DnsAlt: List[int] = [0, 0, 0, 0]
+		ipv6Gateway: List[int] = [0, 0, 0, 0]
+		ipv6Prefix: int = 0
+		mac: List[int] = [0, 0, 0, 0, 0, 0]
+		staticIpv4: bool = False
+		staticIpv6: bool = False
+		timeoutMs: int = 30000
+
+		def __init__(self, **data):
+			if "ipv4" in data and isinstance(data["ipv4"], str):
+				data["ipv4"] = BootloaderConfig.str_to_ip(data["ipv4"])
+			if "ipv4Dns" in data and isinstance(data["ipv4Dns"], str):
+				data["ipv4Dns"] = BootloaderConfig.str_to_ip(data["ipv4Dns"])
+			if "ipv4DnsAlt" in data and isinstance(data["ipv4DnsAlt"], str):
+				data["ipv4DnsAlt"] = BootloaderConfig.str_to_ip(data["ipv4DnsAlt"])
+			if "ipv4Gateway" in data and isinstance(data["ipv4Gateway"], str):
+				data["ipv4Gateway"] = BootloaderConfig.str_to_ip(data["ipv4Gateway"])
+			if "ipv4Mask" in data and isinstance(data["ipv4Mask"], str):
+				data["ipv4Mask"] = BootloaderConfig.str_to_ip(data["ipv4Mask"])
+			if "ipv6" in data and isinstance(data["ipv6"], str):
+				data["ipv6"] = [int(x, 16) for x in data["ipv6"].split(":")]
+			if "ipv6Dns" in data and isinstance(data["ipv6Dns"], str):
+				data["ipv6Dns"] = [int(x, 16) for x in data["ipv6Dns"].split(":")]
+			if "ipv6DnsAlt" in data and isinstance(data["ipv6DnsAlt"], str):
+				data["ipv6DnsAlt"] = [int(x, 16) for x in data["ipv6DnsAlt"].split(":")]
+			if "ipv6Gateway" in data and isinstance(data["ipv6Gateway"], str):
+				data["ipv6Gateway"] = [int(x, 16) for x in data["ipv6Gateway"].split(":")]
+			if "mac" in data and isinstance(data["mac"], str):
+				data["mac"] = [int(x, 16) for x in data["mac"].split(":")]
+			super().__init__(**data)
+    
+	class UsbConfig(BaseModel):
+		maxUsbSpeed: int = 3
+		pid: int = 0xF63C
+		timeoutMs: int = 3000
+		vid: int = 0x03E7
+
+	network: NetworkConfig = NetworkConfig()
+	usb: UsbConfig = UsbConfig()
+
 class Options(BaseModel):
 	bootloader: BootloaderType
+	bootloader_config: Optional[BootloaderConfig] = None
 
 	environment: Union[str, dict] = "standard"
 	""" if dict, each key represents a stage (flashing, testing, calibration) and the value
 	is the environment to use for that stage """
 
+	has_serial_code: bool = False
+	"""Does the device have a serial code?"""
+
 	imu: bool = True
 	""" Does the board have an IMU or not? """
+
+	usb3: bool = True
+	"""Does the board support USB3?"""
+
+	jpeg: bool = True
+	"""Does the board support JPEG encoding? (or is it tested?)"""
+
+	eth: bool = False
+	"""Does the board support Ethernet? (Is it tested?)"""
+
+	nor_size: int = 0
+	"""Specify the size of the NOR flash in bytes."""
+
+	eeprom: bool = True
+	"""Should the eeprom be flashed?"""
+
+	emmc_size: int = 0
+	"""Specify the size of the eMMC storage size in bytes (if the device has it)."""
 
 	websocket_capture: bool = False
 	""" This should be set to 'True' for cameras (e.g. OAK-D-CM4) that don't work with depthai
@@ -72,6 +162,9 @@ class Options(BaseModel):
 
 	skip_eeprom_check: bool = False
 
+	cameras: List[BasicCameraInfo] = []
+	"""List of cameras on board. (If specified this camera config is preferred over board_options for testing)"""
+
 
 class EepromData(BaseModel):
 	boardConf: Optional[str] = None
@@ -84,6 +177,7 @@ class EepromData(BaseModel):
 	version: Optional[int] = None
 	batchTime: int = 0
 	""" seconds since epoch """
+
 
 class RotationType(BaseModel):
 	r: float # roll
@@ -105,6 +199,7 @@ class CameraInfo(BaseModel):
 	hfov: float = 0.0
 	type: str = ""
 	camera_model: str = "perspective"
+	calib_model: str = "perspective_NORMAL"
 	""" Camera model can be either 'perspective' or 'fisheye'. """
 	extrinsics: Optional[Extrinsics] = None
 	sensor_name: str = ""
@@ -149,6 +244,9 @@ class VariantConfig(BaseModel):
 	fip: Optional[str] = None
 	""" Name of the FIP fipe to be flashed."""
 
+	cdt: Optional[str] = None
+	"""Name of the CDT file to be flashed. (RVC4 only)"""
+
 	os: Optional[str] = None
 	"""Name of the OS zip to be flashed."""
 
@@ -157,6 +255,9 @@ class VariantConfig(BaseModel):
 
 	test_suite: str = ""
 	""" Specify which test_suite to use. """
+
+	test_station_config: Optional[str] = None
+	"""Path of the test_station_config, look at stage_testing/test_station/config/__init__.py for more info."""
 
 
 class DeviceConfig(BaseModel):
