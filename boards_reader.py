@@ -206,13 +206,16 @@ class CameraInfo(BaseModel):
 	has_autofocus: bool = False
 	lens_position: int = -1
 
+class ImuSensorInfo(BaseModel):
+	name: str = ""
+	extrinsics: Optional[Extrinsics] = None
+
 class StereoConfig(BaseModel):
 	left_cam: str
 	right_cam: str
 
 class ImuExtrinsics(BaseModel):
-	sensorName: str
-	extrinsics: Optional[Extrinsics] = None
+	sensors: Dict[str, ImuSensorInfo]
 
 class BoardConfig(BaseModel):
 	cameras: Dict[str, CameraInfo]
