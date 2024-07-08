@@ -6,6 +6,18 @@
     "options": {"bootloader": "header_usb", "imu": true},
     "variants": [
         {
+            "title":"OAK-D W (DM9098 R8M2E8)",
+            "description": "OAK-D Wide Lens, based on DM9098 R8M2E8 board",
+            "eeprom":"eeprom/DM9098_R8M2E8_oak_d_w.json",
+            "board_config_file": "OAK-D-W.json"
+        },
+        {
+            "title":"OAK-D W 97 (DM9098 R8M2E8)",
+            "description": "OAK-D W 97 based on DM9098 R8M2E8 board, with wide lens (OV9782 center camera)",
+            "eeprom":"eeprom/DM9098_R8M2E8_oak_d_w_97.json",
+            "board_config_file": "OAK-D-W-97.json"
+        },
+        {
             "title":"OAK-D W 97 (DM9098 R7M2E7)",
             "description": "OAK-D W 97 based on DM9098 R7M2E7 board, with wide lens (OV9782 center camera)",
             "eeprom":"eeprom/DM9098_R7M2E7_oak_d_w_97.json",
