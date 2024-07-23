@@ -4,19 +4,19 @@
         "name": "OAK-FFC-4P",
         "cameras":{
             "CAM_A": {
-                "name": "rgb",
+                "name": "color",
                 "type": "color"
             },
             "CAM_B": {
-                "name": "rgb",
+                "name": "color",
                 "type": "color"
             },
             "CAM_C": {
-                "name": "rgb",
+                "name": "color",
                 "type": "color"
             },
             "CAM_D": {
-                "name": "rgb",
+                "name": "color",
                 "type": "color"
             }
         }

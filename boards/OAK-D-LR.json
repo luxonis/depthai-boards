@@ -41,7 +41,7 @@
                 }
             },
             "CAM_A": {
-                "name": "rgb",
+                "name": "color",
                 "hfov":  77.3,
                 "type": "color"
             }
