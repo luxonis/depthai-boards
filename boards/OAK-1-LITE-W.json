@@ -5,7 +5,7 @@
         "revision": "R3M1E2",
         "cameras":{
             "CAM_A": {
-                "name": "rgb",
+                "name": "color",
                 "hfov": 105,
                 "type": "color"
             }

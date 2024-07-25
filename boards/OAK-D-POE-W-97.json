@@ -3,7 +3,7 @@
     {
         "cameras":{
             "CAM_A": {
-                "name": "rgb",
+                "name": "color",
                 "hfov": 127.0,
                 "type": "color",
                 "calib_model": "perspective_TILTED"
