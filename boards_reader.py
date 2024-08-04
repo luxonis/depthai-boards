@@ -134,6 +134,11 @@ class FlashMacAddressConfig(BaseModel):
 	""" Number of digits to be used from the serial number. """
 
 class Options(BaseModel):
+	module_name: str = ""
+	"""If this field is set, the device will be treated as a module."""
+	submodules: List[str] = []
+	"""List names of submodules with unique serial codes."""
+
 	bootloader: BootloaderType
 	bootloader_config: Optional[BootloaderConfig] = None
 
