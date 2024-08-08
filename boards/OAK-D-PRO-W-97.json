@@ -1,6 +1,7 @@
 {
     "board_config":
     {
+        "name": "OAK-D PRO-W",
         "cameras":{
             "CAM_A": {
                 "name": "color",
