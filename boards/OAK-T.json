@@ -25,7 +25,8 @@
             "CAM_E": {
                 "name": "thermal",
                 "hfov": 90,
-                "type": "thermal"
+                "type": "thermal",
+                "calib_model": "perspective_THERMAL"
             }
         }
     }
