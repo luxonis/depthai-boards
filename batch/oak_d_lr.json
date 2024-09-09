@@ -13,7 +13,7 @@
                 "CAM_C": {"isp_scale": [2,3]},
                 "CAM_A": {"isp_scale": [2,3]}
             }
-        } 
+        }
     },
     "variants": [
         {

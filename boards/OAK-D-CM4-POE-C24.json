@@ -3,7 +3,7 @@
     {
         "cameras":{
             "CAM_A": {
-                "name": "rgb",
+                "name": "color",
                 "hfov": 108.0,
                 "type": "color"
             },

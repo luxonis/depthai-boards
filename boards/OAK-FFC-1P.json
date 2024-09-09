@@ -4,7 +4,7 @@
         "name": "OAK-FFC-1P",
         "cameras":{
             "CAM_A": {
-                "name": "rgb",
+                "name": "color",
                 "type": "color"
             }
         }

@@ -5,7 +5,7 @@
         "revision": "R3M1E2",
         "cameras":{
             "CAM_A": {
-                "name": "rgb",
+                "name": "color",
                 "hfov": 68.7938,
                 "type": "color",
                 "extrinsics": {
@@ -25,7 +25,8 @@
             "CAM_E": {
                 "name": "thermal",
                 "hfov": 90,
-                "type": "thermal"
+                "type": "thermal",
+                "calib_model": "perspective_THERMAL"
             }
         }
     }
