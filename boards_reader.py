@@ -184,6 +184,9 @@ class Options(BaseModel):
 	flash_mac_address: Optional[FlashMacAddressConfig] = None
 	""" Configuration for generating MAC addresses during flashing. """
 
+	ssh_password: str = ""
+	""" Password for SSH connection to the device. """
+
 class EepromData(BaseModel):
 	boardConf: Optional[str] = None
 	boardName: Optional[str] = None
