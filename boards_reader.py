@@ -137,6 +137,11 @@ class Options(BaseModel):
 	bootloader: BootloaderType
 	bootloader_config: Optional[BootloaderConfig] = None
 
+	module_name: str = ""
+	"""If this field is set, the device will be treated as a module."""
+	submodules: List[str] = []
+	"""List names of submodules with unique serial codes."""
+
 	environment: Union[str, dict] = "standard"
 	""" if dict, each key represents a stage (flashing, testing, calibration) and the value
 	is the environment to use for that stage """
@@ -307,6 +312,8 @@ def update(d: Dict, u: Dict):
 DEVICES = []
 DEVICES_TYPED: List[DeviceConfig] = []
 for device_file in [*(DEPTHAI_BOARDS_PATH / "batch" ).glob("*.json"), *(DEPTHAI_BOARDS_PRIVATE_PATH / "batch" ).glob("*.json")]:
+	if "flashparking" not in str(device_file):
+		continue
 	try:
 		with open(device_file, "r") as f:
 			device = json.load(f)
