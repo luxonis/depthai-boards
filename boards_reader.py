@@ -133,6 +133,14 @@ class FlashMacAddressConfig(BaseModel):
 	serial_number_digits: Optional[int]
 	""" Number of digits to be used from the serial number. """
 
+class HubRobotIdGeneratingMethod(str, Enum):
+	random_uuid4 = "random_uuid4"
+	""" Generate a random UUID4 as a Hub robot ID. """
+
+class HubRobotIdConfig(BaseModel):
+	generating_method: HubRobotIdGeneratingMethod
+	""" Method used to generate the Hub robot UUID. """
+
 class Options(BaseModel):
 	bootloader: BootloaderType
 	bootloader_config: Optional[BootloaderConfig] = None
@@ -183,6 +191,9 @@ class Options(BaseModel):
 
 	flash_mac_address: Optional[FlashMacAddressConfig] = None
 	""" Configuration for generating MAC addresses during flashing. """
+
+	hub_robot_id: Optional[HubRobotIdConfig] = None
+	""" Configuration for generating the Hub robot ID. """
 
 class EepromData(BaseModel):
 	boardConf: Optional[str] = None
