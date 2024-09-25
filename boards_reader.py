@@ -133,6 +133,13 @@ class FlashMacAddressConfig(BaseModel):
 	serial_number_digits: Optional[int]
 	""" Number of digits to be used from the serial number. """
 
+class HostnameGeneratingMethod(str, Enum):
+	mxid = "mxid"
+	""" Use the MXID as the hostname. """
+class HostnameConfig(BaseModel):
+	generating_method: HostnameGeneratingMethod
+	""" Method used to generate the hostname. """
+
 class Options(BaseModel):
 	bootloader: BootloaderType
 	bootloader_config: Optional[BootloaderConfig] = None
@@ -183,6 +190,9 @@ class Options(BaseModel):
 
 	flash_mac_address: Optional[FlashMacAddressConfig] = None
 	""" Configuration for generating MAC addresses during flashing. """
+
+	hostname: Optional[HostnameConfig] = None
+	""" Configuration for generating hostnames during flashing. """
 
 class EepromData(BaseModel):
 	boardConf: Optional[str] = None
