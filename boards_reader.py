@@ -144,6 +144,7 @@ class HubRobotIdConfig(BaseModel):
 class HostnameGeneratingMethod(str, Enum):
 	mxid = "mxid"
 	""" Use the MXID as the hostname. """
+
 class HostnameConfig(BaseModel):
 	generating_method: HostnameGeneratingMethod
 	""" Method used to generate the hostname. """
