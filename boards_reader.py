@@ -141,6 +141,13 @@ class HubRobotIdConfig(BaseModel):
 	generating_method: HubRobotIdGeneratingMethod
 	""" Method used to generate the Hub robot UUID. """
 
+class HostnameGeneratingMethod(str, Enum):
+	mxid = "mxid"
+	""" Use the MXID as the hostname. """
+class HostnameConfig(BaseModel):
+	generating_method: HostnameGeneratingMethod
+	""" Method used to generate the hostname. """
+
 class Options(BaseModel):
 	bootloader: BootloaderType
 	bootloader_config: Optional[BootloaderConfig] = None
@@ -201,6 +208,9 @@ class Options(BaseModel):
 
 	hub_robot_id: Optional[HubRobotIdConfig] = None
 	""" Configuration for generating the Hub robot ID. """
+
+	hostname: Optional[HostnameConfig] = None
+	""" Configuration for generating hostnames during flashing. """
 
 class EepromData(BaseModel):
 	boardConf: Optional[str] = None
