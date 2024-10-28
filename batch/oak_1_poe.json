@@ -12,6 +12,12 @@
             "board_config_file": "OAK-1-POE.json"
         },
         {
+            "title":"OAK-1 MAX PoE AF (PA2096 R1M1E1)",
+            "description": "OAK-1 PoE with IMX582 AF, based on PA2096 R1M1E1 board",
+            "eeprom":"eeprom/PA2096_R1M1E1_oak_1_max_poe_af.json",
+            "board_config_file": "OAK-1-POE.json"
+        },
+        {
             "title":"OAK-1 PoE AF (PA2096 R1M1E1)",
             "description": "OAK-1 PoE with Fixed Focus, based on PA2096 R1M1E1 board",
             "eeprom":"eeprom/PA2096_R1M1E1_oak_1_poe_af.json",
