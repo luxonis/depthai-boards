@@ -6,6 +6,12 @@
     "options": {"bootloader": "header_usb", "imu": true},
     "variants": [
         {
+            "title":"OAK-D W C49 (DM9098 R9M2E9)",
+            "description": "OAK-D Wide Lens, based on DM9098 R9M2E9 board",
+            "eeprom":"eeprom/DM9098_R9M2E9_oak_d_w_c49.json",
+            "board_config_file": "OAK-D-W.json"
+        },
+        {
             "title":"OAK-D W (DM9098 R8M2E8)",
             "description": "OAK-D Wide Lens, based on DM9098 R8M2E8 board",
             "eeprom":"eeprom/DM9098_R8M2E8_oak_d_w.json",
