@@ -147,6 +147,9 @@ class Options(BaseModel):
 	imu: bool = True
 	""" Does the board have an IMU or not? """
 
+	imu_kind: Optional[str] = None
+	""" The tests will check for this specific IMU kind if it's specified. """
+
 	usb3: bool = True
 	"""Does the board support USB3?"""
 
