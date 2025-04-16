@@ -119,19 +119,29 @@ class BootloaderConfig(BaseModel):
 
 class MacAddressGeneratingMethod(str, Enum):
 	last_serial_number_digits = "last_serial_number_digits"
+	database_sourced = "database_sourced"
 
-class FlashMacAddressConfig(BaseModel):
-	generating_method: MacAddressGeneratingMethod
-	""" Method used to generate the MAC address. """
-
+class MacAddressConfig(BaseModel):
 	prefix: str
 	""" MAC address prefix to be used for all generated MAC addresses. """
 
 	prefix_bits: int
 	""" Number of bits to be used from the prefix. """
 
-	serial_number_digits: Optional[int]
+class MacAddressSerialBasedConfig(MacAddressConfig):
+	serial_number_digits: int
 	""" Number of digits to be used from the serial number. """
+	
+class MacAddressDBBasedConfig(MacAddressConfig):
+	region_id: str
+	""" MAC region ID in database to retrieve from. """
+	
+class FlashMacAddressConfig(BaseModel):
+	generating_method: MacAddressGeneratingMethod
+	""" Method used to generate the MAC address. """
+
+	config: Union[MacAddressSerialBasedConfig, MacAddressDBBasedConfig]
+	""" Config for corresponding MAC generation method used. """
 
 class Options(BaseModel):
 	bootloader: BootloaderType
