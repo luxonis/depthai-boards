@@ -302,7 +302,7 @@ class DeviceConfig(BaseModel):
 
 	description: str
 
-	os: Optional[str]
+	os: Optional[str] = None
 	"""The common OS which to use on all of this devices' variants, unless explicitly overwritten by the VariantConfig"""
 
 	variants: List[VariantConfig]
