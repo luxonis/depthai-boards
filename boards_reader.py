@@ -143,6 +143,9 @@ class FlashMacAddressConfig(BaseModel):
 	config: Union[MacAddressSerialBasedConfig, MacAddressDBBasedConfig]
 	""" Config for corresponding MAC generation method used. """
 
+	iface: str = "enP1p1s0"
+	""" Network interface name on which to flash the mac."""
+
 class Options(BaseModel):
 	bootloader: BootloaderType
 	bootloader_config: Optional[BootloaderConfig] = None
