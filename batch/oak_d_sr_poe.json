@@ -15,7 +15,7 @@
         {
             "title":"OAK-D SR PoE (EL2086 R3M2E3) with IMX378",
             "description": "OAK-D SR PoE, based on EL2086 R3M2E3 board with IMX378 center and ToF",
-            "eeprom":"eeprom/EL2086_R3M2E3_oak_d_sr_poe_c84.json",
+            "eeprom":"eeprom/EL2086_R3M2E3_oak_d_sr_poe_c83.json",
             "board_config_file": "OAK-D-SR-POE.json",
             "options": {"nor_size": 33554432}
         },
