@@ -34,6 +34,18 @@
             "description": "OAK-D Series 2, AutoFocus, based on DM9098 R8M2E8 board, with PMIC IC",
             "eeprom":"eeprom/DM9098_R8M2E8_oak_d_s2_af.json",
             "board_config_file": "OAK-D-S2.json"
+        },
+        {
+            "title":"OAK-D S2 AF (DM9098 R9M2E9)",
+            "description": "OAK-D Series 2, AutoFocus, based on DM9098 R9M2E9 board, with PMIC IC",
+            "eeprom":"eeprom/DM9098_R9M2E9_oak_d_s2_af.json",
+            "board_config_file": "OAK-D-S2.json"
+        },
+        {
+            "title":"OAK-D S2 FF (DM9098 R9M2E9)",
+            "description": "OAK-D Series 2, AutoFocus, based on DM9098 R9M2E9 board, with PMIC IC",
+            "eeprom":"eeprom/DM9098_R9M2E9_oak_d_s2_ff.json",
+            "board_config_file": "OAK-D-S2.json"
         }
     ]
 }
