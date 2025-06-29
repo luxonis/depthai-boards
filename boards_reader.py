@@ -132,17 +132,6 @@ class MacAddressSerialBasedConfig(MacAddressConfig):
 	serial_number_digits: int
 	""" Number of digits to be used from the serial number. """
 	
-class MacAddressDBBasedConfig(MacAddressConfig):
-	region_id: str
-	""" MAC region ID in database to retrieve from. """
-	
-class FlashMacAddressConfig(BaseModel):
-	generating_method: MacAddressGeneratingMethod
-	""" Method used to generate the MAC address. """
-
-	config: Union[MacAddressSerialBasedConfig, MacAddressDBBasedConfig]
-	""" Config for corresponding MAC generation method used. """
-
 	serial_number_offset: Optional[int]
 	""" Offset added to the serial number. Useful when the <serial_number_digits> don't reflect the boards already produced and the mac addresses would overlap with the previously produced devices."""
 	
