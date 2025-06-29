@@ -119,22 +119,32 @@ class BootloaderConfig(BaseModel):
 
 class MacAddressGeneratingMethod(str, Enum):
 	last_serial_number_digits = "last_serial_number_digits"
+	database_sourced = "database_sourced"
 
-class FlashMacAddressConfig(BaseModel):
-	generating_method: MacAddressGeneratingMethod
-	""" Method used to generate the MAC address. """
-
+class MacAddressConfig(BaseModel):
 	prefix: str
 	""" MAC address prefix to be used for all generated MAC addresses. """
 
 	prefix_bits: int
 	""" Number of bits to be used from the prefix. """
 
-	serial_number_digits: Optional[int]
+class MacAddressSerialBasedConfig(MacAddressConfig):
+	serial_number_digits: int
 	""" Number of digits to be used from the serial number. """
 
 	serial_number_offset: Optional[int]
 	""" Offset added to the serial number. Useful when the <serial_number_digits> don't reflect the boards already produced and the mac addresses would overlap with the previously produced devices."""
+	
+class MacAddressDBBasedConfig(MacAddressConfig):
+	region_id: str
+	""" MAC region ID in database to retrieve from. """
+	
+class FlashMacAddressConfig(BaseModel):
+	generating_method: MacAddressGeneratingMethod
+	""" Method used to generate the MAC address. """
+
+	config: Union[MacAddressSerialBasedConfig, MacAddressDBBasedConfig]
+	""" Config for corresponding MAC generation method used. """
 
 class HubRobotIdGeneratingMethod(str, Enum):
 	random_uuid4 = "random_uuid4"
@@ -170,6 +180,9 @@ class Options(BaseModel):
 
 	imu: bool = True
 	""" Does the board have an IMU or not? """
+
+	imu_kind: Optional[str] = None
+	""" The tests will check for this specific IMU kind if it's specified. """
 
 	usb3: bool = True
 	"""Does the board support USB3?"""
@@ -209,6 +222,7 @@ class Options(BaseModel):
 	""" Configuration for generating MAC addresses during flashing. """
 
 	ssh_password: str = ""
+	""" Password for SSH connection to the device. """
 
 	hub_robot_id: Optional[HubRobotIdConfig] = None
 	""" Configuration for generating the Hub robot ID. """
@@ -318,6 +332,9 @@ class DeviceConfig(BaseModel):
 
 	description: str
 
+	os: Optional[str] = None
+	"""The common OS which to use on all of this devices' variants, unless explicitly overwritten by the VariantConfig"""
+
 	variants: List[VariantConfig]
 
 
@@ -336,8 +353,6 @@ def update(d: Dict, u: Dict):
 DEVICES = []
 DEVICES_TYPED: List[DeviceConfig] = []
 for device_file in [*(DEPTHAI_BOARDS_PATH / "batch" ).glob("*.json"), *(DEPTHAI_BOARDS_PRIVATE_PATH / "batch" ).glob("*.json")]:
-	if "flashparking" not in str(device_file):
-		continue
 	try:
 		with open(device_file, "r") as f:
 			device = json.load(f)
@@ -402,7 +417,7 @@ for device_file in [*(DEPTHAI_BOARDS_PATH / "batch" ).glob("*.json"), *(DEPTHAI_
 		else:
 			variant_combined["board_config"] = {"cameras": {}} # if no board config is specified, use an empty one (used for FCC cameras)
 		# Convert the bootloader string to an enum
-		variant_combined["options"]["bootloader"] = BootloaderType(options["bootloader"]) # convert string to enum
+		variant_combined["options"]["bootloader"] = BootloaderType(variant_combined["options"]["bootloader"]) # convert string to enum
 
 		if "board_config_file_2" in variant_combined:
 			board_config_path = device_file.parent / "../boards" / variant_combined["board_config_file_2"]
@@ -415,8 +430,6 @@ for device_file in [*(DEPTHAI_BOARDS_PATH / "batch" ).glob("*.json"), *(DEPTHAI_
 					raise Exception(f"Couldn't load board config file at {board_config_path.resolve()} for device '{device_file.resolve()}'. Make sure the board_config_file field is set correctly in the device file.")
 		else:
 			variant_combined["board_config_2"] = {"cameras": {}} # if no board config is specified, use an empty one (used for FCC cameras)
-		# Convert the bootloader string to an enum
-		variant_combined["options"]["bootloader"] = BootloaderType(options["bootloader"]) # convert string to enum
 
 		variants_combined.append(variant_combined)
 
