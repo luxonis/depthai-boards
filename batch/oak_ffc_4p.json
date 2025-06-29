@@ -6,6 +6,15 @@
     "options": {"bootloader": "header_usb", "imu": true},
     "variants": [
         {
+            "title":"OAK-FFC 4P (DD2090 R7M1E7) USB BL",
+            "description": "OAK-FFC 4P",
+            "eeprom":"eeprom/DD2090_R7M1E7_oak_ffc_4p_usb_bl.json",
+            "board_config_file": "OAK-FFC-4P.json",
+            "options": {
+                "bootloader": "usb"
+            }
+        },
+        {
             "title":"OAK-FFC 4P (DD2090 R7M1E7)",
             "description": "OAK-FFC 4P",
             "eeprom":"eeprom/DD2090_R7M1E7_oak_ffc_4p.json",

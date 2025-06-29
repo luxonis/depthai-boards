@@ -5,6 +5,12 @@
     "options": { "bootloader": "poe", "imu": true, "usb3": false, "eth": true },
     "variants": [
         {
+            "title": "OAK-T (MD2084 R7M6E4)",
+            "description": "OAK Thermal camera.",
+            "eeprom": "eeprom/MD2084_R7M6E4_oak_t.json",
+            "board_config_file": "OAK-T.json"
+        },
+        {
             "title": "OAK-T (MD2084 R3M2E2)",
             "description": "OAK Thermal camera.",
             "eeprom": "eeprom/MD2084_R3M2E2_oak_t.json",
