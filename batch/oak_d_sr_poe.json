@@ -6,6 +6,13 @@
     "options": {"bootloader": "poe", "imu": true, "usb3": false, "eth": true},
     "variants": [
         {
+            "title":"OAK-D SR PoE (EL2086 R4M3E4)",
+            "description": "OAK-D SR PoE, based on EL2086 R4M3E4 board with ToF sensor",
+            "eeprom":"eeprom/EL2086_R4M3E4_oak_d_sr_poe.json",
+            "board_config_file": "OAK-D-SR-POE.json",
+            "options": {"nor_size": 33554432}
+        },
+        {
             "title":"OAK-D SR PoE (EL2086 R3M2E3)",
             "description": "OAK-D SR PoE, based on EL2086 R3M2E3 board with ToF sensor",
             "eeprom":"eeprom/EL2086_R3M2E3_oak_d_sr_poe.json",
