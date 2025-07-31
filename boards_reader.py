@@ -1,12 +1,18 @@
 from pathlib import Path
 import json
 from enum import Enum
-from pydantic import BaseModel, ValidationError
+from pydantic import BaseModel, ValidationError, Field, ConfigDict
 from typing import Optional, Union, Dict, List, Tuple
 import copy
 
 DEPTHAI_BOARDS_PATH = Path(__file__).parent
 DEPTHAI_BOARDS_PRIVATE_PATH = Path(__file__).parent / "../depthai_boards_private" # (optional) private/custom boards should be placed in a sibling directory to this one
+
+class StrictModel(BaseModel):
+	model_config = ConfigDict(
+		extra='forbid',
+		frozen=False,
+	)
 
 
 # Bootloader options
@@ -27,7 +33,7 @@ class BootloaderType(str, Enum):
 			return BootloaderType.NONE
 
 
-class CameraSettings(BaseModel):
+class CameraSettings(StrictModel):
 	sharpness: Optional[int] = None
 	luma_denoise: Optional[int] = None
 	chroma_denoise: Optional[int] = None
@@ -39,7 +45,7 @@ class CameraSettings(BaseModel):
 	""" Tuple of (numerator, denominator) values. The image is scaled by
 	numerator/denominator. Only applicable to color cameras. """
 
-class TVCalibrationSettings(BaseModel):
+class TVCalibrationSettings(StrictModel):
 	camera_settings: Dict[str, CameraSettings] = {}
 	""" Dictionary with camera sockets as keys and CameraSettings as values. Used to set
 	camera settings (sharpness, exposure, ...) for TV calibration. """
@@ -49,7 +55,7 @@ class TVCalibrationSettings(BaseModel):
 	charuco square is determined by dividing the width of the TV by this number. """
 
 
-class BasicCameraInfo(BaseModel):
+class BasicCameraInfo(StrictModel):
 	name: str = ""
 	socket: str
 	type: str # color, mono, tof
@@ -62,14 +68,14 @@ class BasicCameraInfo(BaseModel):
 
 
 # Base model mirror of dai.DeviceBootlodar.Config
-class BootloaderConfig(BaseModel):
+class BootloaderConfig(StrictModel):
 	@staticmethod
 	def str_to_ip(ip: str) -> int:
 		""" Converts an IPv4 string to an integer."""
 		return sum([int(x) << (8 * i) for i, x in enumerate(ip.split("."))])
 	
 
-	class NetworkConfig(BaseModel):
+	class NetworkConfig(StrictModel):
 		ipv4: int = 0
 		ipv4Dns: int = 0
 		ipv4DnsAlt: int = 0
@@ -107,8 +113,8 @@ class BootloaderConfig(BaseModel):
 			if "mac" in data and isinstance(data["mac"], str):
 				data["mac"] = [int(x, 16) for x in data["mac"].split(":")]
 			super().__init__(**data)
-    
-	class UsbConfig(BaseModel):
+
+	class UsbConfig(StrictModel):
 		maxUsbSpeed: int = 3
 		pid: int = 0xF63C
 		timeoutMs: int = 3000
@@ -121,7 +127,7 @@ class MacAddressGeneratingMethod(str, Enum):
 	last_serial_number_digits = "last_serial_number_digits"
 	database_sourced = "database_sourced"
 
-class MacAddressConfig(BaseModel):
+class MacAddressConfig(StrictModel):
 	prefix: str
 	""" MAC address prefix to be used for all generated MAC addresses. """
 
@@ -136,16 +142,30 @@ class MacAddressDBBasedConfig(MacAddressConfig):
 	region_id: str
 	""" MAC region ID in database to retrieve from. """
 	
-class FlashMacAddressConfig(BaseModel):
+class FlashMacAddressConfig(StrictModel):
 	generating_method: MacAddressGeneratingMethod
 	""" Method used to generate the MAC address. """
 
 	config: Union[MacAddressSerialBasedConfig, MacAddressDBBasedConfig]
 	""" Config for corresponding MAC generation method used. """
+ 
+class HostnameGeneratingMethod(str, Enum):
+	mxid = "mxid"
+class HostnameConfig(StrictModel):
+	generating_method: HostnameGeneratingMethod
+ 
+class HubRobotIdGeneratingMethod(str, Enum):
+	random_uuid4 = "random_uuid4"
+class HubRobotIdConfig(StrictModel):
+	generating_method: HubRobotIdGeneratingMethod
 
-class Options(BaseModel):
+class Options(StrictModel):
 	bootloader: BootloaderType
 	bootloader_config: Optional[BootloaderConfig] = None
+	module_name: str = ''
+	hostname: Optional[HostnameConfig] = None
+	hub_robot_id: Optional[HubRobotIdConfig] = None
+	submodules: List[str] = []
 
 	environment: Union[str, dict] = "standard"
 	""" if dict, each key represents a stage (flashing, testing, calibration) and the value
@@ -199,70 +219,115 @@ class Options(BaseModel):
 
 	ssh_password: str = ""
 	""" Password for SSH connection to the device. """
+ 
+class CalibModel(str, Enum):
+		perspective_NORMAL = "perspective_NORMAL"
+		perspective_TILTED = "perspective_TILTED"
+		perspective_THERMAL = "perspective_THERMAL"
 
-class EepromData(BaseModel):
-	boardConf: Optional[str] = None
-	boardName: Optional[str] = None
-	boardRev: Optional[str] = None
-	productName: Optional[str] = None
-	boardCustom: Optional[str] = None
-	hardwareConf: Optional[str] = None
-	boardOptions: Optional[int] = None
-	version: Optional[int] = None
-	batchTime: int = 0
+class CameraModel(str, Enum):
+		perspective = "perspective"
+		fisheye = "fisheye"
+
+class EepromData(StrictModel):
+	boardConf: str = Field(pattern=r'^n?IR-C[0-9]{2}M[0-9]{2}-[0-9]{2}$')
+	boardName: str
+	boardRev: str
+	productName: str
+	batchName: str
+	boardCustom: str
+	hardwareConf: str = Field(pattern=r'^F[0-2]-FV0[0-6]-BC0[015][0-9]$')
+	boardOptions: int
+	version: int
+	batchTime: int
 	""" seconds since epoch """
 
 
-class RotationType(BaseModel):
+class RotationType(StrictModel):
 	r: float # roll
 	p: float # pitch
 	y: float # yaw
 
-class TranslationType(BaseModel):
+class TranslationType(StrictModel):
 	x: float
 	y: float
 	z: float
 
-class Extrinsics(BaseModel):
-	to_cam: str
+class Extrinsics(StrictModel):
+	to_cam: str = Field(pattern=r'^(CAM_[A-G]|LEFT)$')
 	rotation: RotationType
 	specTranslation: TranslationType
 
-class CameraInfo(BaseModel):
+class CameraInfo(StrictModel):
+	model_config = ConfigDict(extra='forbid')
+
 	name: str = ""
 	hfov: float = 0.0
 	type: str = ""
-	camera_model: str = "perspective"
-	calib_model: str = "perspective_NORMAL"
+	camera_model: CameraModel = CameraModel.perspective
+	calib_model: CalibModel = CalibModel.perspective_NORMAL
 	""" Camera model can be either 'perspective' or 'fisheye'. """
 	extrinsics: Optional[Extrinsics] = None
 	sensor_name: str = ""
 	has_autofocus: bool = False
 	lens_position: int = -1
 
-class ImuSensorInfo(BaseModel):
+class ImuSensorInfo(StrictModel):
 	name: str = ""
 	extrinsics: Optional[Extrinsics] = None
 
-class StereoConfig(BaseModel):
+class StereoConfig(StrictModel):
 	left_cam: str
 	right_cam: str
 
-class ImuExtrinsics(BaseModel):
+class ImuExtrinsics(StrictModel):
 	sensors: Dict[str, ImuSensorInfo]
 
-class BoardConfig(BaseModel):
+class BoardConfig(StrictModel):
+	name: Optional[str] = None
+	revision: Optional[str] = None
+	camera_model: CameraModel = CameraModel.perspective
 	cameras: Dict[str, CameraInfo]
 	stereo_config: Optional[StereoConfig] = None
 	imuExtrinsics: Optional[ImuExtrinsics] = None
 
-class VariantConfig(BaseModel):
+class Limitations(StrictModel):
+  calib_temp: int
+  flashing_temp: int
+
+class DeviceSharedConfig(StrictModel):
+	"""A config of fields shared between the `DeviceConfig` and `VariantConfig`"""
+
 	id: str
-	""" equivalent to the eeprom file name (inside the eeprom folder) without the extension """
+	""" equivalent to the device file name (inside the batch folder) without the extension """
+
+	image: Optional[str] = None
+
+	test_type: Optional[str] = None
+
+	limitations: Optional[Limitations] = None
+
+	options: Options
 
 	title: str
 
 	description: str
+
+	os: Optional[str] = None
+	"""The common OS which to use on all of this devices' variants, unless explicitly overwritten by the VariantConfig"""
+
+
+class VariantConfig(DeviceSharedConfig):
+	id: str
+	""" equivalent to the eeprom file name (inside the eeprom folder) without the extension """
+
+	eeprom_file_name: str
+
+	board_config_file: Optional[str] = None
+
+	board_config_file_2: Optional[str] = None
+
+	environment: Optional[Union[str, dict]] = None
 
 	eeprom: str
 	""" path to eeprom file """
@@ -273,16 +338,11 @@ class VariantConfig(BaseModel):
 
 	board_config_2: BoardConfig
 
-	options: Options
-
 	fip: Optional[str] = None
 	""" Name of the FIP fipe to be flashed."""
 
 	cdt: Optional[str] = None
 	"""Name of the CDT file to be flashed. (RVC4 only)"""
-
-	os: Optional[str] = None
-	"""Name of the OS zip to be flashed."""
 
 	configs: Optional[List[str]] = None
 	""" List of config tars names to be flashed. """
@@ -294,27 +354,17 @@ class VariantConfig(BaseModel):
 	"""Path of the test_station_config, look at stage_testing/test_station/config/__init__.py for more info."""
 
 
-class DeviceConfig(BaseModel):
-	id: str
-	""" equivalent to the device file name (inside the batch folder) without the extension """
-
-	title: str
-
-	description: str
-
-	os: Optional[str] = None
-	"""The common OS which to use on all of this devices' variants, unless explicitly overwritten by the VariantConfig"""
-
+class DeviceConfig(DeviceSharedConfig):
 	variants: List[VariantConfig]
 
 
 def update(d: Dict, u: Dict):
-    for k, v in u.items():
-        if isinstance(v, dict):
-            d[k] = update(d.get(k, {}), v)
-        else:
-            d[k] = v
-    return d
+	for k, v in u.items():
+		if isinstance(v, dict):
+			d[k] = update(d.get(k, {}), v)
+		else:
+			d[k] = v
+	return d
 
 
 # construct a devices dict
@@ -376,7 +426,9 @@ for device_file in [*(DEPTHAI_BOARDS_PATH / "batch" ).glob("*.json"), *(DEPTHAI_
 			except Exception as e:
 				raise Exception(f"Couldn't load board config file at {board_config_path.resolve()} for device '{device_file.resolve()}'. Make sure the board_config_file field is set correctly in the device file.")
 		else:
+			# Get a default one here
 			variant_combined["board_config"] = {"cameras": {}} # if no board config is specified, use an empty one (used for FCC cameras)
+
 		# Convert the bootloader string to an enum
 		variant_combined["options"]["bootloader"] = BootloaderType(variant_combined["options"]["bootloader"]) # convert string to enum
 
