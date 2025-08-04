@@ -1,0 +1,75 @@
+{
+    "title": "OAK4-D",
+    "description": "OAK4-D",
+    "image": "images/oak4_d.jpg",
+    "test_type": "OAK4-D",
+    "os": "PRODUCTION/luxonis_os_rvc4-1.8.0+c9cacedb58f1308cdb5c026a55eb584d94832186.tar.xz",
+    "options": {
+        "imu": true,
+        "platform": "rvc4",
+        "environment": {
+            "flashing": "rvc4",
+            "testing": "rvc4",
+            "calibration": "rvc4"
+        },
+        "ssh_password": "oelinux123",
+        "flash_mac_address": {
+            "generating_method": "database_sourced",
+            "config": {
+                "prefix": "44:A9:2C:30:00:00",
+                "prefix_bits": 36,
+                "region_id": "RVC4"
+            }
+        }
+    },
+    "variants": [
+        {
+            "title": "OAK4-D AF (NG9498 P7D1)",
+            "description": "OAK4-D AF (NG9498 P7D1)",
+            "eeprom": "eeprom/NG9498_ASM_P7D1_oak4_d_af.json",
+            "cdt": "OAK4-D_R7",
+            "test_suite": "TESTBED_OAK4_D_generic",
+            "board_config_file": "OAK4-D.json"
+        },
+        {
+            "title": "OAK4-D Pro AF (NG9498 P7D1)",
+            "description": "OAK4-D Pro AF (NG9498 P7D1)",
+            "eeprom": "eeprom/NG9498_ASM_P7D1_oak4_d_pro_af.json",
+            "cdt": "OAK4-D_R7",
+            "test_suite": "TESTBED_OAK4_D_Pro_generic",
+            "board_config_file": "OAK4-D.json"
+        },
+        {
+            "title": "OAK4-D FF (NG9498 P7D1)",
+            "description": "OAK4-D FF (NG9498 P7D1)",
+            "eeprom": "eeprom/NG9498_ASM_P7D1_oak4_d_ff.json",
+            "cdt": "OAK4-D_R7",
+            "test_suite": "TESTBED_OAK4_D_generic",
+            "board_config_file": "OAK4-D.json"
+        },
+        {
+            "title": "OAK4-D Pro FF (NG9498 P7D1)",
+            "description": "OAK4-D Pro FF (NG9498 P7D1)",
+            "eeprom": "eeprom/NG9498_ASM_P7D1_oak4_d_pro_ff.json",
+            "cdt": "OAK4-D_R7",
+            "test_suite": "TESTBED_OAK4_D_Pro_generic",
+            "board_config_file": "OAK4-D.json"
+        },
+        {
+            "title": "OAK4-D W (NG9498 P7D1)",
+            "description": "OAK4-D W (NG9498 P7D1)",
+            "eeprom": "eeprom/NG9498_ASM_P7D1_oak4_d_w.json",
+            "cdt": "OAK4-D_R7",
+            "test_suite": "TESTBED_OAK4_D_generic",
+            "board_config_file": "OAK4-D-W.json"
+        },
+        {
+            "title": "OAK4-D Pro W (NG9498 P7D1)",
+            "description": "OAK4-D Pro W (NG9498 P7D1)",
+            "eeprom": "eeprom/NG9498_ASM_P7D1_oak4_d_pro_w.json",
+            "cdt": "OAK4-D_R7",
+            "test_suite": "TESTBED_OAK4_D_Pro_generic",
+            "board_config_file": "OAK4-D-W.json"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "board_config":
+    {
+        "name": "OAK4-S",
+        "cameras":{
+            "CAM_A": {
+                "name": "rgb",
+                "hfov": 75.0,
+                "type": "color"
+            }
+        }
+    }
+}
+

@@ -1,0 +1,15 @@
+{
+    "board_config":
+    {
+        "name": "OAK4-S-W",
+        "cameras":{
+            "CAM_A": {
+                "name": "rgb",
+                "hfov": 108.0,
+                "type": "color",
+                "calib_model": "perspective_TILTED"
+            }
+        }
+    }
+}
+
