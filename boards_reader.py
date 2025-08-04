@@ -352,6 +352,10 @@ def update(d: Dict, u: Dict):
 # each device contains a list of variants which are represented by JSON files in depthai-boards/batch/eeeprom
 DEVICES = []
 DEVICES_TYPED: List[DeviceConfig] = []
+
+# Create a dictionary of board_config files
+board_configs = {file.name: file for file in [*(DEPTHAI_BOARDS_PATH / "boards" ).glob("*.json"), *(DEPTHAI_BOARDS_PRIVATE_PATH / "boards" ).glob("*.json")]}
+
 for device_file in [*(DEPTHAI_BOARDS_PATH / "batch" ).glob("*.json"), *(DEPTHAI_BOARDS_PRIVATE_PATH / "batch" ).glob("*.json")]:
 	try:
 		with open(device_file, "r") as f:
@@ -393,34 +397,21 @@ for device_file in [*(DEPTHAI_BOARDS_PATH / "batch" ).glob("*.json"), *(DEPTHAI_
 
 		# Load the board config
 		if "board_config_file" in variant_combined:
-
-			if type(variant_combined["board_config_file"]) is list:
-				board_config_path=[]
-				for index, board in enumerate(variant_combined["board_config_file"]):
-					board_config_path.append(device_file.parent / "../boards" / variant_combined["board_config_file"][index])
-					try:
-						with open(board_config_path[index], "r") as f:
-							variant_combined[f"board_config_{index}"]=(json.load(f).get("board_config", {}))
-					except json.decoder.JSONDecodeError as e:
-						raise Exception(f"Couldn't parse board config file at {board_config_path[index].resolve()} for device '{device_file.resolve()}'. Make sure the board config file is valid JSON. \n{e}")
-					except Exception as e:
-						raise Exception(f"Couldn't load board config file at {board_config_path[index].resolve()} for device '{device_file.resolve()}'. Make sure the board_config_file field is set correctly in the device file.")
-			else:
-				board_config_path = device_file.parent / "../boards" / variant_combined["board_config_file"]
-				try:
-					with open(board_config_path, "r") as f:
-						variant_combined["board_config"] = json.load(f).get("board_config", {})
-				except json.decoder.JSONDecodeError as e:
-					raise Exception(f"Couldn't parse board config file at {board_config_path.resolve()} for device '{device_file.resolve()}'. Make sure the board config file is valid JSON. \n{e}")
-				except Exception as e:
-					raise Exception(f"Couldn't load board config file at {board_config_path.resolve()} for device '{device_file.resolve()}'. Make sure the board_config_file field is set correctly in the device file.")
+			board_config_path = board_configs[variant_combined["board_config_file"]]
+			try:
+				with open(board_config_path, "r") as f:
+					variant_combined["board_config"] = json.load(f).get("board_config", {})
+			except json.decoder.JSONDecodeError as e:
+				raise Exception(f"Couldn't parse board config file at {board_config_path.resolve()} for device '{device_file.resolve()}'. Make sure the board config file is valid JSON. \n{e}")
+			except Exception as e:
+				raise Exception(f"Couldn't load board config file at {board_config_path.resolve()} for device '{device_file.resolve()}'. Make sure the board_config_file field is set correctly in the device file.")
 		else:
 			variant_combined["board_config"] = {"cameras": {}} # if no board config is specified, use an empty one (used for FCC cameras)
 		# Convert the bootloader string to an enum
 		variant_combined["options"]["bootloader"] = BootloaderType(variant_combined["options"]["bootloader"]) # convert string to enum
 
 		if "board_config_file_2" in variant_combined:
-			board_config_path = device_file.parent / "../boards" / variant_combined["board_config_file_2"]
+			board_config_path = board_configs[variant_combined["board_config_file_2"]]
 			try:
 				with open(board_config_path, "r") as f:
 					variant_combined["board_config_2"] = json.load(f).get("board_config", {})
