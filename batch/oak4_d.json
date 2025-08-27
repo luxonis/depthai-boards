@@ -3,7 +3,7 @@
     "description": "OAK4-D",
     "image": "images/oak4_d.jpg",
     "test_type": "OAK4-D",
-    "os": "PRODUCTION/luxonis_os_rvc4_debug-1.18.2+2c21c9aee3c55b49c1155f4d57daf5357ea128d2.tar.xz",
+    "os": "PRODUCTION/luxonis_os_rvc4_debug-1.18.3+fa095cbb52a51bcf883b93aa6b77fd08bcc4170b.tar.xz",
     "options": {
         "imu": true,
         "platform": "rvc4",

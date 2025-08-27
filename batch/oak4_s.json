@@ -2,7 +2,7 @@
     "title": "OAK4-S",
     "description": "OAK4-S full assembly.",
     "image": "images/oak4-s.jpeg",
-    "os": "PRODUCTION/luxonis_os_rvc4-1.8.0+c9cacedb58f1308cdb5c026a55eb584d94832186.tar.xz",
+    "os": "PRODUCTION/luxonis_os_rvc4-1.8.3+fa095cbb52a51bcf883b93aa6b77fd08bcc4170b.tar.xz",
     "options": {
         "platform": "rvc4",
         "environment": {
