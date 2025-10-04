@@ -132,6 +132,9 @@ class MacAddressSerialBasedConfig(MacAddressConfig):
 	serial_number_digits: int
 	""" Number of digits to be used from the serial number. """
 	
+	serial_number_offset: Optional[int]
+	""" Offset added to the serial number. Useful when the <serial_number_digits> don't reflect the boards already produced and the mac addresses would overlap with the previously produced devices."""
+	
 class MacAddressDBBasedConfig(MacAddressConfig):
 	region_id: str
 	""" MAC region ID in database to retrieve from. """
@@ -143,9 +146,30 @@ class FlashMacAddressConfig(BaseModel):
 	config: Union[MacAddressSerialBasedConfig, MacAddressDBBasedConfig]
 	""" Config for corresponding MAC generation method used. """
 
+class HubRobotIdGeneratingMethod(str, Enum):
+	random_uuid4 = "random_uuid4"
+	""" Generate a random UUID4 as a Hub robot ID. """
+
+class HubRobotIdConfig(BaseModel):
+	generating_method: HubRobotIdGeneratingMethod
+	""" Method used to generate the Hub robot UUID. """
+
+class HostnameGeneratingMethod(str, Enum):
+	mxid = "mxid"
+	""" Use the MXID as the hostname. """
+
+class HostnameConfig(BaseModel):
+	generating_method: HostnameGeneratingMethod
+	""" Method used to generate the hostname. """
+
 class Options(BaseModel):
 	bootloader: BootloaderType
 	bootloader_config: Optional[BootloaderConfig] = None
+
+	module_name: str = ""
+	"""If this field is set, the device will be treated as a module."""
+	submodules: List[str] = []
+	"""List names of submodules with unique serial codes."""
 
 	environment: Union[str, dict] = "standard"
 	""" if dict, each key represents a stage (flashing, testing, calibration) and the value
@@ -199,6 +223,12 @@ class Options(BaseModel):
 
 	ssh_password: str = ""
 	""" Password for SSH connection to the device. """
+
+	hub_robot_id: Optional[HubRobotIdConfig] = None
+	""" Configuration for generating the Hub robot ID. """
+
+	hostname: Optional[HostnameConfig] = None
+	""" Configuration for generating hostnames during flashing. """
 
 class EepromData(BaseModel):
 	boardConf: Optional[str] = None
