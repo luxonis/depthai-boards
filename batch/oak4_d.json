@@ -118,6 +118,15 @@
             "cdt": "OAK4-D_R9",
             "test_suite": "TESTBED_OAK4_D_Pro_generic",
             "board_config_file": "OAK4-D-W.json"
+        },
+        {
+            "title": "[Test Station] OAK4-D AF (NG9498 P9D1)",
+            "description": "OAK4-D AF (NG9498 P9D1)",
+            "eeprom": "eeprom/TEST_STATION_NG9498_ASM_P9D1_oak4_d_pro_w.json",
+            "cdt": "OAK4-D_R9",
+            "test_suite": "TESTBED_OAK4_D_Pro_generic",
+            "test_station_config": "NG9498_ASM_P9D1",
+            "board_config_file": "OAK4-D-W.json"
         }
     ]
 }
