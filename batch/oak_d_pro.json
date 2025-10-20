@@ -48,6 +48,12 @@
             "board_config_file": "OAK-D-PRO-97.json"
         },
         {
+            "title":"OAK-D Pro FF 97 (DM9098 R9M2E9)",
+            "description": "OAK-D Pro, Fixed Focus, with center OV9782 camera",
+            "eeprom":"eeprom/DM9098_R9M2E9_oak_d_pro_ff_97.json",
+            "board_config_file": "OAK-D-PRO-97.json"
+        },
+        {
             "title":"OAK-D Pro W 97 (DM9098 R9M2E9)",
             "description": "OAK-D Pro Wide 97 with center OV9782 camera",
             "eeprom":"eeprom/DM9098_R9M2E9_oak_d_pro_w_97.json",
