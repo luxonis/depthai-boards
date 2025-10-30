@@ -76,7 +76,7 @@
             "description": "OAK4-D AF (NG9498 P9D1)",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_af.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_generic",
+            "test_suite": "TESTBED_OAK4_D_R9+",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -84,7 +84,7 @@
             "description": "OAK4-D Pro AF (NG9498 P9D1)",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_pro_af.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_Pro_generic",
+            "test_suite": "TESTBED_OAK4_D_Pro_R9+",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -92,7 +92,7 @@
             "description": "OAK4-D FF (NG9498 P9D1)",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_ff.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_generic",
+            "test_suite": "TESTBED_OAK4_D_R9+",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -100,7 +100,7 @@
             "description": "OAK4-D Pro FF (NG9498 P9D1)",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_pro_ff.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_Pro_generic",
+            "test_suite": "TESTBED_OAK4_D_Pro_R9+",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -108,7 +108,7 @@
             "description": "OAK4-D W (NG9498 P9D1)",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_w.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_generic",
+            "test_suite": "TESTBED_OAK4_D_R9+",
             "board_config_file": "OAK4-D-W.json"
         },
         {
@@ -116,7 +116,7 @@
             "description": "OAK4-D Pro W (NG9498 P9D1)",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_pro_w.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_Pro_generic",
+            "test_suite": "TESTBED_OAK4_D_Pro_R9+",
             "board_config_file": "OAK4-D-W.json"
         }
     ]
