@@ -55,6 +55,12 @@
             "description": "OAK-D Wide Lens, based on DM9098 R6M2E6 board",
             "eeprom":"eeprom/DM9098_R6M2E6_oak_d_w.json",
             "board_config_file": "OAK-D-W.json"
+        },
+        {
+            "title":"OAK-D W (DM9098 R7M2E7)",
+            "description": "OAK-D Wide Lens, based on DM9098 R7M2E7 board",
+            "eeprom":"eeprom/DM9098_R7M2E7_oak_d_w.json",
+            "board_config_file": "OAK-D-W.json"
         }
     ]
 }
