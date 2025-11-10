@@ -76,6 +76,20 @@
             "cdt": "OAK4-S_R9",
             "test_suite": "TESTBED_OAK4_S_generic",
             "board_config_file": "OAK4-S-W.json"
+        },
+        {
+            "title": "[Test Station] OAK4-S W (SL3443 P9D1)",
+            "description": "OAK4-S W (SL3443 P9D1)",
+            "eeprom": "eeprom/TEST_STATION_SL3443_ASM_P9D1_oak4_s_w.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TESTBED_OAK4_S_generic",
+            "test_station_config": "SL3443_ASM_P9D1",
+            "board_config_file": "OAK4-S-W.json",
+            "options": {
+                "has_serial_code": true,
+                "module_name": "Camera board",
+                "submodules": ["Connector board"]
+            }
         }
     ]
 }
