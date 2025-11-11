@@ -82,7 +82,7 @@
             "description": "OAK4-S W (SL3443 P9D1)",
             "eeprom": "eeprom/TEST_STATION_SL3443_ASM_P9D1_oak4_s_w.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_generic",
+            "test_suite": "TEST_STATION_OAK4_S_generic",
             "test_station_config": "SL3443_ASM_P9D1",
             "board_config_file": "OAK4-S-W.json",
             "options": {
