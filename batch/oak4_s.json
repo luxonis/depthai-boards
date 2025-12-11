@@ -14,9 +14,9 @@
         "flash_mac_address": {
             "generating_method": "database_sourced",
             "config": {
-                "prefix": "44:A9:2C:30:30:00",
+                "prefix": "44:A9:2C:30:50:00",
                 "prefix_bits": 36,
-                "region_id": "RVC4_OAK4-S"
+                "region_id": "RVC4_OAK4-S_1"
             }
         }
     },
