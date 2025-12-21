@@ -132,7 +132,7 @@ class MacAddressSerialBasedConfig(MacAddressConfig):
 	serial_number_digits: int
 	""" Number of digits to be used from the serial number. """
 	
-	serial_number_offset: Optional[int]
+	serial_number_offset: Optional[int] = 0
 	""" Offset added to the serial number. Useful when the <serial_number_digits> don't reflect the boards already produced and the mac addresses would overlap with the previously produced devices."""
 	
 class MacAddressDBBasedConfig(MacAddressConfig):

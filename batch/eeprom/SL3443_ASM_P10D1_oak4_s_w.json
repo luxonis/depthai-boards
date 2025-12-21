@@ -3,10 +3,10 @@
   "batchTime": 0,
   "boardConf": "nIR-C45M52-03",
   "boardName": "SL3443-ASM",
-  "boardRev": "P5D1",
-  "productName": "OAK-4-S-AF",
+  "boardRev": "P10D1",
+  "productName": "OAK-4-S-W",
   "boardCustom": "",
-  "hardwareConf": "F0-FV00-BC000",
+  "hardwareConf": "F1-FV01-BC000",
   "boardOptions": 0,
   "version": 7
 }
