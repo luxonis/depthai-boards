@@ -10,13 +10,13 @@
             "testing": "rvc4",
             "calibration": "rvc4"
         },
-        "ssh_password": "oelinux123",
+        "ssh_password": "",
         "flash_mac_address": {
             "generating_method": "database_sourced",
             "config": {
-                "prefix": "44:A9:2C:30:00:00",
+                "prefix": "44:A9:2C:30:30:00",
                 "prefix_bits": 36,
-                "region_id": "RVC4"
+                "region_id": "RVC4_OAK4-S"
             }
         }
     },
@@ -87,8 +87,8 @@
             "board_config_file": "OAK4-S-W.json",
             "options": {
                 "has_serial_code": true,
-                "module_name": "Camera board",
-                "submodules": ["Connector board"]
+                "module_name": "Camera board (SL3443)",
+                "submodules": ["Connector board (SL6987)", "FPC board (SL6979)", "SoM board (DM3499)"]
             }
         }
     ]

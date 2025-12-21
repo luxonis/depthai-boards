@@ -129,8 +129,8 @@
             "board_config_file": "OAK4-D-W.json",
             "options": {
                 "has_serial_code": true,
-                "module_name": "Main board",
-                "submodules": ["Connector board", "Camera board"]
+                "module_name": "Main board (NG9498)",
+                "submodules": ["Connector board (JF6400)", "Camera board (JF6961)", "FPC board #1 (JF6964)", "FPC board #2 (JF6964)"]
             }
         }
     ]
