@@ -100,6 +100,24 @@
             "cdt": "OAK4-S_R9",
             "test_suite": "TESTBED_OAK4_S_R9+",
             "board_config_file": "OAK4-S-W.json"
+        },
+        {
+            "title": "OAK-4-CS-OG05B10 (SL3443 P10D1)",
+            "description": "OAK4-S CS lens with OG05B10 sensor (SL3443 P10D1)",
+            "eeprom": "eeprom/SL3443_ASM_P10D1_oak4_cs_og05b10.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TESTBED_OAK4_S_R9+",
+            "board_config_file": "OAK4-S.json",
+            "os": "PRODUCTION/luxonis_os_rvc4-1.23.0.tar.xz"
+        },
+        {
+            "title": "OAK-4-CS-IMX586 (SL3443 P10D1)",
+            "description": "OAK-4-CS-IMX586 (SL3443 P10D1)",
+            "eeprom": "eeprom/SL3443_ASM_P10D1_oak4_cs_imx586.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TESTBED_OAK4_S_R9+",
+            "board_config_file": "OAK4-S.json",
+            "os": "PRODUCTION/luxonis_os_rvc4-1.23.0.tar.xz"
         }
     ]
 }
