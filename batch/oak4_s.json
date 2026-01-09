@@ -108,7 +108,7 @@
             "cdt": "OAK4-S_R9",
             "test_suite": "TESTBED_OAK4_S_R9+",
             "board_config_file": "OAK4-S.json",
-            "os": "PRODUCTION/luxonis_os_rvc4-1.23.0.tar.xz"
+            "os": "PRODUCTION/luxonis_os_rvc4-1.23.1.tar.xz"
         },
         {
             "title": "OAK-4-CS-IMX586 (SL3443 P10D1)",
@@ -117,7 +117,7 @@
             "cdt": "OAK4-S_R9",
             "test_suite": "TESTBED_OAK4_S_R9+",
             "board_config_file": "OAK4-S.json",
-            "os": "PRODUCTION/luxonis_os_rvc4-1.23.0.tar.xz"
+            "os": "PRODUCTION/luxonis_os_rvc4-1.23.1.tar.xz"
         }
     ]
 }
