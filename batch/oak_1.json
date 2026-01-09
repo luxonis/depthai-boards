@@ -82,6 +82,12 @@
             "description": "OAK-1 Wide Lens 97",
             "eeprom":"eeprom/NG9093_R3M0E4_oak_1_w_97.json",
             "board_config_file": "OAK-1-W-97.json"
+        },
+        {
+            "title":"A00579-C5 (NG9093 R3M0E4)",
+            "description": "OAK-1 with Fixed Focus A00579-C5",
+            "eeprom":"eeprom/NG9093_R3M0E4_oak_1_ff_a00579_c5.json",
+            "board_config_file": "OAK-1.json"
         }
     ]
 }
