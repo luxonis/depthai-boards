@@ -3,7 +3,7 @@
     "description": "OAK4-D",
     "image": "images/oak4_d.jpg",
     "test_type": "OAK4-D",
-    "os": "PRODUCTION/luxonis_os_rvc4-1.20.5.tar.xz",
+    "os": "PRODUCTION/luxonis_os_rvc4-1.23.1.tar.xz",
     "options": {
         "imu": true,
         "platform": "rvc4",
@@ -163,6 +163,54 @@
             "title": "OAK-4-PRO-W (NG9498 P10D0)",
             "description": "OAK-4-PRO-W (NG9498 P10D0)",
             "eeprom": "eeprom/NG9498_ASM_P10D0_oak4_d_pro_w.json",
+            "cdt": "OAK4-D_R9",
+            "test_suite": "TESTBED_OAK4_D_Pro_R9+",
+            "board_config_file": "OAK4-D-W.json"
+        },
+        {
+            "title": "OAK-4-D-AF (NG9498 P10D2)",
+            "description": "OAK-4-D-AF (NG9498 P10D2)",
+            "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_af.json",
+            "cdt": "OAK4-D_R9",
+            "test_suite": "TESTBED_OAK4_D_R9+",
+            "board_config_file": "OAK4-D.json"
+        },
+        {
+            "title": "OAK-4-PRO-AF (NG9498 P10D2)",
+            "description": "OAK-4-PRO-AF (NG9498 P10D2)",
+            "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_pro_af.json",
+            "cdt": "OAK4-D_R9",
+            "test_suite": "TESTBED_OAK4_D_Pro_R9+",
+            "board_config_file": "OAK4-D.json"
+        },
+        {
+            "title": "OAK-4-D-FF (NG9498 P10D2)",
+            "description": "OAK-4-D-FF (NG9498 P10D2)",
+            "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_ff.json",
+            "cdt": "OAK4-D_R9",
+            "test_suite": "TESTBED_OAK4_D_R9+",
+            "board_config_file": "OAK4-D.json"
+        },
+        {
+            "title": "OAK-4-PRO-FF (NG9498 P10D2)",
+            "description": "OAK-4-PRO-FF (NG9498 P10D2)",
+            "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_pro_ff.json",
+            "cdt": "OAK4-D_R9",
+            "test_suite": "TESTBED_OAK4_D_Pro_R9+",
+            "board_config_file": "OAK4-D.json"
+        },
+        {
+            "title": "OAK-4-D-W(NG9498 P10D2)",
+            "description": "OAK-4-D-W(NG9498 P10D2)",
+            "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_w.json",
+            "cdt": "OAK4-D_R9",
+            "test_suite": "TESTBED_OAK4_D_R9+",
+            "board_config_file": "OAK4-D-W.json"
+        },
+        {
+            "title": "OAK-4-PRO-W (NG9498 P10D2)",
+            "description": "OAK-4-PRO-W (NG9498 P10D2)",
+            "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_pro_w.json",
             "cdt": "OAK4-D_R9",
             "test_suite": "TESTBED_OAK4_D_Pro_R9+",
             "board_config_file": "OAK4-D-W.json"
