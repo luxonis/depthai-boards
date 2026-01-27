@@ -1,6 +1,7 @@
 {
     "board_config":
     {
+        "name": "OAK-D-CM4-POE",
         "cameras":{
             "CAM_A": {
                 "name": "color",
