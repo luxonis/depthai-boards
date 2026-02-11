@@ -54,15 +54,15 @@
             "board_config_file": "OAK-1-W-POE.json"
         },
         {
-            "title":"OAK-1 W PoE OV9782 (PA2096 R1M1E1)",
+            "title":"OAK-1 W PoE OV97 (PA2096 R1M1E1)",
             "description": "OAK-1 WideLens angle PoE, with OV9782",
-            "eeprom":"eeprom/PA2096_R1M1E1_oak_1_w_poe_9782.json",
+            "eeprom":"eeprom/PA2096_R1M1E1_oak_1_w_poe_97.json",
             "board_config_file": "OAK-1-W-POE-97.json"
         },
         {
-            "title":"OAK-1 W PoE OV9782 (PA2096 R0M0E0)",
+            "title":"OAK-1 W PoE OV97 (PA2096 R0M0E0)",
             "description": "OAK-1 WideLens angle PoE, with OV9782",
-            "eeprom":"eeprom/PA2096_R0M0E0_oak_1_w_poe_9782.json",
+            "eeprom":"eeprom/PA2096_R0M0E0_oak_1_w_poe_97.json",
             "board_config_file": "OAK-1-W-POE-97.json"
         }
     ]
