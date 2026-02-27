@@ -6,7 +6,7 @@
         "cameras":{
             "CAM_B": {
                 "name": "left",
-                "hfov": 71.86,
+                "hfov": 80.0,
                 "type": "color",
                 "extrinsics": {
                     "to_cam": "CAM_C",
@@ -24,7 +24,7 @@
             },
             "CAM_C": {
                 "name": "right",
-                "hfov": 71.86,
+                "hfov": 80.0,
                 "type": "color",
                 "extrinsics": {
                     "to_cam": "CAM_A",
@@ -42,7 +42,7 @@
             },
             "CAM_A": {
                 "name": "tof",
-                "hfov": 71.86,
+                "hfov": 80.0,
                 "type": "tof"
             }
         },

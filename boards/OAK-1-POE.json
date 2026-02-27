@@ -6,10 +6,9 @@
         "cameras":{
             "CAM_A": {
                 "name": "color",
-                "hfov": 68.7938,
+                "hfov": 66.0,
                 "type": "color"
             }
         }
     }
 }
-
