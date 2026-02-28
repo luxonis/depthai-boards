@@ -56,7 +56,7 @@
                 "BNO": {
                     "name" : "BNO086",
                     "extrinsics": {
-                        "to_cam": "LEFT",
+                        "to_cam": "CAM_B",
                         "specTranslation": {
                             "x": 0.2915,
                             "y": -0.069,
