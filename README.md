@@ -39,7 +39,6 @@ The `batch` folder contains a file for each device type, which looks like this:
 
 ```json
 {
-    "batchName": <batch name>,
     "batchTime": <batch time in seconds since epoch>,
     "boardConf": "nIR-C30M00-00",
     "boardName": "BC2087",

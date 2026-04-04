@@ -1,11 +1,12 @@
 {
     "batchTime": 0,
-    "boardConf": "IR-C00M00-00",
+    "boardConf": "nIR-C04M06-00",
     "boardName": "NG9097",
     "boardRev": "R4M2E4",
-    "productName": "OAK-D-PRO-POE-AF-C27",
+    "productName": "OAK-D-W-POE-C57",
     "boardCustom": "",
-    "hardwareConf": "F0-FV00-BC001",
+    "hardwareConf": "F1-FV01-BC000",
     "boardOptions": 7,
     "version": 7
 }
+

@@ -1,14 +1,9 @@
 {
     "board_config":
     {
-        "name": "OAK-D-S2-POE",
-        "revision": "R2M0E2",
+        "name": "OAK-D-W-POE-C57",
+        "revision": "R4M2E4",
         "cameras":{
-            "CAM_A": {
-                "name": "color",
-                "hfov": 66.0,
-                "type": "color"
-            },
             "CAM_B": {
                 "name": "left",
                 "hfov": 80.0,
@@ -29,7 +24,7 @@
             },
             "CAM_C": {
                 "name": "right",
-                "hfov": 80.0,
+                "hfov": 71.86,
                 "type": "mono",
                 "extrinsics": {
                     "to_cam": "CAM_A",
@@ -54,7 +49,7 @@
         {   
             "sensors":{ 
                 "BNO": {
-                    "name" : "BNO085",
+                    "name" : "BNO086",
                     "extrinsics": {
                         "to_cam": "CAM_B",
                         "specTranslation": {
@@ -65,7 +60,7 @@
                         "rotation":{
                             "r": 180,
                             "p": 0,
-                            "y": 270
+                            "y": 90
                             }
                     }
                 },
@@ -76,7 +71,7 @@
                         "specTranslation": {
                             "x": 8.5475,
                             "y": -0.2,
-                            "z": 1.6464
+                            "z": 1.646
                             },
                         "rotation":{
                             "r": 180,
@@ -89,3 +84,4 @@
         }
     }
 }
+
