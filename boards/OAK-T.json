@@ -28,6 +28,27 @@
                 "type": "thermal",
                 "calib_model": "perspective_THERMAL"
             }
+        },
+        "imuExtrinsics":
+        {
+            "sensors":{
+                "BMI": {
+                    "name" : "BMI270",
+                    "extrinsics": {
+                        "to_cam": "CAM_A",
+                        "specTranslation": {
+                            "x": 7.75,
+                            "y": -0.2,
+                            "z": 2.0264
+                            },
+                        "rotationMatrix": [
+                            [-1, 0, 0],
+                            [0, -1, 0],
+                            [0, 0, 1]
+                            ]
+                    }
+                }
+            }
         }
     }
 }

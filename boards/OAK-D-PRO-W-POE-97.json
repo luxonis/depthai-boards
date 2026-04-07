@@ -58,21 +58,20 @@
                 "BNO": {
                     "name" : "BNO086",
                     "extrinsics": {
-                        "to_cam": "CAM_B",
+                        "to_cam": "CAM_A",
                         "specTranslation": {
-                            "x": -7.75,
-                            "y": -2.264,
-                            "z": 0
+                            "x": 4.0,
+                            "y": 2.264,
+                            "z": 0.0
                             },
-                        "rotation":{
-                            "r": 0,
-                            "p": 180,
-                            "y": 270
-                            }
+                        "rotationMatrix": [
+                            [-1, 0, 0],
+                            [0, 1, 0],
+                            [0, 0, -1]
+                            ]
                     }
                 }
             }
         }
     }
 }
-

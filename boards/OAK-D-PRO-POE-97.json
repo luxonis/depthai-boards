@@ -56,37 +56,36 @@
                 "BNO": {
                     "name" : "BNO086",
                     "extrinsics": {
-                        "to_cam": "CAM_B",
+                        "to_cam": "CAM_A",
                         "specTranslation": {
-                            "x": 2.0264,
-                            "y": -7.75,
-                            "z": -0.2
+                            "x": 4.0,
+                            "y": 2.264,
+                            "z": 0.0
                             },
-                        "rotation":{
-                            "r": 180,
-                            "p": 0,
-                            "y": 90
-                            }
+                        "rotationMatrix": [
+                            [-1, 0, 0],
+                            [0, 1, 0],
+                            [0, 0, -1]
+                            ]
                     }
                 },
                 "BMI": {
                     "name" : "BMI270",
                     "extrinsics": {
-                        "to_cam": "CAM_B",
+                        "to_cam": "CAM_A",
                         "specTranslation": {
-                            "x": -1.646,
-                            "y": -8.5475,
-                            "z": -0.2
+                            "x": 4.7975,
+                            "y": 1.6464,
+                            "z": 0.0
                             },
-                        "rotation":{
-                            "r": 180,
-                            "p": 0,
-                            "y": 270
-                            }
+                        "rotationMatrix": [
+                            [0, 1, 0],
+                            [1, 0, 0],
+                            [0, 0, -1]
+                            ]
                     }
                 }
             }
         }
     }
 }
-

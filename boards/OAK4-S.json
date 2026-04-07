@@ -8,7 +8,27 @@
                 "hfov": 75.0,
                 "type": "color"
             }
+        },
+        "imuExtrinsics":
+        {
+            "sensors":{
+                "ACCEL": {
+                    "name" : "accel",
+                    "extrinsics": {
+                        "to_cam": "CAM_A",
+                        "specTranslation": {
+                            "x": -4.7790,
+                            "y": -0.1945,
+                            "z": 0.0
+                            },
+                        "rotationMatrix": [
+                            [1, 0, 0],
+                            [0, 1, 0],
+                            [0, 0, 1]
+                            ]
+                    }
+                }
+            }
         }
     }
 }
-
