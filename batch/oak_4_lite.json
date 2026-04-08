@@ -1,0 +1,90 @@
+{
+    "title": "OAK-4-LITE",
+    "description": "OAK-4-LITE",
+    "image": "images/oak_4_lite.jpg",
+    "test_type": "OAK-4-D-LITE",
+    "os": "PRODUCTION/luxonis_os_rvc4-1.25.3.tar.xz",
+    "options": {
+        "imu": true,
+        "platform": "rvc4",
+        "environment": {
+            "flashing": "rvc4",
+            "testing": "rvc4",
+            "calibration": "rvc4"
+        },
+        "ssh_password": "oelinux123",
+        "flash_mac_address": {
+            "generating_method": "database_sourced",
+            "config": {
+                "prefix": "44:A9:2C:30:70:00",
+                "prefix_bits": 36,
+                "region_id": "RVC4_OAK-4-LITE_01"
+            }
+        }
+    },
+    "variants": [
+        {
+            "title": "OAK-4-LITE-AF (PA9496-ASM P0D1)",
+            "description": "OAK-4-LITE with auto focus",
+            "eeprom": "eeprom/PA9496_ASM_P0D1_oak_4_lite_af.json",
+            "test_suite": "TESTBED_OAK_4_LITE_generic",
+            "board_config_file": "OAK-4-LITE.json"
+        },
+        {
+            "title": "OAK-4-LITE-FF (PA9496-ASM P0D1)",
+            "description": "OAK-4-LITE with fixed focus",
+            "eeprom": "eeprom/PA9496_ASM_P0D1_oak_4_lite_ff.json",
+            "test_suite": "TESTBED_OAK_4_LITE_generic",
+            "board_config_file": "OAK-4-LITE.json"
+        },
+        {
+            "title": "OAK-4-LITE-W (PA9496-ASM P0D1)",
+            "description": "OAK-4-LITE with wide angle",
+            "eeprom": "eeprom/PA9496_ASM_P0D1_oak_4_lite_w.json",
+            "test_suite": "TESTBED_OAK_4_LITE_generic",
+            "board_config_file": "OAK-4-LITE-W.json"
+        },
+        {
+            "title": "OAK-4-LITE-PRO-AF (PA9496-ASM P0D1)",
+            "description": "OAK-4-LITE with dot projector and auto focus",
+            "eeprom": "eeprom/PA9496_ASM_P0D1_oak_4_lite_pro_af.json",
+            "test_suite": "TESTBED_OAK_4_LITE_generic",
+            "board_config_file": "OAK-4-LITE.json"
+        },
+        {
+            "title": "OAK-4-LITE-PRO-FF (PA9496-ASM P0D1)",
+            "description": "OAK-4-LITE with dot projector and fixed focus",
+            "eeprom": "eeprom/PA9496_ASM_P0D1_oak_4_lite_pro_ff.json",
+            "test_suite": "TESTBED_OAK_4_LITE_generic",
+            "board_config_file": "OAK-4-LITE.json"
+        },
+        {
+            "title": "OAK-4-LITE-W-PRO (PA9496-ASM P0D1)",
+            "description": "OAK-4-LITE with wide angle and dot projector",
+            "eeprom": "eeprom/PA9496_ASM_P0D1_oak_4_lite_w_pro.json",
+            "test_suite": "TESTBED_OAK_4_LITE_generic",
+            "board_config_file": "OAK-4-LITE-W.json"
+        },
+        {
+            "title": "OAK-4-LITE-ULTRA-AF (PA9496-ASM P0D1)",
+            "description": "OAK-4-LITE with tof and auto focus",
+            "eeprom": "eeprom/PA9496_ASM_P0D1_oak_4_lite_ultra_af.json",
+            "test_suite": "TESTBED_OAK_4_LITE_generic",
+            "board_config_file": "OAK-4-LITE.json"
+        },
+        {
+            "title": "OAK-4-LITE-ULTRA-FF (PA9496-ASM P0D1)",
+            "description": "OAK-4-LITE with tof and fixed focus",
+            "eeprom": "eeprom/PA9496_ASM_P0D1_oak_4_lite_ultra_ff.json",
+            "test_suite": "TESTBED_OAK_4_LITE_generic",
+            "board_config_file": "OAK-4-LITE.json"
+        },
+        {
+            "title": "OAK-4-LITE-W-ULTRA (PA9496-ASM P0D1)",
+            "description": "OAK-4-LITE with wide angle and tof",
+            "eeprom": "eeprom/PA9496_ASM_P0D1_oak_4_lite_w_ultra.json",
+            "test_suite": "TESTBED_OAK_4_LITE_generic",
+            "board_config_file": "OAK-4-LITE-W.json"
+        }
+    ]
+}
