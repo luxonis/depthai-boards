@@ -60,10 +60,10 @@
                     "extrinsics": {
                         "to_cam": "CAM_A",
                         "specTranslation": {
-                            "x": -1.2263,
-                            "y": 1.9577,
-                            "z": 0.0
-                            },
+                            "x": -4.4032,
+                            "y": -0.2697,
+                            "z": -0.2
+                        },
                         "rotationMatrix": [
                             [1, 0, 0],
                             [0, 1, 0],
