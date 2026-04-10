@@ -55,8 +55,8 @@
         "imuExtrinsics":
         {
             "sensors":{
-                "ACCEL": {
-                    "name" : "accel",
+                "LSM6DSV": {
+                    "name" : "LSM6DSV",
                     "extrinsics": {
                         "to_cam": "CAM_A",
                         "specTranslation": {
