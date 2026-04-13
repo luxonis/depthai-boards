@@ -19,6 +19,22 @@
                         "specTranslation": {
                             "x": 1.2263,
                             "y": 1.9577,
+                            "z": 0.2
+                        },
+                        "rotationMatrix": [
+                            [1, 0, 0],
+                            [0, 1, 0],
+                            [0, 0, 1]
+                            ]
+                    }
+                },
+                "AK099": {
+                    "name" : "AK09916",
+                    "extrinsics": { 
+                        "to_cam": "CAM_A",
+                        "specTranslation": {
+                            "x": 0.0638,
+                            "y": -1.3998,
                             "z": -0.2
                         },
                         "rotationMatrix": [
