@@ -10,6 +10,12 @@
             "description": "OAK-FFC 3P",
             "eeprom":"eeprom/DM1090_R3M0E3_oak_ffc_3p.json",
             "board_config_file": "OAK-FFC-3P.json"
+        },
+        {
+            "title": "OAK-FFC-3P-C44 (BK1098-WA)",
+            "description": "OAK-FFC-3P-C44",
+            "eeprom": "eeprom/BK1098-WA_P1D0_oak_ffc_3p.json",
+            "board_config_file": "OAK-FFC-3P-C44.json"
         }
     ]
 }
