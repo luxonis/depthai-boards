@@ -1,15 +1,12 @@
 {
-    "board_config":
-    {
-        "name": "OAK-1-W-POE",
-        "cameras":{
+    "board_config": {
+        "cameras": {
             "CAM_A": {
                 "name": "color",
-                "hfov": 108.0,
-                "type": "color"
+                "type": "color",
+                "fov": 120.0
             }
-        }
-        
+        },
+        "name": "OAK-1-W-POE"
     }
 }
-

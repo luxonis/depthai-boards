@@ -1,0 +1,86 @@
+{
+    "board_config": {
+        "cameras": {
+            "CAM_A": {
+                "name": "color",
+                "type": "color",
+                "fov": 81.0
+            },
+            "CAM_B": {
+                "name": "left",
+                "extrinsics": {
+                    "to_cam": "CAM_C",
+                    "specTranslation": {
+                        "x": -7.5,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotation": {
+                        "r": 0,
+                        "p": 0,
+                        "y": 0
+                    }
+                },
+                "type": "mono",
+                "fov": 89.5,
+                "calib_model": "perspective_TILTED"
+            },
+            "CAM_C": {
+                "name": "right",
+                "extrinsics": {
+                    "to_cam": "CAM_A",
+                    "specTranslation": {
+                        "x": 3.75,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotation": {
+                        "r": 0,
+                        "p": 0,
+                        "y": 0
+                    }
+                },
+                "type": "mono",
+                "fov": 89.5,
+                "calib_model": "perspective_TILTED"
+            }
+        },
+        "imuExtrinsics": {
+            "sensors": {
+                "BNO": {
+                    "name": "BNO086",
+                    "extrinsics": {
+                        "to_cam": "CAM_A",
+                        "specTranslation": {
+                            "x": 3.7948,
+                            "y": 0.079,
+                            "z": -0.2
+                        },
+                        "rotationMatrix": [
+                            [0, 1, 0],
+                            [1, 0, 0],
+                            [0, 0, -1]
+                        ]
+                    }
+                },
+                "BMI": {
+                    "name": "BMI270",
+                    "extrinsics": {
+                        "to_cam": "CAM_A",
+                        "specTranslation": {
+                            "x": 3.185,
+                            "y": 0.2314,
+                            "z": -0.2
+                        },
+                        "rotationMatrix": [
+                            [0, 1, 0],
+                            [1, 0, 0],
+                            [0, 0, -1]
+                        ]
+                    }
+                }
+            }
+        },
+        "name": "OAK-D-PRO-FF"
+    }
+}

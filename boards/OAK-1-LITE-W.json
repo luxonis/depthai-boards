@@ -1,14 +1,12 @@
 {
-    "board_config":
-    {
-        "name": "OAK-1-Lite-W",
-        "revision": "R3M1E2",
-        "cameras":{
+    "board_config": {
+        "cameras": {
             "CAM_A": {
                 "name": "color",
-                "hfov": 105,
-                "type": "color"
+                "type": "color",
+                "fov": 117.0
             }
-        }
+        },
+        "name": "OAK-1-LITE-W"
     }
 }

@@ -1,17 +1,13 @@
 {
-    "board_config":
-    {
-        "name": "OAK-D-CM4-POE",
-        "cameras":{
+    "board_config": {
+        "cameras": {
             "CAM_A": {
                 "name": "color",
-                "hfov": 69.0,
-                "type": "color"
+                "type": "color",
+                "fov": 78.0
             },
             "CAM_B": {
                 "name": "left",
-                "hfov": 72.0,
-                "type": "mono",
                 "extrinsics": {
                     "to_cam": "CAM_C",
                     "specTranslation": {
@@ -19,17 +15,18 @@
                         "y": 0,
                         "z": 0
                     },
-                    "rotation":{
+                    "rotation": {
                         "r": 0,
                         "p": 0,
                         "y": 0
                     }
-                }
+                },
+                "type": "mono",
+                "fov": 89.5,
+                "calib_model": "perspective_TILTED"
             },
             "CAM_C": {
                 "name": "right",
-                "hfov": 72.0,
-                "type": "mono",
                 "extrinsics": {
                     "to_cam": "CAM_A",
                     "specTranslation": {
@@ -37,7 +34,7 @@
                         "y": 0,
                         "z": 0
                     },
-                    "rotation":{
+                    "rotation": {
                         "r": 0,
                         "p": 0,
                         "y": 0
@@ -45,31 +42,26 @@
                 }
             }
         },
-        "stereo_config":{
-            "left_cam": "CAM_B",
-            "right_cam": "CAM_C"
-        }
-        ,
-        "imuExtrinsics":
-        {   
-            "sensors":{ 
+        "imuExtrinsics": {
+            "sensors": {
                 "BNO": {
-                    "name" : "BNO086",
+                    "name": "BNO086",
                     "extrinsics": {
                         "to_cam": "CAM_A",
                         "specTranslation": {
-                            "x": -2.0473,
-                            "y": -0.1088,
+                            "x": -0.2047,
+                            "y": -0.0109,
                             "z": 0.0
-                            },
+                        },
                         "rotationMatrix": [
                             [0, -1, 0],
                             [1, 0, 0],
                             [0, 0, 1]
-                            ]
-                        }
+                        ]
                     }
                 }
-        }
+            }
+        },
+        "name": "OAK-D-CM4-POE"
     }
 }

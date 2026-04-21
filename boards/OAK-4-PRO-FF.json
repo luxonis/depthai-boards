@@ -1,0 +1,69 @@
+{
+    "board_config": {
+        "cameras": {
+            "CAM_A": {
+                "name": "rgb",
+                "type": "color",
+                "fov": 82.4
+            },
+            "CAM_B": {
+                "name": "left",
+                "extrinsics": {
+                    "to_cam": "CAM_C",
+                    "specTranslation": {
+                        "x": -7.5,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotation": {
+                        "r": 0,
+                        "p": 0,
+                        "y": 0
+                    }
+                },
+                "type": "mono",
+                "fov": 84.5
+            },
+            "CAM_C": {
+                "name": "right",
+                "hfov": 71.86,
+                "type": "mono",
+                "extrinsics": {
+                    "to_cam": "CAM_A",
+                    "specTranslation": {
+                        "x": 3.75,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotation": {
+                        "r": 0,
+                        "p": 0,
+                        "y": 0
+                    }
+                },
+                "fov": 84.5
+            }
+        },
+        "imuExtrinsics": {
+            "sensors": {
+                "LSM6DSV": {
+                    "name": "LSM6DSV",
+                    "extrinsics": {
+                        "to_cam": "CAM_A",
+                        "specTranslation": {
+                            "x": -4.4032,
+                            "y": -0.2697,
+                            "z": -0.2
+                        },
+                        "rotationMatrix": [
+                            [1, 0, 0],
+                            [0, 1, 0],
+                            [0, 0, 1]
+                        ]
+                    }
+                }
+            }
+        },
+        "name": "OAK-4-PRO-FF"
+    }
+}

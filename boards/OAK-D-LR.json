@@ -1,12 +1,8 @@
 {
-    "board_config":
-    {
-        "name": "OAK-D-LR",
-        "cameras":{
+    "board_config": {
+        "cameras": {
             "CAM_B": {
                 "name": "left",
-                "hfov": 82.0,
-                "type": "color",
                 "extrinsics": {
                     "to_cam": "CAM_C",
                     "specTranslation": {
@@ -14,19 +10,16 @@
                         "y": 0,
                         "z": 0
                     },
-                    "rotation":{
+                    "rotation": {
                         "r": 0,
                         "p": 0,
                         "y": 0
                     }
-
-                }
-
+                },
+                "type": "mono"
             },
             "CAM_C": {
                 "name": "right",
-                "hfov":  82.0,
-                "type": "color",
                 "extrinsics": {
                     "to_cam": "CAM_A",
                     "specTranslation": {
@@ -34,29 +27,23 @@
                         "y": 0,
                         "z": 0
                     },
-                    "rotation":{
+                    "rotation": {
                         "r": 0,
                         "p": 0,
                         "y": 0
                     }
-                }
+                },
+                "type": "mono"
             },
             "CAM_A": {
                 "name": "center",
-                "hfov":  82.0,
-                "type": "color"
+                "type": "mono"
             }
         },
-
-        "stereo_config":{
-            "left_cam": "CAM_B",
-            "right_cam": "CAM_C"
-        },
-        "imuExtrinsics":
-        {   
-            "sensors":{ 
+        "imuExtrinsics": {
+            "sensors": {
                 "BNO": {
-                    "name" : "BNO086",
+                    "name": "BNO086",
                     "extrinsics": {
                         "to_cam": "CAM_A",
                         "specTranslation": {
@@ -68,11 +55,11 @@
                             [0, -1, 0],
                             [1, 0, 0],
                             [0, 0, 1]
-                            ]
+                        ]
                     }
                 },
                 "BMI": {
-                    "name" : "BMI270",
+                    "name": "BMI270",
                     "extrinsics": {
                         "to_cam": "CAM_A",
                         "specTranslation": {
@@ -84,10 +71,11 @@
                             [1, 0, 0],
                             [0, -1, 0],
                             [0, 0, -1]
-                            ]
+                        ]
                     }
                 }
             }
-        }
+        },
+        "name": "OAK-D-LR"
     }
 }

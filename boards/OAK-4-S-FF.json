@@ -1,0 +1,32 @@
+{
+    "board_config": {
+        "cameras": {
+            "CAM_A": {
+                "name": "rgb",
+                "type": "color",
+                "fov": 82.4
+            }
+        },
+        "imuExtrinsics": {
+            "sensors": {
+                "LSM6DSV": {
+                    "name": "LSM6DSV",
+                    "extrinsics": {
+                        "to_cam": "CAM_A",
+                        "specTranslation": {
+                            "x": 1.2263,
+                            "y": 1.9577,
+                            "z": -0.2
+                        },
+                        "rotationMatrix": [
+                            [1, 0, 0],
+                            [0, 1, 0],
+                            [0, 0, 1]
+                        ]
+                    }
+                }
+            }
+        },
+        "name": "OAK-4-S-FF"
+    }
+}

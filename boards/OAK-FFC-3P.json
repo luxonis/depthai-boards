@@ -1,8 +1,6 @@
 {
-    "board_config":
-    {
-        "name": "OAK-FFC-3P",
-        "cameras":{
+    "board_config": {
+        "cameras": {
             "CAM_A": {
                 "name": "color",
                 "type": "color"
@@ -15,6 +13,7 @@
                 "name": "color",
                 "type": "color"
             }
-        }
+        },
+        "name": "OAK-FFC-3P"
     }
 }

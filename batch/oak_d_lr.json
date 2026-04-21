@@ -1,7 +1,7 @@
 {
-    "title": "OAK-D LR",
-    "description": "OAK-D LR",
-    "image": "images/oak_d_lr.jpg",
+    "title": "OAK-D-LR",
+    "description": "OAK-D-LR",
+    "image": "",
     "test_type": "OAK-D-LR",
     "options": {
         "bootloader": "poe",
@@ -9,29 +9,44 @@
         "eth": true,
         "tv_calibration": {
             "camera_settings": {
-                "CAM_B": {"isp_scale": [2,3]},
-                "CAM_C": {"isp_scale": [2,3]},
-                "CAM_A": {"isp_scale": [2,3]}
+                "CAM_B": {
+                    "isp_scale": [
+                        2,
+                        3
+                    ]
+                },
+                "CAM_C": {
+                    "isp_scale": [
+                        2,
+                        3
+                    ]
+                },
+                "CAM_A": {
+                    "isp_scale": [
+                        2,
+                        3
+                    ]
+                }
             }
         }
     },
     "variants": [
         {
-            "title":"OAK-D LR (BC2087 R3M1E3)",
-            "description": "OAK-D LR, based on BC2087 R3M1E3 board",
-            "eeprom":"eeprom/BC2087_R3M1E3_oak_d_lr.json",
+            "title": "OAK-D-LR (BC2087 R3M1E3)",
+            "description": "OAK-D-LR",
+            "eeprom": "eeprom/BC2087_R3M1E3_oak_d_lr.json",
             "board_config_file": "OAK-D-LR.json"
         },
         {
-            "title":"OAK-D LR (BC2087 R1M1E1)",
-            "description": "OAK-D LR, based on BC2087 R1M1E1 board",
-            "eeprom":"eeprom/BC2087_R1M1E1_oak_d_lr.json",
+            "title": "OAK-D-LR (BC2087 R1M1E1)",
+            "description": "OAK-D-LR",
+            "eeprom": "eeprom/BC2087_R1M1E1_oak_d_lr.json",
             "board_config_file": "OAK-D-LR.json"
         },
         {
-            "title":"OAK-D LR (BC2087 R0M0E0)",
-            "description": "OAK-D LR, based on BC2087 R0M0E0 board",
-            "eeprom":"eeprom/BC2087_R0M0E0_oak_d_lr.json",
+            "title": "OAK-D-LR (BC2087 R0M0E0)",
+            "description": "OAK-D-LR",
+            "eeprom": "eeprom/BC2087_R0M0E0_oak_d_lr.json",
             "board_config_file": "OAK-D-LR.json"
         }
     ]

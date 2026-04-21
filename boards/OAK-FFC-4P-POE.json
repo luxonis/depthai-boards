@@ -1,0 +1,23 @@
+{
+    "board_config": {
+        "cameras": {
+            "CAM_A": {
+                "name": "color",
+                "type": "color"
+            },
+            "CAM_B": {
+                "name": "color",
+                "type": "color"
+            },
+            "CAM_C": {
+                "name": "color",
+                "type": "color"
+            },
+            "CAM_D": {
+                "name": "color",
+                "type": "color"
+            }
+        },
+        "name": "OAK-FFC-4P-POE"
+    }
+}

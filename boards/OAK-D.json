@@ -1,17 +1,13 @@
 {
-    "board_config":
-    {
-        "name": "OAK-D",
-        "cameras":{
+    "board_config": {
+        "cameras": {
             "CAM_A": {
                 "name": "color",
-                "hfov": 69.0,
-                "type": "color"
+                "type": "color",
+                "fov": 81.0
             },
             "CAM_B": {
                 "name": "left",
-                "hfov": 72.0,
-                "type": "mono",
                 "extrinsics": {
                     "to_cam": "CAM_C",
                     "specTranslation": {
@@ -19,16 +15,18 @@
                         "y": 0,
                         "z": 0
                     },
-                    "rotation":{
+                    "rotation": {
                         "r": 0,
                         "p": 0,
                         "y": 0
                     }
-                }
+                },
+                "type": "mono",
+                "fov": 81.0
             },
             "CAM_C": {
                 "name": "right",
-                "hfov": 72.0,
+                "hfov": 71.86,
                 "type": "mono",
                 "extrinsics": {
                     "to_cam": "CAM_A",
@@ -37,23 +35,19 @@
                         "y": 0,
                         "z": 0
                     },
-                    "rotation":{
+                    "rotation": {
                         "r": 0,
                         "p": 0,
                         "y": 0
                     }
-                }
+                },
+                "fov": 81.0
             }
         },
-        "stereo_config":{
-            "left_cam": "CAM_B",
-            "right_cam": "CAM_C"
-        },
-        "imuExtrinsics":
-        {
-            "sensors":{
+        "imuExtrinsics": {
+            "sensors": {
                 "BNO": {
-                    "name" : "BNO086",
+                    "name": "BNO086",
                     "extrinsics": {
                         "to_cam": "CAM_A",
                         "specTranslation": {
@@ -62,13 +56,14 @@
                             "z": 0.0
                         },
                         "rotationMatrix": [
+                            [-1, 0, 0],
                             [0, -1, 0],
-                            [1, 0, 0],
                             [0, 0, 1]
-                            ]
+                        ]
                     }
                 }
             }
-        }
+        },
+        "name": "OAK-D"
     }
 }

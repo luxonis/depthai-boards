@@ -1,19 +1,13 @@
 {
-    "board_config":
-    {
-        "name": "OAK-D-W",
-        "revision": "R3M2E2",
-        "cameras":{
+    "board_config": {
+        "cameras": {
             "CAM_A": {
                 "name": "color",
-                "hfov": 108.0,
-                "type": "color"
+                "type": "color",
+                "fov": 120.0
             },
             "CAM_B": {
                 "name": "left",
-                "hfov": 127.0,
-                "type": "mono",
-                "calib_model": "perspective_TILTED",
                 "extrinsics": {
                     "to_cam": "CAM_C",
                     "specTranslation": {
@@ -21,18 +15,18 @@
                         "y": 0,
                         "z": 0
                     },
-                    "rotation":{
+                    "rotation": {
                         "r": 0,
                         "p": 0,
                         "y": 0
                     }
-                }
+                },
+                "type": "mono",
+                "fov": 150.0,
+                "calib_model": "perspective_TILTED"
             },
             "CAM_C": {
                 "name": "right",
-                "hfov": 127.0,
-                "type": "mono",
-                "calib_model": "perspective_TILTED",
                 "extrinsics": {
                     "to_cam": "CAM_A",
                     "specTranslation": {
@@ -40,54 +34,53 @@
                         "y": 0,
                         "z": 0
                     },
-                    "rotation":{
+                    "rotation": {
                         "r": 0,
                         "p": 0,
                         "y": 0
                     }
-                }
+                },
+                "type": "mono",
+                "fov": 150.0,
+                "calib_model": "perspective_TILTED"
             }
         },
-        "stereo_config":{
-            "left_cam": "CAM_B",
-            "right_cam": "CAM_C"
-        },
-        "imuExtrinsics":
-        {   
-            "sensors":{ 
+        "imuExtrinsics": {
+            "sensors": {
                 "BNO": {
-                    "name" : "BNO086",
+                    "name": "BNO086",
                     "extrinsics": {
                         "to_cam": "CAM_A",
                         "specTranslation": {
                             "x": 3.7948,
                             "y": 0.079,
                             "z": -0.2
-                            },
+                        },
                         "rotationMatrix": [
+                            [0, 1, 0],
                             [1, 0, 0],
-                            [0, -1, 0],
                             [0, 0, -1]
-                            ]
+                        ]
                     }
                 },
                 "BMI": {
-                    "name" : "BMI270",
+                    "name": "BMI270",
                     "extrinsics": {
                         "to_cam": "CAM_A",
                         "specTranslation": {
                             "x": 3.185,
                             "y": 0.2314,
                             "z": -0.2
-                            },
+                        },
                         "rotationMatrix": [
+                            [0, 1, 0],
                             [1, 0, 0],
-                            [0, -1, 0],
                             [0, 0, -1]
-                            ]
+                        ]
                     }
                 }
             }
-        }
+        },
+        "name": "OAK-D-W"
     }
 }

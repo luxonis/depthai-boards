@@ -1,14 +1,11 @@
 {
-    "board_config":
-    {
-        "name": "OAK-1-MAX",
-        "revision": "R3M1E2",
-        "cameras":{
+    "board_config": {
+        "cameras": {
             "CAM_A": {
                 "name": "color",
-                "hfov": 45.0,
                 "type": "color"
             }
-        }
+        },
+        "name": "OAK-1-MAX"
     }
 }

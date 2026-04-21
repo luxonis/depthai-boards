@@ -1,13 +1,13 @@
 {
-    "board_config":
-    {
-        "name": "OAK-1-W-97",
-        "cameras":{
+    "board_config": {
+        "cameras": {
             "CAM_A": {
                 "name": "color",
-                "hfov": 127,
-                "type": "color"
+                "type": "color",
+                "fov": 150.0,
+                "calib_model": "perspective_TILTED"
             }
-        }
+        },
+        "name": "OAK-1-W-97"
     }
 }

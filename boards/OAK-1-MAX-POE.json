@@ -1,0 +1,11 @@
+{
+    "board_config": {
+        "cameras": {
+            "CAM_A": {
+                "name": "color",
+                "type": "color"
+            }
+        },
+        "name": "OAK-1-MAX-POE"
+    }
+}

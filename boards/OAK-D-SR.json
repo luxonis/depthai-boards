@@ -1,13 +1,8 @@
 {
-    "board_config":
-    {
-        "name": "OAK-D-SR",
-        "revision": "R0M0E0",
-        "cameras":{
+    "board_config": {
+        "cameras": {
             "CAM_B": {
                 "name": "left",
-                "hfov": 80.0,
-                "type": "color",
                 "extrinsics": {
                     "to_cam": "CAM_C",
                     "specTranslation": {
@@ -15,63 +10,59 @@
                         "y": 0,
                         "z": 0
                     },
-                    "rotation":{
+                    "rotation": {
                         "r": 0,
                         "p": 0,
                         "y": 0
                     }
-
-                }
-
+                },
+                "type": "color",
+                "fov": 89.5,
+                "calib_model": "perspective_TILTED"
             },
             "CAM_C": {
                 "name": "right",
-                "hfov": 80.0,
-                "type": "color"
+                "type": "color",
+                "fov": 89.5,
+                "calib_model": "perspective_TILTED"
             }
-
         },
-
-        "stereo_config":{
-            "left_cam": "CAM_B",
-            "right_cam": "CAM_C"
-        },
-        "imuExtrinsics":
-        {   
-            "sensors":{ 
+        "imuExtrinsics": {
+            "sensors": {
                 "BNO": {
-                    "name" : "BNO086",
+                    "name": "BNO086",
                     "extrinsics": {
                         "to_cam": "CAM_B",
                         "specTranslation": {
-                            "x": 1.0175,
-                            "y": -0.1713,
+                            "x": 0.1018,
+                            "y": -0.0171,
                             "z": 0.0
-                            },
+                        },
                         "rotationMatrix": [
                             [0, 1, 0],
                             [-1, 0, 0],
                             [0, 0, 1]
-                            ]
+                        ]
                     }
                 },
                 "BMI": {
-                    "name" : "BMI270",
+                    "name": "BMI270",
                     "extrinsics": {
                         "to_cam": "CAM_B",
                         "specTranslation": {
-                            "x": 1.0,
-                            "y": -0.24,
+                            "x": 0.1,
+                            "y": -0.024,
                             "z": 0.0
-                            },
+                        },
                         "rotationMatrix": [
                             [0, 1, 0],
                             [-1, 0, 0],
                             [0, 0, 1]
-                            ]
+                        ]
                     }
                 }
             }
-        }
+        },
+        "name": "OAK-D-SR"
     }
 }

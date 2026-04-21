@@ -1,65 +1,131 @@
 {
     "title": "OAK-D-W",
     "description": "OAK-D-W",
-    "image": "images/oak_d.jpg",
+    "image": "",
     "test_type": "OAK-D",
-    "options": {"bootloader": "header_usb", "imu": true},
+    "options": {
+        "bootloader": "header_usb",
+        "imu": true
+    },
     "variants": [
         {
-            "title":"OAK-D W C49 (DM9098 R9M2E9)",
-            "description": "OAK-D Wide Lens, based on DM9098 R9M2E9 board",
-            "eeprom":"eeprom/DM9098_R9M2E9_oak_d_w_c49.json",
-            "board_config_file": "OAK-D-W.json",
-            "options": {
-                "imu_kind": "BNO086"
-            }
+            "title": "OAK-D-W-POE-97 (NG9097 R4M2E4)",
+            "description": "OAK-D-W-POE-97",
+            "eeprom": "eeprom/NG9097_R4M2E4_BNO086_oak_d_w_poe_97.json",
+            "board_config_file": "OAK-D-W-POE-97.json"
         },
         {
-            "title":"OAK-D W 97 (DM9098 R9M2E9)",
-            "description": "OAK-D W 97 based on DM9098 R9M2E9 board, with wide lens (OV9782 center camera)",
-            "eeprom":"eeprom/DM9098_R9M2E9_oak_d_w_97.json",
-            "board_config_file": "OAK-D-W-97.json"
+            "title": "OAK-D-W-POE (NG9097 R4M2E4)",
+            "description": "OAK-D-W-POE",
+            "eeprom": "eeprom/NG9097_R4M2E4_BNO086_oak_d_w_poe.json",
+            "board_config_file": "OAK-D-W-POE.json"
         },
         {
-            "title":"OAK-D W (DM9098 R9M2E9)",
-            "description": "OAK-D Wide Lens, based on DM9098 R9M2E9 board",
-            "eeprom":"eeprom/DM9098_R9M2E9_oak_d_w.json",
+            "title": "OAK-D-W-POE-97 (NG9097 R4M2E4)",
+            "description": "OAK-D-W-POE-97",
+            "eeprom": "eeprom/NG9097_R4M2E4_BMI270_oak_d_w_poe_97.json",
+            "board_config_file": "OAK-D-W-POE-97.json"
+        },
+        {
+            "title": "OAK-D-W-POE (NG9097 R4M2E4)",
+            "description": "OAK-D-W-POE",
+            "eeprom": "eeprom/NG9097_R4M2E4_BMI270_oak_d_w_poe.json",
+            "board_config_file": "OAK-D-W-POE.json"
+        },
+        {
+            "title": "OAK-D-W-POE (NG9097 R4M2E3)",
+            "description": "OAK-D-W-POE",
+            "eeprom": "eeprom/NG9097_R4M2E3_BNO086_oak_d_w_poe.json",
+            "board_config_file": "OAK-D-W-POE.json"
+        },
+        {
+            "title": "OAK-D-W-POE (NG9097 R4M2E3)",
+            "description": "OAK-D-W-POE",
+            "eeprom": "eeprom/NG9097_R4M2E3_BMI270_oak_d_w_poe.json",
+            "board_config_file": "OAK-D-W-POE.json"
+        },
+        {
+            "title": "OAK-D-W-C49 (DM9098 R9M2E9)",
+            "description": "OAK-D-W-C49",
+            "eeprom": "eeprom/DM9098_R9M2E9_oak_d_w_c49.json",
+            "board_config_file": "OAK-D-W-C49.json"
+        },
+        {
+            "title": "OAK-D-W (DM9098 R9M2E9)",
+            "description": "OAK-D-W",
+            "eeprom": "eeprom/DM9098_R9M2E9_oak_d_w.json",
             "board_config_file": "OAK-D-W.json"
         },
         {
-            "title":"OAK-D W (DM9098 R8M2E8)",
-            "description": "OAK-D Wide Lens, based on DM9098 R8M2E8 board",
-            "eeprom":"eeprom/DM9098_R8M2E8_oak_d_w.json",
+            "title": "OAK-D-PRO-W-97 (DM9098 R9M2E9)",
+            "description": "OAK-D-PRO-W-97",
+            "eeprom": "eeprom/DM9098_R9M2E9_oak_d_pro_w_97.json",
+            "board_config_file": "OAK-D-PRO-W-97.json"
+        },
+        {
+            "title": "OAK-D-PRO-W (DM9098 R9M2E9)",
+            "description": "OAK-D-PRO-W",
+            "eeprom": "eeprom/DM9098_R9M2E9_oak_d_pro_w.json",
+            "board_config_file": "OAK-D-PRO-W.json"
+        },
+        {
+            "title": "OAK-D-W (DM9098 R8M2E8)",
+            "description": "OAK-D-W",
+            "eeprom": "eeprom/DM9098_R8M2E8_oak_d_w.json",
             "board_config_file": "OAK-D-W.json"
         },
         {
-            "title":"OAK-D W 97 (DM9098 R8M2E8)",
-            "description": "OAK-D W 97 based on DM9098 R8M2E8 board, with wide lens (OV9782 center camera)",
-            "eeprom":"eeprom/DM9098_R8M2E8_oak_d_w_97.json",
-            "board_config_file": "OAK-D-W-97.json"
+            "title": "OAK-D-PRO-W-97 (DM9098 R8M2E8)",
+            "description": "OAK-D-PRO-W-97",
+            "eeprom": "eeprom/DM9098_R8M2E8_oak_d_pro_w_97.json",
+            "board_config_file": "OAK-D-PRO-W-97.json"
         },
         {
-            "title":"OAK-D W 97 (DM9098 R7M2E7)",
-            "description": "OAK-D W 97 based on DM9098 R7M2E7 board, with wide lens (OV9782 center camera)",
-            "eeprom":"eeprom/DM9098_R7M2E7_oak_d_w_97.json",
-            "board_config_file": "OAK-D-W-97.json"
+            "title": "OAK-D-PRO-W (DM9098 R8M2E8)",
+            "description": "OAK-D-PRO-W",
+            "eeprom": "eeprom/DM9098_R8M2E8_oak_d_pro_w.json",
+            "board_config_file": "OAK-D-PRO-W.json"
         },
         {
-            "title":"OAK-D W C15 (DM9098 R6M2E6)",
-            "description": "OAK-D W C15 based on DM9098 R6M2E6 board, with wide lens (OV9782 center camera)",
-            "eeprom":"eeprom/DM9098_R6M2E6_oak_d_w_c15.json",
-            "board_config_file": "OAK-D-W-97.json"
-        },
-        {
-            "title":"OAK-D W (DM9098 R6M2E6)",
-            "description": "OAK-D Wide Lens, based on DM9098 R6M2E6 board",
-            "eeprom":"eeprom/DM9098_R6M2E6_oak_d_w.json",
+            "title": "OAK-D-W (DM9098 R7M2E7)",
+            "description": "OAK-D-W",
+            "eeprom": "eeprom/DM9098_R7M2E7_oak_d_w.json",
             "board_config_file": "OAK-D-W.json"
         },
         {
-            "title":"OAK-D W (DM9098 R7M2E7)",
-            "description": "OAK-D Wide Lens, based on DM9098 R7M2E7 board",
-            "eeprom":"eeprom/DM9098_R7M2E7_oak_d_w.json",
+            "title": "OAK-D-PRO-W-97 (DM9098 R7M2E7)",
+            "description": "OAK-D-PRO-W-97",
+            "eeprom": "eeprom/DM9098_R7M2E7_oak_d_pro_w_97.json",
+            "board_config_file": "OAK-D-PRO-W-97.json"
+        },
+        {
+            "title": "OAK-D-PRO-W (DM9098 R7M2E7)",
+            "description": "OAK-D-PRO-W",
+            "eeprom": "eeprom/DM9098_R7M2E7_oak_d_pro_w.json",
+            "board_config_file": "OAK-D-PRO-W.json"
+        },
+        {
+            "title": "OAK-D-W (DM9098 R6M2E6)",
+            "description": "OAK-D-W",
+            "eeprom": "eeprom/DM9098_R6M2E6_oak_d_w.json",
+            "board_config_file": "OAK-D-W.json"
+        },
+        {
+            "title": "OAK-D-PRO-W-97 (DM9098 R6M2E6)",
+            "description": "OAK-D-PRO-W-97",
+            "eeprom": "eeprom/DM9098_R6M2E6_oak_d_pro_w_97.json",
+            "board_config_file": "OAK-D-PRO-W-97.json"
+        },
+        {
+            "title": "OAK-D-PRO-W (DM9098 R6M2E6)",
+            "description": "OAK-D-PRO-W",
+            "eeprom": "eeprom/DM9098_R6M2E6_oak_d_pro_w.json",
+            "board_config_file": "OAK-D-PRO-W.json"
+        },
+        {
+            "title": "OAK-D-W (DM9098 R3M2E3)",
+            "description": "OAK-D-W",
+            "eeprom": "eeprom/DM9098_R3M2E3_oak_d_w.json",
             "board_config_file": "OAK-D-W.json"
         }
     ]

@@ -1,0 +1,12 @@
+{
+    "board_config": {
+        "cameras": {
+            "CAM_A": {
+                "name": "color",
+                "type": "color",
+                "fov": 81.0
+            }
+        },
+        "name": "OAK-1-POE-FF"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "board_config": {
+        "cameras": {
+            "CAM_A": {
+                "name": "color",
+                "fov": 101.0
+            }
+        },
+        "name": "OAK-1-PCBA-C3"
+    }
+}

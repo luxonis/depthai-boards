@@ -1,17 +1,13 @@
 {
-    "board_config":
-    {
-        "name": "OAK-D-CM4",
-        "cameras":{
+    "board_config": {
+        "cameras": {
             "CAM_A": {
                 "name": "color",
-                "hfov": 68.7938,
-                "type": "color"
+                "type": "color",
+                "fov": 81.0
             },
             "CAM_B": {
                 "name": "left",
-                "hfov": 71.86,
-                "type": "mono",
                 "extrinsics": {
                     "to_cam": "CAM_C",
                     "specTranslation": {
@@ -19,17 +15,17 @@
                         "y": 0,
                         "z": 0
                     },
-                    "rotation":{
+                    "rotation": {
                         "r": 0,
                         "p": 0,
                         "y": 0
                     }
-                }
+                },
+                "type": "mono",
+                "fov": 81.0
             },
             "CAM_C": {
                 "name": "right",
-                "hfov": 71.86,
-                "type": "mono",
                 "extrinsics": {
                     "to_cam": "CAM_A",
                     "specTranslation": {
@@ -37,17 +33,16 @@
                         "y": 0,
                         "z": 0
                     },
-                    "rotation":{
+                    "rotation": {
                         "r": 0,
                         "p": 0,
                         "y": 0
                     }
-                }
+                },
+                "type": "mono",
+                "fov": 81.0
             }
         },
-        "stereo_config":{
-            "left_cam": "CAM_B",
-            "right_cam": "CAM_C"
-        }
+        "name": "OAK-D-CM4"
     }
 }

@@ -1,0 +1,12 @@
+{
+    "board_config": {
+        "cameras": {
+            "CAM_A": {
+                "name": "color",
+                "fov": 81.0,
+                "calib_model": "perspective_TILTED"
+            }
+        },
+        "name": "OAK-1-LITE-FF"
+    }
+}
