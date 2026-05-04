@@ -40,19 +40,19 @@
         {   
             "sensors":{ 
                 "BNO": {
-                    "name" : "BNO085",
+                    "name" : "BNO086",
                     "extrinsics": {
                         "to_cam": "CAM_B",
                         "specTranslation": {
-                            "x": -0.1731,
-                            "y": 0.0,
-                            "z": 1.0175
+                            "x": 1.0175,
+                            "y": -0.1713,
+                            "z": 0.0
                             },
-                        "rotation":{
-                            "r": 0,
-                            "p": 0,
-                            "y": 180
-                            }
+                        "rotationMatrix": [
+                            [0, 1, 0],
+                            [-1, 0, 0],
+                            [0, 0, 1]
+                            ]
                     }
                 },
                 "BMI": {
@@ -60,15 +60,15 @@
                     "extrinsics": {
                         "to_cam": "CAM_B",
                         "specTranslation": {
-                            "x": -0.24,
-                            "y": 0.0,
-                            "z": 1.0
+                            "x": 1.0,
+                            "y": -0.24,
+                            "z": 0.0
                             },
-                        "rotation":{
-                            "r": 0,
-                            "p": 0,
-                            "y": 180
-                            }
+                        "rotationMatrix": [
+                            [0, 1, 0],
+                            [-1, 0, 0],
+                            [0, 0, 1]
+                            ]
                     }
                 }
             }

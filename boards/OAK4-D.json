@@ -51,6 +51,43 @@
         "stereo_config":{
             "left_cam": "CAM_B",
             "right_cam": "CAM_C"
+        },
+        "imuExtrinsics":
+        {
+            "sensors":{
+                "LSM6DSV": {
+                    "name" : "LSM6DSV",
+                    "extrinsics": {
+                        "to_cam": "CAM_A",
+                        "specTranslation": {
+                            "x": -4.4032,
+                            "y": -0.2697,
+                            "z": -0.2
+                        },
+                        "rotationMatrix": [
+                            [1, 0, 0],
+                            [0, 1, 0],
+                            [0, 0, 1]
+                            ]
+                    }
+                },
+                "AK099": {
+                    "name" : "AK09916",
+                    "extrinsics": { 
+                        "to_cam": "CAM_A",
+                        "specTranslation": {
+                            "x": -4.9739,
+                            "y": -0.4150,
+                            "z": -0.2 
+                        },
+                        "rotationMatrix": [
+                            [1, 0, 0],
+                            [0, 1, 0],
+                            [0, 0, 1]
+                            ]
+                    }
+                }
+            }
         }
     }
 }
