@@ -13,14 +13,14 @@
             "title":"OAK-FFC 6P (DM3390_R1M0E1)",
             "description": "OAK-FFC 6P on DM6031_R1M0E1 board",
             "eeprom":"eeprom/DM3390_R1M0E1_oak_ffc_6p.json",
-            "fip": "fip-oak-ffc-6p-rvc3-1.2.0.bin",
-            "test_suite": "DM3390_R0M0E0_oak_ffc_6p"
+            "fip": "fip-oak-ffc-6p-kb-1.13.1.bin",
+            "test_suite": "DM3390_R1M0E1_oak_ffc_6p"
         },
         {
             "title":"OAK-FFC 6P (DM3390_R0M0E0)",
             "description": "OAK-FFC 6P on DM6031_R0M0E0 board",
             "eeprom":"eeprom/DM3390_R0M0E0_oak_ffc_6p.json",
-            "fip": "fip-oak-ffc-6p-rvc3-1.2.0.bin",
+            "fip": "fip-oak-ffc-6p-kb-1.13.1.bin",
             "test_suite": "DM3390_R0M0E0_oak_ffc_6p"
         }
     ]
