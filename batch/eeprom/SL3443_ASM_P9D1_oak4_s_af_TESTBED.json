@@ -4,7 +4,7 @@
   "boardName": "SL3443-ASM",
   "boardRev": "P9D1",
   "productName": "OAK-4-S-AF",
-  "boardCustom": "TESTBED",
+  "boardCustom": "",
   "hardwareConf": "F0-FV00-BC000",
   "boardOptions": 0,
   "version": 7
