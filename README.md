@@ -53,6 +53,30 @@ The `batch` folder contains a file for each device type, which looks like this:
 
 `board_config_file` field specifies the path to the baord config file. They are located in the `boards` folder. Board config file is used to specifiy camera extrinsics and other board specific settings.
 
+## Utils
+
+To visualize how cameras and IMU frames are linked on a board, use:
+
+```bash
+python3 utils/visualize_board_extrinsics.py OAK-D-S2.json
+```
+
+You can also pass an explicit JSON path:
+
+```bash
+python3 utils/visualize_board_extrinsics.py boards/OAK-D-S2.json
+```
+
+Useful options:
+
+```bash
+python3 utils/visualize_board_extrinsics.py OAK-D-S2.json --print-only
+python3 utils/visualize_board_extrinsics.py OAK-D-S2.json --reference CAM_A
+python3 utils/visualize_board_extrinsics.py OAK-D-S2.json --save /tmp/oak-d-s2.png --no-show
+```
+
+The visualizer prints resolved poses, flashed links, and a consistency check, and it can render a 3D plot showing how camera and IMU coordinate systems are oriented and connected.
+
 
 ### Instructions
 Add this repository with

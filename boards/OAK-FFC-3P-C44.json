@@ -1,0 +1,12 @@
+{
+    "board_config":
+    {
+        "name": "OAK-FFC-3P-C44",
+        "cameras":{
+            "CAM_A": {
+                "name": "color",
+                "type": "color"
+            }
+        }
+    }
+}
