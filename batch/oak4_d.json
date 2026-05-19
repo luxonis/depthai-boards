@@ -44,7 +44,7 @@
             "description": "OAK-4-PRO-AF (NG9498 P7D1)",
             "eeprom": "eeprom/NG9498_ASM_P7D1_oak4_d_pro_af.json",
             "cdt": "OAK4-D_R7",
-            "test_suite": "OAK4_D_Pro_generic",
+            "test_suite": "OAK4_Pro_generic",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -52,7 +52,7 @@
             "description": "OAK-4-PRO-AF (NG9498 P7D1) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P7D1_oak4_d_pro_af_TESTBED.json",
             "cdt": "OAK4-D_R7",
-            "test_suite": "TESTBED_OAK4_D_Pro_generic",
+            "test_suite": "TESTBED_OAK4_Pro_generic",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -76,7 +76,7 @@
             "description": "OAK-4-PRO-FF (NG9498 P7D1)",
             "eeprom": "eeprom/NG9498_ASM_P7D1_oak4_d_pro_ff.json",
             "cdt": "OAK4-D_R7",
-            "test_suite": "OAK4_D_Pro_generic",
+            "test_suite": "OAK4_Pro_generic",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -84,7 +84,7 @@
             "description": "OAK-4-PRO-FF (NG9498 P7D1) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P7D1_oak4_d_pro_ff_TESTBED.json",
             "cdt": "OAK4-D_R7",
-            "test_suite": "TESTBED_OAK4_D_Pro_generic",
+            "test_suite": "TESTBED_OAK4_Pro_generic",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -108,7 +108,7 @@
             "description": "OAK-4-PRO-W (NG9498 P7D1)",
             "eeprom": "eeprom/NG9498_ASM_P7D1_oak4_d_pro_w.json",
             "cdt": "OAK4-D_R7",
-            "test_suite": "OAK4_D_Pro_generic",
+            "test_suite": "OAK4_Pro_generic",
             "board_config_file": "OAK4-D-W.json"
         },
         {
@@ -116,7 +116,7 @@
             "description": "OAK-4-PRO-W (NG9498 P7D1) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P7D1_oak4_d_pro_w_TESTBED.json",
             "cdt": "OAK4-D_R7",
-            "test_suite": "TESTBED_OAK4_D_Pro_generic",
+            "test_suite": "TESTBED_OAK4_Pro_generic",
             "board_config_file": "OAK4-D-W.json"
         },
         {
@@ -124,7 +124,7 @@
             "description": "OAK-4-D-AF (NG9498 P9D1)",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_af.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_R9+",
+            "test_suite": "OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -132,7 +132,7 @@
             "description": "OAK-4-D-AF (NG9498 P9D1) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_af_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_R9+",
+            "test_suite": "TESTBED_OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -140,7 +140,7 @@
             "description": "OAK-4-PRO-AF (NG9498 P9D1)",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_pro_af.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_Pro_R9+",
+            "test_suite": "OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -148,7 +148,7 @@
             "description": "OAK-4-PRO-AF (NG9498 P9D1) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_pro_af_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_Pro_R9+",
+            "test_suite": "TESTBED_OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -156,7 +156,7 @@
             "description": "OAK-4-D-FF (NG9498 P9D1)",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_ff.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_R9+",
+            "test_suite": "OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -164,7 +164,7 @@
             "description": "OAK-4-D-FF (NG9498 P9D1) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_ff_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_R9+",
+            "test_suite": "TESTBED_OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -172,7 +172,7 @@
             "description": "OAK-4-PRO-FF (NG9498 P9D1)",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_pro_ff.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_Pro_R9+",
+            "test_suite": "OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -180,7 +180,7 @@
             "description": "OAK-4-PRO-FF (NG9498 P9D1) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_pro_ff_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_Pro_R9+",
+            "test_suite": "TESTBED_OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -188,7 +188,7 @@
             "description": "OAK-4-D-W (NG9498 P9D1)",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_w.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_R9+",
+            "test_suite": "OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D-W.json"
         },
         {
@@ -196,7 +196,7 @@
             "description": "OAK-4-D-W (NG9498 P9D1) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_w_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_R9+",
+            "test_suite": "TESTBED_OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D-W.json"
         },
         {
@@ -204,7 +204,7 @@
             "description": "OAK-4-PRO-W (NG9498 P9D1)",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_pro_w.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_Pro_R9+",
+            "test_suite": "OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D-W.json"
         },
         {
@@ -212,7 +212,7 @@
             "description": "OAK-4-PRO-W (NG9498 P9D1) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P9D1_oak4_d_pro_w_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_Pro_R9+",
+            "test_suite": "TESTBED_OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D-W.json"
         },
         {
@@ -220,7 +220,7 @@
             "description": "OAK-4-D-AF (NG9498 P10D0)",
             "eeprom": "eeprom/NG9498_ASM_P10D0_oak4_d_af.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_R9+",
+            "test_suite": "OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -228,7 +228,7 @@
             "description": "OAK-4-D-AF (NG9498 P10D0) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P10D0_oak4_d_af_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_R9+",
+            "test_suite": "TESTBED_OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -236,7 +236,7 @@
             "description": "OAK-4-PRO-AF (NG9498 P10D0)",
             "eeprom": "eeprom/NG9498_ASM_P10D0_oak4_d_pro_af.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_Pro_R9+",
+            "test_suite": "OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -244,7 +244,7 @@
             "description": "OAK-4-PRO-AF (NG9498 P10D0) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P10D0_oak4_d_pro_af_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_Pro_R9+",
+            "test_suite": "TESTBED_OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -252,7 +252,7 @@
             "description": "OAK-4-D-FF (NG9498 P10D0)",
             "eeprom": "eeprom/NG9498_ASM_P10D0_oak4_d_ff.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_R9+",
+            "test_suite": "OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -260,7 +260,7 @@
             "description": "OAK-4-D-FF (NG9498 P10D0) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P10D0_oak4_d_ff_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_R9+",
+            "test_suite": "TESTBED_OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -268,7 +268,7 @@
             "description": "OAK-4-PRO-FF (NG9498 P10D0)",
             "eeprom": "eeprom/NG9498_ASM_P10D0_oak4_d_pro_ff.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_Pro_R9+",
+            "test_suite": "OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -276,7 +276,7 @@
             "description": "OAK-4-PRO-FF (NG9498 P10D0) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P10D0_oak4_d_pro_ff_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_Pro_R9+",
+            "test_suite": "TESTBED_OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -284,7 +284,7 @@
             "description": "OAK-4-D-W(NG9498 P10D0)",
             "eeprom": "eeprom/NG9498_ASM_P10D0_oak4_d_w.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_R9+",
+            "test_suite": "OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D-W.json"
         },
         {
@@ -292,7 +292,7 @@
             "description": "OAK-4-D-W(NG9498 P10D0) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P10D0_oak4_d_w_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_R9+",
+            "test_suite": "TESTBED_OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D-W.json"
         },
         {
@@ -300,7 +300,7 @@
             "description": "OAK-4-PRO-W (NG9498 P10D0)",
             "eeprom": "eeprom/NG9498_ASM_P10D0_oak4_d_pro_w.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_Pro_R9+",
+            "test_suite": "OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D-W.json"
         },
         {
@@ -308,7 +308,7 @@
             "description": "OAK-4-PRO-W (NG9498 P10D0) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P10D0_oak4_d_pro_w_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_Pro_R9+",
+            "test_suite": "TESTBED_OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D-W.json"
         },
         {
@@ -316,13 +316,37 @@
             "description": "OAK-4-PRO-W (NG9498 P9D1)",
             "eeprom": "eeprom/TEST_STATION_NG9498_ASM_P9D1_oak4_d_pro_w.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TEST_STATION_OAK4_D_Pro_generic",
+            "test_suite": "TEST_STATION_OAK4_D_generic",
             "test_station_config": "NG9498_ASM_P9D1",
             "board_config_file": "OAK4-D-W.json",
             "options": {
                 "has_serial_code": true,
                 "module_name": "Main board (NG9498)",
-                "submodules": ["Connector board (JF6400)", "Camera board (JF6961)", "FPC board #1 (JF6964)", "FPC board #2 (JF6964)"]
+                "submodules": [
+                    "Connector board (JF6400)",
+                    "Camera board (JF6961)",
+                    "FPC board #1 (JF6964)",
+                    "FPC board #2 (JF6964)"
+                ]
+            }
+        },
+        {
+            "title": "[Test Station] OAK-4-D-W (NG9498 P9D1) R9+",
+            "description": "OAK-4-D-W (NG9498 P9D1) R9+",
+            "eeprom": "eeprom/TEST_STATION_NG9498_ASM_P9D1_oak4_d_pro_w.json",
+            "cdt": "OAK4-D_R9",
+            "test_suite": "TEST_STATION_OAK4_D_R9_PLUS",
+            "test_station_config": "NG9498_ASM_P9D1",
+            "board_config_file": "OAK4-D-W.json",
+            "options": {
+                "has_serial_code": true,
+                "module_name": "Main board (NG9498)",
+                "submodules": [
+                    "Connector board (JF6400)",
+                    "Camera board (JF6961)",
+                    "FPC board #1 (JF6964)",
+                    "FPC board #2 (JF6964)"
+                ]
             }
         },
         {
@@ -330,7 +354,7 @@
             "description": "OAK-4-D-AF (NG9498 P10D2)",
             "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_af.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_R9+",
+            "test_suite": "OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -338,7 +362,7 @@
             "description": "OAK-4-D-AF (NG9498 P10D2) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_af_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_R9+",
+            "test_suite": "TESTBED_OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -346,7 +370,7 @@
             "description": "OAK-4-PRO-AF (NG9498 P10D2)",
             "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_pro_af.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_Pro_R9+",
+            "test_suite": "OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -354,7 +378,7 @@
             "description": "OAK-4-PRO-AF (NG9498 P10D2) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_pro_af_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_Pro_R9+",
+            "test_suite": "TESTBED_OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -362,7 +386,7 @@
             "description": "OAK-4-D-FF (NG9498 P10D2)",
             "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_ff.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_R9+",
+            "test_suite": "OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -370,7 +394,7 @@
             "description": "OAK-4-D-FF (NG9498 P10D2) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_ff_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_R9+",
+            "test_suite": "TESTBED_OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -378,7 +402,7 @@
             "description": "OAK-4-PRO-FF (NG9498 P10D2)",
             "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_pro_ff.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_Pro_R9+",
+            "test_suite": "OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -386,7 +410,7 @@
             "description": "OAK-4-PRO-FF (NG9498 P10D2) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_pro_ff_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_Pro_R9+",
+            "test_suite": "TESTBED_OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D.json"
         },
         {
@@ -394,7 +418,7 @@
             "description": "OAK-4-D-W(NG9498 P10D2)",
             "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_w.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_R9+",
+            "test_suite": "OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D-W.json"
         },
         {
@@ -402,7 +426,7 @@
             "description": "OAK-4-D-W(NG9498 P10D2) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_w_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_R9+",
+            "test_suite": "TESTBED_OAK4_D_R9_PLUS",
             "board_config_file": "OAK4-D-W.json"
         },
         {
@@ -410,7 +434,7 @@
             "description": "OAK-4-PRO-W (NG9498 P10D2)",
             "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_pro_w.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "OAK4_D_Pro_R9+",
+            "test_suite": "OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D-W.json"
         },
         {
@@ -418,7 +442,7 @@
             "description": "OAK-4-PRO-W (NG9498 P10D2) [TESTBED]",
             "eeprom": "eeprom/NG9498_ASM_P10D2_oak4_d_pro_w_TESTBED.json",
             "cdt": "OAK4-D_R9",
-            "test_suite": "TESTBED_OAK4_D_Pro_R9+",
+            "test_suite": "TESTBED_OAK4_Pro_R9_PLUS",
             "board_config_file": "OAK4-D-W.json"
         }
     ]
