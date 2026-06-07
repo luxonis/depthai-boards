@@ -10,7 +10,13 @@
             "description": "OAK-D SR PoE, based on EL2086 R4M3E4 board with ToF sensor",
             "eeprom":"eeprom/EL2086_R4M3E4_oak_d_sr_poe.json",
             "board_config_file": "OAK-D-SR-POE.json",
-            "options": {"nor_size": 33554432}
+            "options": {
+                "bootloader": "none",
+                "imu": false,
+                "usb3": false,
+                "jpeg": false,
+                "eeprom": false
+            }
         },
         {
             "title":"OAK-D SR PoE (EL2086 R3M2E3)",
