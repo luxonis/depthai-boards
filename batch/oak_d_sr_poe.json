@@ -11,7 +11,7 @@
             "eeprom":"eeprom/EL2086_R4M3E4_oak_d_sr_poe.json",
             "board_config_file": "OAK-D-SR-POE.json",
             "options": {
-                "bootloader": "none",
+                "nor_size": 33554432,
                 "imu": false,
                 "usb3": false,
                 "jpeg": false,
