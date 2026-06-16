@@ -6,7 +6,7 @@
     "options": {
         "platform": "rvc3",
         "bootloader": "poe",
-        "environment": {"flashing": "rvc3_develop", "testing": "rvc3_develop", "calibration": "rvc3_develop"}
+        "environment": {"flashing": "dai_v2", "testing": "dai_v2"}
     },
     "variants": [
         {
