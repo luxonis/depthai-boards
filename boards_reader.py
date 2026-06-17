@@ -259,7 +259,7 @@ class Extrinsics(BaseModel):
 	rotationMatrix: Optional[List[List[float]]] = None
 	specTranslation: TranslationType
 
-	@root_validator
+	@root_validator(skip_on_failure=True)
 	def validate_rotation_repr(cls, values):
 		if values.get("rotation") is None and values.get("rotationMatrix") is None:
 			raise ValueError("either rotation or rotationMatrix must be provided")
