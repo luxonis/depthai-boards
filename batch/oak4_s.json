@@ -10,7 +10,7 @@
             "testing": "rvc4",
             "calibration": "rvc4"
         },
-        "ssh_password": "",
+        "ssh_password": "oelinux123",
         "flash_mac_address": {
             "generating_method": "database_sourced",
             "config": {
