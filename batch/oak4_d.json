@@ -8,9 +8,8 @@
         "imu": true,
         "platform": "rvc4",
         "environment": {
-            "flashing": "rvc4",
-            "testing": "rvc4",
-            "calibration": "rvc4"
+            "flashing": "dai_v3",
+            "testing": "dai_v3"
         },
         "ssh_password": "oelinux123",
         "flash_mac_address": {
