@@ -25,6 +25,14 @@
             "description": "OAK-4-S-AF (SL3443 P5D1)",
             "eeprom": "eeprom/SL3443_ASM_P5D1_oak4_s_af.json",
             "cdt": "OAK4-S_R5",
+            "test_suite": "OAK4_S_generic",
+            "board_config_file": "OAK4-S.json"
+        },
+        {
+            "title": "OAK-4-S-AF (SL3443 P5D1) [TESTBED]",
+            "description": "OAK-4-S-AF (SL3443 P5D1) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P5D1_oak4_s_af_TESTBED.json",
+            "cdt": "OAK4-S_R5",
             "test_suite": "TESTBED_OAK4_S_generic",
             "board_config_file": "OAK4-S.json"
         },
@@ -32,6 +40,14 @@
             "title": "OAK-4-S-FF (SL3443 P5D1)",
             "description": "OAK-4-S-FF (SL3443 P5D1)",
             "eeprom": "eeprom/SL3443_ASM_P5D1_oak4_s_ff.json",
+            "cdt": "OAK4-S_R5",
+            "test_suite": "OAK4_S_generic",
+            "board_config_file": "OAK4-S.json"
+        },
+        {
+            "title": "OAK-4-S-FF (SL3443 P5D1) [TESTBED]",
+            "description": "OAK-4-S-FF (SL3443 P5D1) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P5D1_oak4_s_ff_TESTBED.json",
             "cdt": "OAK4-S_R5",
             "test_suite": "TESTBED_OAK4_S_generic",
             "board_config_file": "OAK4-S.json"
@@ -41,6 +57,14 @@
             "description": "OAK-4-S-W (SL3443 P5D1)",
             "eeprom": "eeprom/SL3443_ASM_P5D1_oak4_s_w.json",
             "cdt": "OAK4-S_R5",
+            "test_suite": "OAK4_S_generic",
+            "board_config_file": "OAK4-S-W.json"
+        },
+        {
+            "title": "OAK-4-S-W (SL3443 P5D1) [TESTBED]",
+            "description": "OAK-4-S-W (SL3443 P5D1) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P5D1_oak4_s_w_TESTBED.json",
+            "cdt": "OAK4-S_R5",
             "test_suite": "TESTBED_OAK4_S_generic",
             "board_config_file": "OAK4-S-W.json"
         },
@@ -48,6 +72,14 @@
             "title": "OAK-4-S-CS-OG05B10 (SL3443 P5D1)",
             "description": "OAK4-S CS lens with OG05B10 sensor. (SL3443 P5D1)",
             "eeprom": "eeprom/SL3443_ASM_P5D1_oak4_s_cs.json",
+            "cdt": "OAK4-S_R5",
+            "test_suite": "OAK4_S_generic",
+            "board_config_file": "OAK4-S.json"
+        },
+        {
+            "title": "OAK-4-S-CS-OG05B10 (SL3443 P5D1) [TESTBED]",
+            "description": "OAK4-S CS lens with OG05B10 sensor. (SL3443 P5D1) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P5D1_oak4_s_cs_TESTBED.json",
             "cdt": "OAK4-S_R5",
             "test_suite": "TESTBED_OAK4_S_generic",
             "board_config_file": "OAK4-S.json"
@@ -57,7 +89,15 @@
             "description": "OAK-4-S-AF (SL3443 P9D1)",
             "eeprom": "eeprom/SL3443_ASM_P9D1_oak4_s_af.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_R9+",
+            "test_suite": "OAK4_S_R9_PLUS",
+            "board_config_file": "OAK4-S.json"
+        },
+        {
+            "title": "OAK-4-S-AF (SL3443 P9D1) [TESTBED]",
+            "description": "OAK-4-S-AF (SL3443 P9D1) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P9D1_oak4_s_af_TESTBED.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TESTBED_OAK4_S_R9_PLUS",
             "board_config_file": "OAK4-S.json"
         },
         {
@@ -65,7 +105,15 @@
             "description": "OAK-4-S-FF (SL3443 P9D1)",
             "eeprom": "eeprom/SL3443_ASM_P9D1_oak4_s_ff.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_R9+",
+            "test_suite": "OAK4_S_R9_PLUS",
+            "board_config_file": "OAK4-S.json"
+        },
+        {
+            "title": "OAK-4-S-FF (SL3443 P9D1) [TESTBED]",
+            "description": "OAK-4-S-FF (SL3443 P9D1) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P9D1_oak4_s_ff_TESTBED.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TESTBED_OAK4_S_R9_PLUS",
             "board_config_file": "OAK4-S.json"
         },
         {
@@ -73,7 +121,15 @@
             "description": "OAK-4-S-W (SL3443 P9D1)",
             "eeprom": "eeprom/SL3443_ASM_P9D1_oak4_s_w.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_R9+",
+            "test_suite": "OAK4_S_R9_PLUS",
+            "board_config_file": "OAK4-S-W.json"
+        },
+        {
+            "title": "OAK-4-S-W (SL3443 P9D1) [TESTBED]",
+            "description": "OAK-4-S-W (SL3443 P9D1) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P9D1_oak4_s_w_TESTBED.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TESTBED_OAK4_S_R9_PLUS",
             "board_config_file": "OAK4-S-W.json"
         },
         {
@@ -81,7 +137,15 @@
             "description": "OAK-4-S-AF (SL3443 P10D1)",
             "eeprom": "eeprom/SL3443_ASM_P10D1_oak4_s_af.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_R9+",
+            "test_suite": "OAK4_S_R9_PLUS",
+            "board_config_file": "OAK4-S.json"
+        },
+        {
+            "title": "OAK-4-S-AF (SL3443 P10D1) [TESTBED]",
+            "description": "OAK-4-S-AF (SL3443 P10D1) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P10D1_oak4_s_af_TESTBED.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TESTBED_OAK4_S_R9_PLUS",
             "board_config_file": "OAK4-S.json"
         },
         {
@@ -89,7 +153,15 @@
             "description": "OAK-4-S-FF (SL3443 P10D1)",
             "eeprom": "eeprom/SL3443_ASM_P10D1_oak4_s_ff.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_R9+",
+            "test_suite": "OAK4_S_R9_PLUS",
+            "board_config_file": "OAK4-S.json"
+        },
+        {
+            "title": "OAK-4-S-FF (SL3443 P10D1) [TESTBED]",
+            "description": "OAK-4-S-FF (SL3443 P10D1) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P10D1_oak4_s_ff_TESTBED.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TESTBED_OAK4_S_R9_PLUS",
             "board_config_file": "OAK4-S.json"
         },
         {
@@ -97,15 +169,45 @@
             "description": "OAK-4-S-W (SL3443 P10D1)",
             "eeprom": "eeprom/SL3443_ASM_P10D1_oak4_s_w.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_R9+",
+            "test_suite": "OAK4_S_R9_PLUS",
             "board_config_file": "OAK4-S-W.json"
+        },
+        {
+            "title": "OAK-4-S-W (SL3443 P10D1) [TESTBED]",
+            "description": "OAK-4-S-W (SL3443 P10D1) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P10D1_oak4_s_w_TESTBED.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TESTBED_OAK4_S_R9_PLUS",
+            "board_config_file": "OAK4-S-W.json"
+        },
+        {
+            "title": "[Test Station] OAK-4-S-W (SL3443 P9D1)",
+            "description": "OAK-4-S-W (SL3443 P9D1)",
+            "eeprom": "eeprom/TEST_STATION_SL3443_ASM_P9D1_oak4_s_w.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TEST_STATION_OAK4_S_R9_PLUS",
+            "test_station_config": "SL3443_ASM_P9D1",
+            "board_config_file": "OAK4-S-W.json",
+            "options": {
+                "has_serial_code": true,
+                "module_name": "Camera board (SL3443)",
+                "submodules": ["Connector board (SL6987)", "FPC board (SL6979)", "SoM board (DM3499)"]
+            }
         },
         {
             "title": "OAK-4-CS-OG05B10 (SL3443 P10D1)",
             "description": "OAK4-S CS lens with OG05B10 sensor (SL3443 P10D1)",
             "eeprom": "eeprom/SL3443_ASM_P10D1_oak4_cs_og05b10.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_R9+",
+            "test_suite": "OAK4_S_R9_PLUS",
+            "board_config_file": "OAK4-S.json"
+        },
+        {
+            "title": "OAK-4-CS-OG05B10 (SL3443 P10D1) [TESTBED]",
+            "description": "OAK4-S CS lens with OG05B10 sensor (SL3443 P10D1) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P10D1_oak4_cs_og05b10_TESTBED.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TESTBED_OAK4_S_R9_PLUS",
             "board_config_file": "OAK4-S.json"
         },
         {
@@ -113,7 +215,15 @@
             "description": "OAK-4-CS-IMX586 (SL3443 P10D1)",
             "eeprom": "eeprom/SL3443_ASM_P10D1_oak4_cs_imx586.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_R9+",
+            "test_suite": "OAK4_S_R9_PLUS",
+            "board_config_file": "OAK4-S.json"
+        },
+        {
+            "title": "OAK-4-CS-IMX586 (SL3443 P10D1) [TESTBED]",
+            "description": "OAK-4-CS-IMX586 (SL3443 P10D1) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P10D1_oak4_cs_imx586_TESTBED.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TESTBED_OAK4_S_R9_PLUS",
             "board_config_file": "OAK4-S.json"
         },
         {
@@ -121,7 +231,15 @@
             "description": "OAK-4-S-AF (SL3443 P10D3)",
             "eeprom": "eeprom/SL3443_ASM_P10D3_oak4_s_af.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_R9+",
+            "test_suite": "OAK4_S_R9_PLUS",
+            "board_config_file": "OAK4-S.json"
+        },
+        {
+            "title": "OAK-4-S-AF (SL3443 P10D3) [TESTBED]",
+            "description": "OAK-4-S-AF (SL3443 P10D3) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P10D3_oak4_s_af_TESTBED.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TESTBED_OAK4_S_R9_PLUS",
             "board_config_file": "OAK4-S.json"
         },
         {
@@ -129,7 +247,15 @@
             "description": "OAK-4-S-FF (SL3443 P10D3)",
             "eeprom": "eeprom/SL3443_ASM_P10D3_oak4_s_ff.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_R9+",
+            "test_suite": "OAK4_S_R9_PLUS",
+            "board_config_file": "OAK4-S.json"
+        },
+        {
+            "title": "OAK-4-S-FF (SL3443 P10D3) [TESTBED]",
+            "description": "OAK-4-S-FF (SL3443 P10D3) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P10D3_oak4_s_ff_TESTBED.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TESTBED_OAK4_S_R9_PLUS",
             "board_config_file": "OAK4-S.json"
         },
         {
@@ -137,7 +263,15 @@
             "description": "OAK-4-S-W (SL3443 P10D3)",
             "eeprom": "eeprom/SL3443_ASM_P10D3_oak4_s_w.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_R9+",
+            "test_suite": "OAK4_S_R9_PLUS",
+            "board_config_file": "OAK4-S-W.json"
+        },
+        {
+            "title": "OAK-4-S-W (SL3443 P10D3) [TESTBED]",
+            "description": "OAK-4-S-W (SL3443 P10D3) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P10D3_oak4_s_w_TESTBED.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TESTBED_OAK4_S_R9_PLUS",
             "board_config_file": "OAK4-S-W.json"
         },
         {
@@ -145,6 +279,15 @@
             "os": "PRODUCTION/luxonis_os_rvc4-1.32.1.tar.xz",
             "description": "OAK-4-S-AF (SL3443 P10D4)",
             "eeprom": "eeprom/SL3443_ASM_P10D4_oak4_s_af.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TESTBED_OAK4_S_R9+",
+            "board_config_file": "OAK4-S.json"
+        },
+        {
+            "title": "OAK-4-S-AF (SL3443 P10D4) [TESTBED]",
+            "os": "PRODUCTION/luxonis_os_rvc4-1.32.1.tar.xz",
+            "description": "OAK-4-S-AF (SL3443 P10D4) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P10D4_oak4_s_af_TESTBED.json",
             "cdt": "OAK4-S_R9",
             "test_suite": "TESTBED_OAK4_S_R9+",
             "board_config_file": "OAK4-S.json"
@@ -159,10 +302,28 @@
             "board_config_file": "OAK4-S.json"
         },
         {
+            "title": "OAK-4-S-FF (SL3443 P10D4) [TESTBED]",
+            "os": "PRODUCTION/luxonis_os_rvc4-1.32.1.tar.xz",
+            "description": "OAK-4-S-FF (SL3443 P10D4) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P10D4_oak4_s_ff_TESTBED.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TESTBED_OAK4_S_R9+",
+            "board_config_file": "OAK4-S.json"
+        },
+        {
             "title": "OAK-4-S-W (SL3443 P10D4)",
             "os": "PRODUCTION/luxonis_os_rvc4-1.32.1.tar.xz",
             "description": "OAK-4-S-W (SL3443 P10D4)",
             "eeprom": "eeprom/SL3443_ASM_P10D4_oak4_s_w.json",
+            "cdt": "OAK4-S_R9",
+            "test_suite": "TESTBED_OAK4_S_R9+",
+            "board_config_file": "OAK4-S-W.json"
+        },
+        {
+            "title": "OAK-4-S-W (SL3443 P10D4) [TESTBED]",
+            "os": "PRODUCTION/luxonis_os_rvc4-1.32.1.tar.xz",
+            "description": "OAK-4-S-W (SL3443 P10D4) [TESTBED]",
+            "eeprom": "eeprom/SL3443_ASM_P10D4_oak4_s_w_TESTBED.json",
             "cdt": "OAK4-S_R9",
             "test_suite": "TESTBED_OAK4_S_R9+",
             "board_config_file": "OAK4-S-W.json"
