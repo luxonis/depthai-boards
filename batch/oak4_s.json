@@ -280,7 +280,7 @@
             "description": "OAK-4-S-AF (SL3443 P10D4)",
             "eeprom": "eeprom/SL3443_ASM_P10D4_oak4_s_af.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_R9+",
+            "test_suite": "TESTBED_OAK4_S_R9_PLUS",
             "board_config_file": "OAK4-S.json"
         },
         {
@@ -289,7 +289,7 @@
             "description": "OAK-4-S-AF (SL3443 P10D4) [TESTBED]",
             "eeprom": "eeprom/SL3443_ASM_P10D4_oak4_s_af_TESTBED.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_R9+",
+            "test_suite": "TESTBED_OAK4_S_R9_PLUS",
             "board_config_file": "OAK4-S.json"
         },
         {
@@ -298,7 +298,7 @@
             "description": "OAK-4-S-FF (SL3443 P10D4)",
             "eeprom": "eeprom/SL3443_ASM_P10D4_oak4_s_ff.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_R9+",
+            "test_suite": "TESTBED_OAK4_S_R9_PLUS",
             "board_config_file": "OAK4-S.json"
         },
         {
@@ -307,7 +307,7 @@
             "description": "OAK-4-S-FF (SL3443 P10D4) [TESTBED]",
             "eeprom": "eeprom/SL3443_ASM_P10D4_oak4_s_ff_TESTBED.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_R9+",
+            "test_suite": "TESTBED_OAK4_S_R9_PLUS",
             "board_config_file": "OAK4-S.json"
         },
         {
@@ -316,7 +316,7 @@
             "description": "OAK-4-S-W (SL3443 P10D4)",
             "eeprom": "eeprom/SL3443_ASM_P10D4_oak4_s_w.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_R9+",
+            "test_suite": "TESTBED_OAK4_S_R9_PLUS",
             "board_config_file": "OAK4-S-W.json"
         },
         {
@@ -325,7 +325,7 @@
             "description": "OAK-4-S-W (SL3443 P10D4) [TESTBED]",
             "eeprom": "eeprom/SL3443_ASM_P10D4_oak4_s_w_TESTBED.json",
             "cdt": "OAK4-S_R9",
-            "test_suite": "TESTBED_OAK4_S_R9+",
+            "test_suite": "TESTBED_OAK4_S_R9_PLUS",
             "board_config_file": "OAK4-S-W.json"
         }
     ]
