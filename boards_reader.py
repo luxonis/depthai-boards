@@ -1,7 +1,7 @@
 from pathlib import Path
 import json
 from enum import Enum
-from pydantic import BaseModel, ValidationError, root_validator, validator
+from pydantic import BaseModel, ValidationError, root_validator, field_validator
 from typing import Optional, Union, Dict, List, Tuple
 import copy
 
@@ -330,7 +330,7 @@ class VariantConfig(BaseModel):
 	test_station_config: Optional[str] = None
 	"""Path of the test_station_config, look at stage_testing/test_station/config/__init__.py for more info."""
 
-	@validator("test_suite", pre=True)
+	@field_validator('test_suite', mode='before')
 	def validate_test_suite_type(cls, value):
 		if isinstance(value, str):
 			return value
