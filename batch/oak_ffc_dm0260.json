@@ -1,0 +1,132 @@
+{
+    "title": "OAK-FFC DM0260",
+    "description": "KT_DM0260 R4M2E3 FFC variants",
+    "image": "images/oak_d_ffc_4p.jpg",
+    "variants": [
+        {
+            "title": "OAK-FFC-2RPi (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-2RPi EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_2rpi.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-IMX214-W (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-IMX214-W EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_imx214_w.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-IMX378 (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-IMX378 EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_imx378.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-IMX462 (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-IMX462 EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_imx462.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-IMX577-M12 (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-IMX577-M12 EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_imx577_m12.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-OV9282-M12 (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-OV9282-M12 EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_ov9282_m12.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-OV9782-M12 (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-OV9782-M12 EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_ov9782_m12.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-PSRBS-150 (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-PSRBS-150 EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_psrbs_150.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-AR0234-M12 (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-AR0234-M12 EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_ar0234_m12.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-AR0234-M12-C56 (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-AR0234-M12-C56 EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_ar0234_m12_c56.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-OV9282-W (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-OV9282-W EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_ov9282_w.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-OV9782-W (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-OV9782-W EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_ov9782_w.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-OV9782-FF (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-OV9782-FF EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_ov9782_ff.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-AR0234-C34 (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-AR0234-C34 EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_ar0234_c34.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-IMX378-W-C30 (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-IMX378-W-C30 EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_imx378_w_c30.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-3P-C44 (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-3P-C44 EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_3p_c44.json",
+            "board_config_file": "OAK-FFC-3P.json"
+        },
+        {
+            "title": "OAK-FFC-OV9282 (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-OV9282 EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_ov9282.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-ToF-33D (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-ToF-33D EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_tof_33d.json"
+        },
+        {
+            "title": "OAK-FFC-48MP (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-48MP EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_48mp.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-IMX378-W (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-IMX378-W EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_imx378_w.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        },
+        {
+            "title": "OAK-FFC-IMX378-FF (KT_DM0260 R4M2E3)",
+            "description": "KT_DM0260 R4M2E3 with OAK-FFC-IMX378-FF EEPROM profile",
+            "eeprom": "eeprom/KT_DM0260_R4M2E3_oak_ffc_imx378_ff.json",
+            "board_config_file": "OAK-FFC-1P.json"
+        }
+    ]
+}
