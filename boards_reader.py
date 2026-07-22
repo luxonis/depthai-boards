@@ -1,7 +1,7 @@
 from pathlib import Path
 import json
 from enum import Enum
-from pydantic import BaseModel, ValidationError, root_validator
+from pydantic import BaseModel, ValidationError, root_validator, field_validator
 from typing import Optional, Union, Dict, List, Tuple
 import copy
 
@@ -259,7 +259,7 @@ class Extrinsics(BaseModel):
 	rotationMatrix: Optional[List[List[float]]] = None
 	specTranslation: TranslationType
 
-	@root_validator
+	@root_validator(skip_on_failure=True)
 	def validate_rotation_repr(cls, values):
 		if values.get("rotation") is None and values.get("rotationMatrix") is None:
 			raise ValueError("either rotation or rotationMatrix must be provided")
@@ -324,11 +324,19 @@ class VariantConfig(BaseModel):
 	configs: Optional[List[str]] = None
 	""" List of config tars names to be flashed. """
 
-	test_suite: str = ""
+	test_suite: Union[str, List[str]] = ""
 	""" Specify which test_suite to use. """
 
 	test_station_config: Optional[str] = None
 	"""Path of the test_station_config, look at stage_testing/test_station/config/__init__.py for more info."""
+
+	@field_validator('test_suite', mode='before')
+	def validate_test_suite_type(cls, value):
+		if isinstance(value, str):
+			return value
+		if isinstance(value, list) and all(isinstance(item, str) for item in value):
+			return value
+		raise TypeError("test_suite must be a string or a list of strings")
 
 
 class DeviceConfig(BaseModel):
