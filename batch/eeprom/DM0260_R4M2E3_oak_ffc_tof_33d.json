@@ -5,7 +5,7 @@
     "boardRev": "R4M2E3",
     "productName": "OAK-FFC-ToF-33D",
     "boardCustom": "",
-    "hardwareConf": "",
+    "hardwareConf": "F1-FV00-BC000",
     "boardOptions": 1025,
     "version": 7
 }
