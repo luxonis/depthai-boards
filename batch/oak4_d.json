@@ -395,6 +395,18 @@
                 "TESTBED_OAK4_Pro_R9_PLUS"
             ],
             "board_config_file": "OAK4-D-W.json"
+        },
+        {
+            "title": "OAK-4-PRO-W-97 (NG9498 P10D4)",
+            "os": "PRODUCTION/luxonis_os_rvc4-1.35.0.tar.xz",
+            "description": "OAK-4-PRO-W-97 (NG9498 P10D4)",
+            "eeprom": "eeprom/NG9498_ASM_P10D4_oak4_d_pro_w_97.json",
+            "cdt": "OAK4-D_R9",
+            "test_suite": [
+                "OAK4_Pro_R9_PLUS",
+                "TESTBED_OAK4_Pro_R9_PLUS"
+            ],
+            "board_config_file": "OAK4-D-W-97.json"
         }
     ]
 }
