@@ -327,6 +327,9 @@ class VariantConfig(BaseModel):
 	test_suite: Union[str, List[str]] = ""
 	""" Specify which test_suite to use. """
 
+	test_suite_details: Dict[str, dict] = {}
+	"""Additional test_station_config/options details, keyed by test suite name."""
+
 	test_station_config: Optional[str] = None
 	"""Path of the test_station_config, look at stage_testing/test_station/config/__init__.py for more info."""
 
