@@ -27,6 +27,11 @@ class BootloaderType(str, Enum):
 			return BootloaderType.NONE
 
 
+class DeviceShellTransport(str, Enum):
+	SSH = 'ssh' # Connect to the device over IP (paramiko SSH)
+	ADB = 'adb' # Connect to the device over USB (adb)
+
+
 class CameraSettings(BaseModel):
 	sharpness: Optional[int] = None
 	luma_denoise: Optional[int] = None
@@ -224,6 +229,11 @@ class Options(BaseModel):
 	ssh_password: str = ""
 	""" Password for SSH connection to the device. """
 
+	device_shell_transport: DeviceShellTransport = DeviceShellTransport.SSH
+	""" Transport used to run shell commands / push / pull files on the device during testing
+	(e.g. ssh over IP, or adb over USB). Must be set explicitly per variant when it differs from
+	the default - never inferred from the variant title, EEPROM productName, or CDT filename. """
+
 	hub_robot_id: Optional[HubRobotIdConfig] = None
 	""" Configuration for generating the Hub robot ID. """
 
@@ -326,6 +336,9 @@ class VariantConfig(BaseModel):
 
 	test_suite: Union[str, List[str]] = ""
 	""" Specify which test_suite to use. """
+
+	test_suite_details: Dict[str, dict] = {}
+	"""Additional test_suite_mode/test_station_config/options details, keyed by test suite name."""
 
 	test_station_config: Optional[str] = None
 	"""Path of the test_station_config, look at stage_testing/test_station/config/__init__.py for more info."""
