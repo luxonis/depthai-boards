@@ -54,6 +54,30 @@
     },
     "variants": [
         {
+            "title": "OAK-4-CS-OG05B10 (SL3443 P10D3)",
+            "description": "OAK4-S CS lens with OG05B10 sensor (SL3443 P10D3)",
+            "eeprom": "eeprom/SL3443_ASM_P10D3_oak4_cs_og05b10.json",
+            "cdt": "OAK4-S_R9",
+            "board_config_file": "OAK-4-S.json",
+            "test_suite": [
+                "TESTBED_OAK_4_S_R9_PLUS",
+                "BURNIN_OAK_4_S_R9_PLUS",
+                "OAK_4_S_R9_PLUS"
+            ]
+        },
+        {
+            "title": "OAK-4-CS-IMX586 (SL3443 P10D3)",
+            "description": "OAK-4-CS-IMX586 (SL3443 P10D3)",
+            "eeprom": "eeprom/SL3443_ASM_P10D3_oak4_cs_imx586.json",
+            "cdt": "OAK4-S_R9",
+            "board_config_file": "OAK-4-S.json",
+            "test_suite": [
+                "TESTBED_OAK_4_S_R9_PLUS",
+                "BURNIN_OAK_4_S_R9_PLUS",
+                "OAK_4_S_R9_PLUS"
+            ]
+        },
+        {
             "title": "OAK-4-S-AF (SL3443 P5D1)",
             "description": "OAK-4-S-AF (SL3443 P5D1)",
             "eeprom": "eeprom/SL3443_ASM_P5D1_oak_4_s_af.json",
