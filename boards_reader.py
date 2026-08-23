@@ -1,5 +1,6 @@
-from pathlib import Path
+import os
 import json
+from pathlib import Path
 from enum import Enum
 from pydantic import BaseModel, ValidationError, root_validator, field_validator
 from typing import Optional, Union, Dict, List, Tuple
@@ -384,6 +385,16 @@ DEVICES_TYPED: List[DeviceConfig] = []
 # Create a dictionary of board_config files
 board_configs = {file.name: file for file in [*(DEPTHAI_BOARDS_PATH / "boards" ).glob("*.json"), *(DEPTHAI_BOARDS_PRIVATE_PATH / "boards" ).glob("*.json")]}
 
+override_file = os.getenv("DEPTHAI_BOARDS_OVERRIDE_FILE")
+
+override_data = None
+if override_file:
+	try:
+		with open(override_file, "r") as f:
+			override_data = json.load(f)
+	except Exception as error:
+		print(f"Could not load override file at {override_file}. Make sure the file exists and is valid JSON. \n{str(error)}")
+
 for device_file in [*(DEPTHAI_BOARDS_PATH / "batch" ).glob("*.json"), *(DEPTHAI_BOARDS_PRIVATE_PATH / "batch" ).glob("*.json")]:
 	try:
 		with open(device_file, "r") as f:
@@ -449,6 +460,15 @@ for device_file in [*(DEPTHAI_BOARDS_PATH / "batch" ).glob("*.json"), *(DEPTHAI_
 					raise Exception(f"Couldn't load board config file at {board_config_path.resolve()} for device '{device_file.resolve()}'. Make sure the board_config_file field is set correctly in the device file.")
 		else:
 			variant_combined["board_config_2"] = {"cameras": {}} # if no board config is specified, use an empty one (used for FCC cameras)
+
+		if override_data is not None:
+			for id in override_data:
+				if id != variant_combined["id"]:
+					continue
+
+				override_variant = override_data[id]
+
+				update(variant_combined, copy.deepcopy(override_variant))
 
 		variants_combined.append(variant_combined)
 
