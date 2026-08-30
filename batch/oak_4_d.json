@@ -294,8 +294,8 @@
                 "has_serial_code": true,
                 "module_name": "Main board (NG9498)",
                 "submodules": [
-                    "Connector board (JF6400)",
-                    "Camera board (JF6961)",
+                    "Connector board (JF6961)",
+                    "Camera board (JF6400)",
                     "FPC board #1 (JF6964)",
                     "FPC board #2 (JF6964)"
                 ]
@@ -313,8 +313,8 @@
                 "has_serial_code": true,
                 "module_name": "Main board (NG9498)",
                 "submodules": [
-                    "Connector board (JF6400)",
-                    "Camera board (JF6961)",
+                    "Connector board (JF6961)",
+                    "Camera board (JF6400)",
                     "FPC board #1 (JF6964)",
                     "FPC board #2 (JF6964)"
                 ]
