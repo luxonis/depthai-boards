@@ -59,10 +59,60 @@
             "test_suite_mode": "burn-in"
         },
         "TEST_STATION_OAK_4_D_generic": {
-            "test_suite_mode": "electrical-test"
+            "test_suite_mode": "electrical-test",
+            "test_station_config": "NG9498_ASM_P9D1",
+            "options": {
+                "has_serial_code": true,
+                "module_name": "Main board (NG9498)",
+                "submodules": [
+                    "Connector board (JF6961)",
+                    "Camera board (JF6400)",
+                    "FPC board #1 (JF6964)",
+                    "FPC board #2 (JF6964)"
+                ]
+            }
+        },
+        "TEST_STATION_OAK_4_PRO_generic": {
+            "test_suite_mode": "electrical-test",
+            "test_station_config": "NG9498_ASM_P9D1",
+            "options": {
+                "has_serial_code": true,
+                "module_name": "Main board (NG9498)",
+                "submodules": [
+                    "Connector board (JF6961)",
+                    "Camera board (JF6400)",
+                    "FPC board #1 (JF6964)",
+                    "FPC board #2 (JF6964)"
+                ]
+            }
         },
         "TEST_STATION_OAK_4_D_R9_PLUS": {
-            "test_suite_mode": "electrical-test"
+            "test_suite_mode": "electrical-test",
+            "test_station_config": "NG9498_ASM_P9D1",
+            "options": {
+                "has_serial_code": true,
+                "module_name": "Main board (NG9498)",
+                "submodules": [
+                    "Connector board (JF6961)",
+                    "Camera board (JF6400)",
+                    "FPC board #1 (JF6964)",
+                    "FPC board #2 (JF6964)"
+                ]
+            }
+        },
+        "TEST_STATION_OAK_4_PRO_R9_PLUS": {
+            "test_suite_mode": "electrical-test",
+            "test_station_config": "NG9498_ASM_P9D1",
+            "options": {
+                "has_serial_code": true,
+                "module_name": "Main board (NG9498)",
+                "submodules": [
+                    "Connector board (JF6961)",
+                    "Camera board (JF6400)",
+                    "FPC board #1 (JF6964)",
+                    "FPC board #2 (JF6964)"
+                ]
+            }
         }
     },
     "variants": [
@@ -75,7 +125,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_D_generic",
                 "BURNIN_OAK_4_D_generic",
-                "OAK_4_D_generic"
+                "OAK_4_D_generic",
+                "TEST_STATION_OAK_4_D_generic"
             ]
         },
         {
@@ -87,7 +138,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_PRO_generic",
                 "BURNIN_OAK_4_PRO_generic",
-                "OAK_4_PRO_generic"
+                "OAK_4_PRO_generic",
+                "TEST_STATION_OAK_4_PRO_generic"
             ]
         },
         {
@@ -99,7 +151,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_D_generic",
                 "BURNIN_OAK_4_D_generic",
-                "OAK_4_D_generic"
+                "OAK_4_D_generic",
+                "TEST_STATION_OAK_4_D_generic"
             ]
         },
         {
@@ -111,7 +164,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_PRO_generic",
                 "BURNIN_OAK_4_PRO_generic",
-                "OAK_4_PRO_generic"
+                "OAK_4_PRO_generic",
+                "TEST_STATION_OAK_4_PRO_generic"
             ]
         },
         {
@@ -123,7 +177,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_D_generic",
                 "BURNIN_OAK_4_D_generic",
-                "OAK_4_D_generic"
+                "OAK_4_D_generic",
+                "TEST_STATION_OAK_4_D_generic"
             ]
         },
         {
@@ -135,7 +190,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_PRO_generic",
                 "BURNIN_OAK_4_PRO_generic",
-                "OAK_4_PRO_generic"
+                "OAK_4_PRO_generic",
+                "TEST_STATION_OAK_4_PRO_generic"
             ]
         },
         {
@@ -147,7 +203,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_D_R9_PLUS",
                 "BURNIN_OAK_4_D_R9_PLUS",
-                "OAK_4_D_R9_PLUS"
+                "OAK_4_D_R9_PLUS",
+                "TEST_STATION_OAK_4_D_R9_PLUS"
             ]
         },
         {
@@ -159,7 +216,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_PRO_R9_PLUS",
                 "BURNIN_OAK_4_PRO_R9_PLUS",
-                "OAK_4_PRO_R9_PLUS"
+                "OAK_4_PRO_R9_PLUS",
+                "TEST_STATION_OAK_4_PRO_R9_PLUS"
             ]
         },
         {
@@ -171,7 +229,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_D_R9_PLUS",
                 "BURNIN_OAK_4_D_R9_PLUS",
-                "OAK_4_D_R9_PLUS"
+                "OAK_4_D_R9_PLUS",
+                "TEST_STATION_OAK_4_D_R9_PLUS"
             ]
         },
         {
@@ -183,7 +242,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_PRO_R9_PLUS",
                 "BURNIN_OAK_4_PRO_R9_PLUS",
-                "OAK_4_PRO_R9_PLUS"
+                "OAK_4_PRO_R9_PLUS",
+                "TEST_STATION_OAK_4_PRO_R9_PLUS"
             ]
         },
         {
@@ -195,7 +255,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_D_R9_PLUS",
                 "BURNIN_OAK_4_D_R9_PLUS",
-                "OAK_4_D_R9_PLUS"
+                "OAK_4_D_R9_PLUS",
+                "TEST_STATION_OAK_4_D_R9_PLUS"
             ]
         },
         {
@@ -207,7 +268,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_PRO_R9_PLUS",
                 "BURNIN_OAK_4_PRO_R9_PLUS",
-                "OAK_4_PRO_R9_PLUS"
+                "OAK_4_PRO_R9_PLUS",
+                "TEST_STATION_OAK_4_PRO_R9_PLUS"
             ]
         },
         {
@@ -219,7 +281,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_D_R9_PLUS",
                 "BURNIN_OAK_4_D_R9_PLUS",
-                "OAK_4_D_R9_PLUS"
+                "OAK_4_D_R9_PLUS",
+                "TEST_STATION_OAK_4_D_R9_PLUS"
             ]
         },
         {
@@ -231,7 +294,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_PRO_R9_PLUS",
                 "BURNIN_OAK_4_PRO_R9_PLUS",
-                "OAK_4_PRO_R9_PLUS"
+                "OAK_4_PRO_R9_PLUS",
+                "TEST_STATION_OAK_4_PRO_R9_PLUS"
             ]
         },
         {
@@ -243,7 +307,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_D_R9_PLUS",
                 "BURNIN_OAK_4_D_R9_PLUS",
-                "OAK_4_D_R9_PLUS"
+                "OAK_4_D_R9_PLUS",
+                "TEST_STATION_OAK_4_D_R9_PLUS"
             ]
         },
         {
@@ -255,11 +320,12 @@
             "test_suite": [
                 "TESTBED_OAK_4_PRO_R9_PLUS",
                 "BURNIN_OAK_4_PRO_R9_PLUS",
-                "OAK_4_PRO_R9_PLUS"
+                "OAK_4_PRO_R9_PLUS",
+                "TEST_STATION_OAK_4_PRO_R9_PLUS"
             ]
         },
         {
-            "title": "OAK-4-D-W(NG9498 P10D0)",
+            "title": "OAK-4-D-W (NG9498 P10D0)",
             "description": "OAK-4-D-W(NG9498 P10D0)",
             "eeprom": "eeprom/NG9498_ASM_P10D0_oak_4_d_w.json",
             "cdt": "OAK4-D_R9",
@@ -267,7 +333,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_D_R9_PLUS",
                 "BURNIN_OAK_4_D_R9_PLUS",
-                "OAK_4_D_R9_PLUS"
+                "OAK_4_D_R9_PLUS",
+                "TEST_STATION_OAK_4_D_R9_PLUS"
             ]
         },
         {
@@ -279,46 +346,9 @@
             "test_suite": [
                 "TESTBED_OAK_4_PRO_R9_PLUS",
                 "BURNIN_OAK_4_PRO_R9_PLUS",
-                "OAK_4_PRO_R9_PLUS"
+                "OAK_4_PRO_R9_PLUS",
+                "TEST_STATION_OAK_4_PRO_R9_PLUS"
             ]
-        },
-        {
-            "title": "[Test Station] OAK-4-PRO-W (NG9498 P9D1)",
-            "description": "OAK-4-PRO-W (NG9498 P9D1)",
-            "eeprom": "eeprom/TEST_STATION_NG9498_ASM_P9D1_oak_4_d_pro_w.json",
-            "cdt": "OAK4-D_R9",
-            "board_config_file": "OAK-4-D-W.json",
-            "test_suite": "TEST_STATION_OAK_4_D_generic",
-            "test_station_config": "NG9498_ASM_P9D1",
-            "options": {
-                "has_serial_code": true,
-                "module_name": "Main board (NG9498)",
-                "submodules": [
-                    "Connector board (JF6961)",
-                    "Camera board (JF6400)",
-                    "FPC board #1 (JF6964)",
-                    "FPC board #2 (JF6964)"
-                ]
-            }
-        },
-        {
-            "title": "[Test Station] OAK-4-D-W (NG9498 P9D1) R9_PLUS",
-            "description": "OAK-4-D-W (NG9498 P9D1) R9_PLUS",
-            "eeprom": "eeprom/TEST_STATION_NG9498_ASM_P9D1_oak_4_d_pro_w.json",
-            "cdt": "OAK4-D_R9",
-            "board_config_file": "OAK-4-D-W.json",
-            "test_suite": "TEST_STATION_OAK_4_D_R9_PLUS",
-            "test_station_config": "NG9498_ASM_P9D1",
-            "options": {
-                "has_serial_code": true,
-                "module_name": "Main board (NG9498)",
-                "submodules": [
-                    "Connector board (JF6961)",
-                    "Camera board (JF6400)",
-                    "FPC board #1 (JF6964)",
-                    "FPC board #2 (JF6964)"
-                ]
-            }
         },
         {
             "title": "OAK-4-D-AF (NG9498 P10D2)",
@@ -329,7 +359,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_D_R9_PLUS",
                 "BURNIN_OAK_4_D_R9_PLUS",
-                "OAK_4_D_R9_PLUS"
+                "OAK_4_D_R9_PLUS",
+                "TEST_STATION_OAK_4_D_R9_PLUS"
             ]
         },
         {
@@ -341,7 +372,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_PRO_R9_PLUS",
                 "BURNIN_OAK_4_PRO_R9_PLUS",
-                "OAK_4_PRO_R9_PLUS"
+                "OAK_4_PRO_R9_PLUS",
+                "TEST_STATION_OAK_4_PRO_R9_PLUS"
             ]
         },
         {
@@ -353,7 +385,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_D_R9_PLUS",
                 "BURNIN_OAK_4_D_R9_PLUS",
-                "OAK_4_D_R9_PLUS"
+                "OAK_4_D_R9_PLUS",
+                "TEST_STATION_OAK_4_D_R9_PLUS"
             ]
         },
         {
@@ -365,7 +398,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_PRO_R9_PLUS",
                 "BURNIN_OAK_4_PRO_R9_PLUS",
-                "OAK_4_PRO_R9_PLUS"
+                "OAK_4_PRO_R9_PLUS",
+                "TEST_STATION_OAK_4_PRO_R9_PLUS"
             ]
         },
         {
@@ -377,7 +411,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_D_R9_PLUS",
                 "BURNIN_OAK_4_D_R9_PLUS",
-                "OAK_4_D_R9_PLUS"
+                "OAK_4_D_R9_PLUS",
+                "TEST_STATION_OAK_4_D_R9_PLUS"
             ]
         },
         {
@@ -389,7 +424,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_PRO_R9_PLUS",
                 "BURNIN_OAK_4_PRO_R9_PLUS",
-                "OAK_4_PRO_R9_PLUS"
+                "OAK_4_PRO_R9_PLUS",
+                "TEST_STATION_OAK_4_PRO_R9_PLUS"
             ]
         },
         {
@@ -402,7 +438,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_D_R9_PLUS",
                 "BURNIN_OAK_4_D_R9_PLUS",
-                "OAK_4_D_R9_PLUS"
+                "OAK_4_D_R9_PLUS",
+                "TEST_STATION_OAK_4_D_R9_PLUS"
             ]
         },
         {
@@ -415,7 +452,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_PRO_R9_PLUS",
                 "BURNIN_OAK_4_PRO_R9_PLUS",
-                "OAK_4_PRO_R9_PLUS"
+                "OAK_4_PRO_R9_PLUS",
+                "TEST_STATION_OAK_4_PRO_R9_PLUS"
             ]
         },
         {
@@ -428,7 +466,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_D_R9_PLUS",
                 "BURNIN_OAK_4_D_R9_PLUS",
-                "OAK_4_D_R9_PLUS"
+                "OAK_4_D_R9_PLUS",
+                "TEST_STATION_OAK_4_D_R9_PLUS"
             ]
         },
         {
@@ -441,7 +480,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_PRO_R9_PLUS",
                 "BURNIN_OAK_4_PRO_R9_PLUS",
-                "OAK_4_PRO_R9_PLUS"
+                "OAK_4_PRO_R9_PLUS",
+                "TEST_STATION_OAK_4_PRO_R9_PLUS"
             ]
         },
         {
@@ -454,7 +494,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_D_R9_PLUS",
                 "BURNIN_OAK_4_D_R9_PLUS",
-                "OAK_4_D_R9_PLUS"
+                "OAK_4_D_R9_PLUS",
+                "TEST_STATION_OAK_4_D_R9_PLUS"
             ]
         },
         {
@@ -467,7 +508,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_PRO_R9_PLUS",
                 "BURNIN_OAK_4_PRO_R9_PLUS",
-                "OAK_4_PRO_R9_PLUS"
+                "OAK_4_PRO_R9_PLUS",
+                "TEST_STATION_OAK_4_PRO_R9_PLUS"
             ]
         },
         {
@@ -480,7 +522,8 @@
             "test_suite": [
                 "TESTBED_OAK_4_PRO_R9_PLUS",
                 "BURNIN_OAK_4_PRO_R9_PLUS",
-                "OAK_4_PRO_R9_PLUS"
+                "OAK_4_PRO_R9_PLUS",
+                "TEST_STATION_OAK_4_PRO_R9_PLUS"
             ]
         }
     ]
