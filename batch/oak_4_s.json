@@ -40,7 +40,6 @@
         },
         "TEST_STATION_OAK_4_S_R9_PLUS": {
             "test_suite_mode": "electrical-test",
-            "test_station_config": "SL3443_ASM_P9D1",
             "options": {
                 "has_serial_code": true,
                 "module_name": "Camera board (SL3443)",
