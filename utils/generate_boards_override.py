@@ -5,11 +5,14 @@ from typing import Any, Dict, Optional
 from resources.depthai_boards.boards_reader import get_variant_by_id_typed, get_device_by_id_typed
 
 
-def generate_override_dict(variant_id: str, os: Optional[str] = None) -> Dict[str, Any]:
+def generate_override_dict(variant_id: str, os: Optional[str] = None, fip: Optional[str] = None) -> Dict[str, Any]:
     override_payload: Dict[str, Any] = {}
 
     if os is not None:
         override_payload["os"] = os
+    
+    if fip is not None:
+        override_payload["fip"] = fip
 
     return {variant_id: override_payload}
 
@@ -32,15 +35,20 @@ def main():
     parser.add_argument("--device", "-d", required=True, help="Target device ID or title (e.g. 'oak_4_s' or 'OAK4-S')")
     parser.add_argument("--variant", "-v", required=True, help="Target variant ID or title (e.g. 'SL3443_ASM_P10D3_oak4_cs_og05b10')")
     parser.add_argument("--os", required=False, default=None, help="Custom OS to override")
+    parser.add_argument("--fip", required=False, default=None, help="Custom FIP to override")
     parser.add_argument("--output", "-o", required=False, default=None, help="Output path for the override JSON file. If not specified, JSON is printed to stdout.")
 
     args = parser.parse_args()
 
     device = get_device_by_id_typed(args.device)
     variant = get_variant_by_id_typed(args.variant)
+    
+    if not any(device_variant.id == variant_id for device_variant in device.variants):
+        parser.error(f"Variant '{variant_id}' does not belong to device '{device.id}'")
+
     variant_id = variant.id
 
-    override_dict = generate_override_dict(variant_id=variant_id, os=args.os)
+    override_dict = generate_override_dict(variant_id=variant_id, os=args.os, fip=args.fip)
 
     out_path = Path(args.output) if args.output else None
     save_override_file(override_dict, output_path=out_path)
