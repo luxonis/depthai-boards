@@ -32,8 +32,8 @@ def main():
     parser = argparse.ArgumentParser(
         description="Generate depthai_boards override JSON file to override existing configuration."
     )
-    parser.add_argument("--device", "-d", required=True, help="Target device ID or title (e.g. 'oak_4_s' or 'OAK4-S')")
-    parser.add_argument("--variant", "-v", required=True, help="Target variant ID or title (e.g. 'SL3443_ASM_P10D3_oak4_cs_og05b10')")
+    parser.add_argument("--device", "-d", required=True, help="Target device ID (e.g. 'oak_4_s')")
+    parser.add_argument("--variant", "-v", required=True, help="Target variant ID (e.g. 'SL3443_ASM_P10D3_oak4_cs_og05b10')")
     parser.add_argument("--os", required=False, default=None, help="Custom OS to override")
     parser.add_argument("--fip", required=False, default=None, help="Custom FIP to override")
     parser.add_argument("--output", "-o", required=False, default=None, help="Output path for the override JSON file. If not specified, JSON is printed to stdout.")
@@ -43,10 +43,10 @@ def main():
     device = get_device_by_id_typed(args.device)
     variant = get_variant_by_id_typed(args.variant)
     
+    variant_id = variant.id
+
     if not any(device_variant.id == variant_id for device_variant in device.variants):
         parser.error(f"Variant '{variant_id}' does not belong to device '{device.id}'")
-
-    variant_id = variant.id
 
     override_dict = generate_override_dict(variant_id=variant_id, os=args.os, fip=args.fip)
 
