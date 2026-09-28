@@ -83,6 +83,12 @@
             "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_w_poe_c57.json",
             "options": {"jpeg": false},
             "board_config_file": "OAK-D-W-POE-C57.json"
+        },
+        {
+            "title":"OAK-D-W-POE-C62 (NG9097 R4M2E4 BNO086)",
+            "description": "OAK-D-W-POE-C62 (Burro) based on NG9097 R4M2E4 with BNO086 IMU, central CCM swapped to AR0234, larger enclosure",
+            "eeprom":"eeprom/NG9097_R4M2E4_BNO086_oak_d_w_poe_c62.json",
+            "board_config_file": "OAK-D-W-POE-C62.json"
         }
     ]
 }
