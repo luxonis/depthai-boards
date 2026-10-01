@@ -61,6 +61,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
         },
@@ -73,6 +74,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
         },
@@ -169,6 +171,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
         },
@@ -181,6 +184,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
         },
@@ -193,6 +197,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
         },
@@ -205,6 +210,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
         },
@@ -217,6 +223,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
         },
@@ -229,6 +236,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
         },
@@ -241,6 +249,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
         },
@@ -253,6 +262,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
         },
