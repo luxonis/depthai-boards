@@ -35,8 +35,14 @@
         "BURNIN_OAK_4_S_generic": {
             "test_suite_mode": "burn-in"
         },
+        "STRESS_OAK_4_S_generic": {
+            "test_suite_mode": "stress-test"
+        },
         "BURNIN_OAK_4_S_R9_PLUS": {
             "test_suite_mode": "burn-in"
+        },
+        "STRESS_OAK_4_S_R9_PLUS": {
+            "test_suite_mode": "stress-test"
         },
         "TEST_STATION_OAK_4_S_R9_PLUS": {
             "test_suite_mode": "electrical-test",
@@ -61,6 +67,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "STRESS_OAK_4_S_R9_PLUS",
                 "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
@@ -74,6 +81,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "STRESS_OAK_4_S_R9_PLUS",
                 "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
@@ -87,6 +95,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_generic",
                 "BURNIN_OAK_4_S_generic",
+                "STRESS_OAK_4_S_generic",
                 "OAK_4_S_generic"
             ]
         },
@@ -99,6 +108,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_generic",
                 "BURNIN_OAK_4_S_generic",
+                "STRESS_OAK_4_S_generic",
                 "OAK_4_S_generic"
             ]
         },
@@ -111,6 +121,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_generic",
                 "BURNIN_OAK_4_S_generic",
+                "STRESS_OAK_4_S_generic",
                 "OAK_4_S_generic"
             ]
         },
@@ -123,6 +134,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_generic",
                 "BURNIN_OAK_4_S_generic",
+                "STRESS_OAK_4_S_generic",
                 "OAK_4_S_generic"
             ]
         },
@@ -135,6 +147,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "STRESS_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
         },
@@ -147,6 +160,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "STRESS_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
         },
@@ -159,6 +173,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "STRESS_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
         },
@@ -171,6 +186,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "STRESS_OAK_4_S_R9_PLUS",
                 "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
@@ -184,6 +200,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "STRESS_OAK_4_S_R9_PLUS",
                 "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
@@ -197,6 +214,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "STRESS_OAK_4_S_R9_PLUS",
                 "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
@@ -210,6 +228,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "STRESS_OAK_4_S_R9_PLUS",
                 "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
@@ -223,6 +242,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "STRESS_OAK_4_S_R9_PLUS",
                 "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
@@ -236,6 +256,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "STRESS_OAK_4_S_R9_PLUS",
                 "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
@@ -249,6 +270,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "STRESS_OAK_4_S_R9_PLUS",
                 "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
@@ -262,6 +284,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "STRESS_OAK_4_S_R9_PLUS",
                 "TEST_STATION_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS"
             ]
@@ -275,6 +298,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "STRESS_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS",
                 "TEST_STATION_OAK_4_S_R9_PLUS"
             ]
@@ -288,6 +312,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "STRESS_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS",
                 "TEST_STATION_OAK_4_S_R9_PLUS"
             ]
@@ -301,6 +326,7 @@
             "test_suite": [
                 "TESTBED_OAK_4_S_R9_PLUS",
                 "BURNIN_OAK_4_S_R9_PLUS",
+                "STRESS_OAK_4_S_R9_PLUS",
                 "OAK_4_S_R9_PLUS",
                 "TEST_STATION_OAK_4_S_R9_PLUS"
             ]
