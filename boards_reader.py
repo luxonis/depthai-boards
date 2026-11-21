@@ -241,6 +241,10 @@ class Options(BaseModel):
 	hostname: Optional[HostnameConfig] = None
 	""" Configuration for generating hostnames during flashing. """
 
+	button_gpio: Optional[int] = None
+	""" gpiochip 0 line of the user button (RVC4), read with gpioget by factory testing and the flashing
+	label step. None when the device has no user button. Applications use agentconfd, not this line. """
+
 class EepromData(BaseModel):
 	boardConf: Optional[str] = None
 	boardName: Optional[str] = None
