@@ -1,2 +1,2 @@
-pydantic==1.10.5
+pydantic==2.3.0
 depthai==3.2.0

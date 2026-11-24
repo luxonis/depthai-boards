@@ -5,6 +5,7 @@
     "os": "PRODUCTION/luxonis_os_rvc4-1.47.0.tar.xz",
     "options": {
         "platform": "rvc4",
+        "button_gpio": 43,
         "environment": {
             "flashing": "dai_v3",
             "testing": "dai_v3"
